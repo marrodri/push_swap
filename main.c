@@ -4,7 +4,8 @@
 int main()
 {
 	int a = 20;
-	ft_printf("test hello world %d\n", a);
-	sleep(10);
+	char *s = "bye";
+	ft_printf("test hello world %s\n", s);
+	// sleep(10);
 	return 0;
 }
