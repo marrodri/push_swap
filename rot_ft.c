@@ -1,9 +1,10 @@
 
 #include "push_swap.h"
 
-// rotates the specific stack
 void	rot(t_list *stack)
 {
+	// rotates the specific stack
+	//the first element of the stack becomes the last element
 
 }
 
@@ -14,10 +15,10 @@ void	rot_r(t_list *stack_a, t_list *stack_b)
 	rot(stack_b);
 }
 
-//reverse rotation the specific stack
 void	rrot(t_list *stack)
 {
-
+	//reverse rotation the specific stack
+	//the last element of the stack becomes the first element
 }
 
 //reverse rotation both stack a and stack b
