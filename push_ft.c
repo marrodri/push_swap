@@ -12,13 +12,21 @@
 
 #include "push_swap.h"
 
-void	push_a(t_list *stack_a, t_list *stack_b)
+void	push(t_list **stack_dst, t_list **stack_src)
 {
+	//push the very first element from stack_src to stack_dst
+	if(stack_src == NULL)
+		return ;
 	t_list *tmp;
-	//push the very first element from stack b to stack a
+	tmp = *stack_src;
+	(*stack_src) = (*stack_src)->next;
+	tmp->next = *stack_dst;
+	*stack_dst = tmp;
+
 }
-void	push_b(t_list *stack_a, t_list *stack_b)
-{
-	t_list *tmp;
-	//push the very first element from stack a to stack b
-}
+
+// void	push_b(t_list *stack_a, t_list *stack_b)
+// {
+// 	t_list *tmp;
+// 	//push the very first element from stack a to stack b
+// }

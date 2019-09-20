@@ -11,107 +11,76 @@ void	print_list(t_list **list)
 	printf("######printing session########\n");
 	while(tmp)
 	{
-		printf("num is |%lu|\n", tmp->content_size);
+		printf("num is |%d|\n", tmp->elem);
 		tmp = tmp->next;
 	}
 	printf("^^^^^EXIT CHECK^^^^^^^\n");
 }
 
-// t_list 	*ft_set_num(int *num)
-// {
-// 	t_list	*elem;
+t_list 	*ft_set_node(int num, void *cont, size_t size)
+{
+	t_list	*new;
 
-// 	if ((elem = (t_list *)malloc(sizeof(t_list))) == NULL)
-// 		return (NULL);
-// 	if (num)
-// 	{
-// 		elem->content = num;
-// 		elem->content_size = 0;
-// 	}
-// 	else
-// 	{
-// 		elem->content = NULL;
-// 		elem->content_size = 0;
-// 	}
-// 	elem->next = NULL;
-// 	return (elem);
-// }
+	if ((new = (t_list *)malloc(sizeof(t_list))) == NULL)
+		return (NULL);
+	if (num || cont || size)
+	{
+		new->elem = num;
+		new->content = cont;
+		new->content_size = size;
+	}
+	else
+	{
+		new->elem = 0;
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	new->next = NULL;
+	return (new);
+}
 
-// void	add_elem(t_list **list, int num)
-// {
-// 	t_list	*elem;
-// }
+void	add_new_elem(t_list **alist, int num)
+{
+	t_list	*new_node;
+
+	new_node = ft_set_node(num, NULL, 0);
+	if(*alist == NULL)
+		*alist = new_node;
+	else
+		ft_lstaddend(alist, new_node);
+}
 
 int main()
 {
 	t_list *st_a; //list
 	t_list *st_b;
-	t_list *elem_a; //first elem;
-	t_list *elem_b; //sec elem;
-	t_list *elem_c; //third elem;
-	t_list *elem_d;
-	t_list *head1;
-	t_list *head2;
-	int *a;
-	int *b;
-	int *c;
-	int *d;
-	a = malloc(sizeof(int));
-	b = malloc(sizeof(int));
-	c = malloc(sizeof(int));
-	d = malloc(sizeof(int));
-	*a = 9;
-	*b = 543;
-	*c = 234234;
-	*d = -12;
 	printf("here!!!!!!!\n");
 	st_a = NULL;
 	st_b = NULL;
-	//head for reset struct pos
-	elem_a = malloc(sizeof(t_list));
-	elem_b = malloc(sizeof(t_list));
-	elem_c = malloc(sizeof(t_list));
-	elem_d = malloc(sizeof(t_list));
-	elem_a->content_size = *a;
-	// printf("content in elem a |%lu|\n", elem_a->content_size);
-	elem_a->next = NULL;
-	elem_b->content_size = *b;
-	elem_b->next = NULL;
-	elem_c->content_size = *c;
-	elem_c->next = NULL;
-	elem_d->content_size = *d;
-	elem_d->next = NULL;
-	st_a = elem_a;
-	// printf("first node in stack a |%lu|\n", st_a->content_size);
-	head1 = st_a;
-	st_a->next = elem_b;
-	st_a = st_a->next;
-	// printf("content in elem b |%lu|\n", elem_b->content_size);
-	// printf("second node in stack a |%lu|\n", st_a->content_size);
-	st_a->next = elem_c;
-	st_a = st_a->next;
-	// printf("content in elem c |%lu|\n", elem_c->content_size);
-	// printf("third node in stack a |%lu|\n", st_a->content_size);
-	st_a->next = NULL;
+	add_new_elem(&st_a, 23);
+	add_new_elem(&st_a, 32);
+	add_new_elem(&st_a, 24);
+	// add_new_elem(&st_a, 65);
+	//stack_b
+	add_new_elem(&st_b, 14);
+	add_new_elem(&st_b, 42);
+	add_new_elem(&st_b, 64);
+	// add_new_elem(&st_b, -435);
 
-	// printf("third node in stack a |%lu|\n", st_a->content_size);
-	st_a = head1;
-
-	st_b = elem_d;
-	head2 = st_b;
-	st_b->next = elem_a;
-	st_b = st_b->next;
-	st_b->next = elem_c;
-	st_b = st_b->next;
-	st_b = head2;
-	// printf("content in head |%lu|\n", head->content_size);
 	print_list(&st_a);
 	print_list(&st_b);
-	swap_s(&st_a, &st_b);
-	printf("!!!!!!!!!!!!!!SWAPED STACK A n B!!!!!!!!!!!!\n");
-	// print_list(&st_a);
-	// print_list(&st_b);
+	// swap(&st_a);
+	// swap_s(&st_a, &st_b);
+	// printf("!!!!!!!!!!!!!!SWAPED STACK A n B!!!!!!!!!!!!\n");
+	printf("^^^^^^push stack a to b^^^^^^^\n");
+	push(&st_b, &st_a);
+	print_list(&st_a);
+	print_list(&st_b);
 
+	printf("&&&&&push stack b to a&&&&&\n");
+	push(&st_a, &st_b);
+	print_list(&st_a);
+	print_list(&st_b);
 	// sleep(10);
 	return 0;
 }
