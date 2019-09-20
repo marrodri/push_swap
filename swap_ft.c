@@ -14,19 +14,21 @@
 
 void	swap(t_list **stack)
 {
-	t_list	*tmp;
-	// t_list	*tmp_b;
+	t_list	*tmp; //head
 	t_list  *backup;
+
 	//swaps the position of the first 2 elements of the stack
 	tmp = *stack;
 	*stack = (*stack)->next;
 	backup = (*stack)->next;
 	(*stack)->next = tmp;
+	tmp = *stack;
 	*stack = (*stack)->next;
 	(*stack)->next = backup;
+	*stack = tmp;
 }
 
-void	swap_s(t_list *stack_a, t_list *stack_b)
+void	swap_s(t_list **stack_a, t_list **stack_b)
 {
  	swap(stack_a);
 	swap(stack_b);
