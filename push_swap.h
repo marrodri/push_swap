@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void	swap(t_list *stack);
+void	swap(t_list **stack);
 void	swap_s(t_list *stack_a, t_list *stack_b);
 void	push_a(t_list *stack_a, t_list *stack_b);
 void	push_b(t_list *stack_a, t_list *stack_b);

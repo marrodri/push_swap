@@ -12,12 +12,18 @@
 
 #include "push_swap.h"
 
-void	swap(t_list *stack)
+void	swap(t_list **stack)
 {
-	t_list	*first_elem;
 	t_list	*tmp;
-	t_list	*sec_elem;
+	// t_list	*tmp_b;
+	t_list  *backup;
 	//swaps the position of the first 2 elements of the stack
+	tmp = *stack;
+	*stack = (*stack)->next;
+	backup = (*stack)->next;
+	(*stack)->next = tmp;
+	*stack = (*stack)->next;
+	(*stack)->next = backup;
 }
 
 void	swap_s(t_list *stack_a, t_list *stack_b)
