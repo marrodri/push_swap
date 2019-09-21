@@ -21,7 +21,7 @@ int		check_stack(t_list *stack)
 		stack = stack->next;
 	}
 	// return 1 if stack has elements and sorted
-	// return 0 if its empty
+	// return 0 if stack is not sorted;
 }
 
 int		check_stacks(t_list *stack_a, t_list *stack_b)

@@ -57,6 +57,10 @@ int main()
 
 	rot(&st_a);
 	print_list(&st_a);
+
+	printf("++++++reverse rotation is stack a+++++++\n");
+	rrot(&st_a);
+	print_list(&st_a);
 	// sleep(10);
 	return 0;
 }
