@@ -37,7 +37,7 @@ int main()
 
 	print_list(&st_a);
 	print_list(&st_b);
-	// swap(&st_a);
+	// swap(&st_a);sfd
 	// swap_s(&st_a, &st_b);
 	// printf("!!!!!!!!!!!!!!SWAPED STACK A n B!!!!!!!!!!!!\n");
 	// printf("^^^^^^push stack a to b^^^^^^^\n");

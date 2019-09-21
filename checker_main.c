@@ -12,11 +12,13 @@
 
 #include "push_swap.h"
 
-int main()
+int main(int argc, char **argv)
 {
-	t_list *stack_a;
-	t_list *stack_b;
+	t_list *st_a;
+	t_list *st_b;
 
+	st_a = NULL;
+	st_b = NULL;
 	//sets the stack a from args readed
 	//reads from the stdin the instruction set and the args
 	// each instruction is separated by a new line

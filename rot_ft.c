@@ -40,23 +40,19 @@ void	rrot(t_list **stack)
 	t_list	*cur_hd;
 	t_list	*new_hd;
 	t_list	*tail;
-	//reverse rotation the specific stack
-	//the last element of the stack becomes the first element
+
 	cur_hd = *stack;
 	while((*stack)->next)
 	{
 		tail = *stack;
 		(*stack) = (*stack)->next;
 		if((*stack)->next == NULL)
-		{
 			new_hd = *stack;
-		}
 	}
 	(*stack)->next = cur_hd;
 	(*stack) = tail;
 	(*stack)->next = NULL;
 	(*stack) = new_hd;
-
 }
 
 //reverse rotation both stack a and stack b

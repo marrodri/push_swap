@@ -1,4 +1,5 @@
 
+//add functions based on adding and deleting lists
 #include "push_swap.h"
 
 t_list 	*ft_set_node(int num, void *cont, size_t size)
