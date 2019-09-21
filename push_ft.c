@@ -22,7 +22,7 @@ void	push(t_list **stack_dst, t_list **stack_src)
 	(*stack_src) = (*stack_src)->next;
 	tmp->next = *stack_dst;
 	*stack_dst = tmp;
-
+	// return (1);
 }
 
 // void	push_b(t_list *stack_a, t_list *stack_b)
