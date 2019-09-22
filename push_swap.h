@@ -13,11 +13,14 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
 #include "./libft/libft.h"
 #include "./libft/ft_printf.h"
-#include <stdlib.h>
-#include <unistd.h>
+
+typedef struct	s_psvar
+{
+	char	**instr;
+	int		*
+}				t_psvar;
 
 void	swap(t_list **stack);
 void	swap_s(t_list **stack_a, t_list **stack_b);
