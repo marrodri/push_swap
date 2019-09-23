@@ -13,14 +13,24 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+#define		PS_FLAG { 'v', 'g', 'f'}
+#define		PS_SZ 3
 #include "./libft/libft.h"
 #include "./libft/ft_printf.h"
 
-typedef struct	s_psvar
+typedef	struct	s_flag
+{
+		int		flag[3];
+}				t_flag;
+
+
+typedef struct	s_app
 {
 	char	**instr;
-	int		*
-}				t_psvar;
+	int		*stck;
+	int		len;
+
+}				t_app;
 
 void	swap(t_list **stack);
 void	swap_s(t_list **stack_a, t_list **stack_b);
@@ -29,6 +39,9 @@ void	rot(t_list **stack);
 void	rot_r(t_list **stack_a, t_list **stack_b);
 void	rrot(t_list **stack);
 void	rrot_r(t_list **stack_a, t_list **stack_b);
+
+int		read_instr(int fd, t_app **app);
+int		check_arg(char **argv, t_app **app);
 
 int		check_stack(t_list *stack);
 int		check_stacks(t_list *stack_a, t_list *stack_b);
