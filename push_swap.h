@@ -28,7 +28,8 @@ typedef struct	s_app
 {
 	char	**instr;
 	int		*stck;
-	int		len;
+	int		len_inst;
+	int		len_stck;
 
 }				t_app;
 

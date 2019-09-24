@@ -57,16 +57,18 @@ int		ft_argvdup(char **av)
 	return (0);
 }
 
-int		int_limit(char *str)
-{
-	long int l_int;
+// !!!!!! MODIFY FOR CHECKING AN INT BEYOND
 
-	// l_int = ft_ato(str, 10);
-	if(l_int >= -2147483648 && l_int <= 2147483647)
-		return 1;
+// int		int_limit(char *str)
+// {
+// 	long int l_int;
 
-	return 0;
-}
+// 	// l_int = ft_ato(str, 10);
+// 	if(l_int >= -2147483648 && l_int <= 2147483647)
+// 		return 1;
+
+// 	return 0;
+// }
 
 int		set_stck(char **argv, int argc, t_app **app)
 {
@@ -87,13 +89,13 @@ int		set_stck(char **argv, int argc, t_app **app)
 		else
 			return 0;
 	}
-	(*app)->len = argc - i;
-	stck = (int*)malloc((*app)->len * sizeof(int));
+	(*app)->len_stck = argc - i;
+	stck = (int*)malloc((*app)->len_stck * sizeof(int));
 	// return 1 if there isn't any duplicate or 
 	// a different character than a number, or goes the limit of int
 	if (check_arg_digit(&argv[i]) && !ft_argvdup(&argv[i]))
 	{
-		ft_printf("all input are passed, setting stack a with flag\n");
+		ft_printf("all input are passed, setting stack\n");
 		while(argv[i])
 		{
 			//here when setting check if a num goes beyond int limit, if does return 0;
@@ -109,11 +111,26 @@ int		set_stck(char **argv, int argc, t_app **app)
 
 int		set_instr(int fd, t_app **app)
 {
-	//reads from the stdin the instruction set and the args
+	char *buff;
+	char *str;
+
+	str = ft_strnew(1);
+	(*app)->len_inst = 0;
+	//reads from the stdin the instruction set
 	// each instruction is separated by a new line
-	//it will read sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr
-	// return  0 if unrecognized instruction from stdin, enters the process
+	while(get_next_line(fd, &buff))
+	{
+		//get buff, and join to str, the join the newline,
+		str = ft_strjoin(str, buff);
+		str = ft_strjoin(str, "\n");
+		(*app)->len_inst++;
+	}
+	//split the string by the newline
+	(*app)->instr = ft_strsplit(str, 's');
+	//read if there is only sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr
+	// return  0 if unrecognized instruction from stdin, there's no instruction
 	//or badly formatted
+
 	return (1);
 }
 
@@ -131,8 +148,13 @@ int main(int argc, char **argv)
 		//sets the stack a from args readed and sets the instrs from stdin
 		if(set_stck(argv, argc, &app) && set_instr(0, &app))
 		{
-			ft_printf("stack and instructions set ready,\n");
-			for(int i = 0; i < app->len; i++)
+			ft_printf("------stack and instructions set read----------\n");
+
+			for(int i = 0; app->instr[i]; i++)
+			{
+				ft_printf("inst[%d] is |%s|\n", app->instr[i]);
+			}	
+			for(int i = 0; i < app->len_stck; i++)
 			{
 				ft_printf("stack[%d] is |%d|\n", i, app->stck[i]);
 			}
@@ -152,6 +174,5 @@ int main(int argc, char **argv)
 	{
 		ft_printf("usage: stdin instruction | ./checker <argument integer>\n");
 	}
-
 	return (0);
 }
