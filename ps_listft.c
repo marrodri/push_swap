@@ -34,3 +34,15 @@ void	add_new_elem(t_list **alist, int num)
 	else
 		ft_lstaddend(alist, new_node);
 }
+
+void	set_stack(t_list **stack, t_app *app, int *num)
+{
+	int i;
+
+	i = 0;
+	while(i < app->len_stck)
+	{
+		add_new_elem(stack, num[i]);
+		i++;
+	}
+}

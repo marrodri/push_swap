@@ -12,6 +12,21 @@
 
 #include "push_swap.h"
 
+void	print_list(t_list **list)
+{
+	t_list *tmp;
+
+	tmp = *list;
+	ft_printf("######printing session########\n");
+	while(tmp)
+	{
+		ft_printf("num is |%d|\n", tmp->elem);
+		tmp = tmp->next;
+	}
+	ft_printf("^^^^^EXIT CHECK^^^^^^^\n");
+}
+
+
 // check the av if they are all digit, if any other character founded return 0;
 int		check_arg_digit(char **av)
 {
@@ -66,7 +81,6 @@ int		ft_argvdup(char **av)
 // 	// l_int = ft_ato(str, 10);
 // 	if(l_int >= -2147483648 && l_int <= 2147483647)
 // 		return 1;
-
 // 	return 0;
 // }
 
@@ -103,7 +117,7 @@ int		set_stck(char **argv, int argc, t_app **app)
 			i++;
 			j++;
 		}
-		(*app)->stck = stck;
+		(*app)->arr_num = stck;
 		return (1);
 	}
 	return (0);
@@ -140,7 +154,7 @@ int		set_instr(int fd, t_app **app)
 
 	str = ft_strnew(1);
 	(*app)->len_inst = 0;
-	//reads from the stdin the instruction set
+	// reads from the stdin the instruction set
 	// each instruction is separated by a new line
 	while (get_next_line(fd, &buff))
 	{
@@ -157,7 +171,7 @@ int		set_instr(int fd, t_app **app)
 	//read if there is only sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr
 	// return  0 if unrecognized instruction from stdin, there's no instruction
 	//or badly formatted
-	return 0;
+	return (0);
 }
 
 int main(int argc, char **argv)
@@ -171,25 +185,21 @@ int main(int argc, char **argv)
 	app = malloc(sizeof(t_app));
 	if (argc >= 2)
 	{
-		//sets the stack a from args readed and sets the instrs from stdin
 		if (set_stck(argv, argc, &app) && set_instr(0, &app))
 		{
-			ft_printf("------stack and instructions set read----------\n");
-			for(int i = 0; app->instr[i]; i++)
-				ft_printf("inst[%d] is |%s|\n", i, app->instr[i]);
-			for(int i = 0; i < app->len_stck; i++)
-				ft_printf("stack[%d] is |%d|\n", i, app->stck[i]);
+			// ft_printf("------stack and instructions set read----------\n");
+			// for(int i = 0; app->instr[i]; i++)
+			// 	ft_printf("inst[%d] is |%s|\n", i, app->instr[i]);
+			// for(int i = 0; i < app->len_stck; i++)
+			// 	ft_printf("stack[%d] is |%d|\n", i, app->stck[i]);
+			set_stack(&st_a, app, app->arr_num);
+			print_list(&st_a);
+			sort_stacks(st_a, st_b, app->instr);
 
-			//sorts the stack a, based from the instructions list,
-			//it will be iterated until the list reach to the end point 
-			//checks stack_a if its sorted and stack b if its empty
-				//if true print OK
-			// else print KO
 		}
 		else
 		{
 			ft_printf("Error\n");
-			// the proccess, displays ERROR and close the program
 		}
 	}
 	else
