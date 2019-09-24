@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-#define		PS_FLAG { 'v', 'g', 'f'}
-#define		PS_SZ 3
-#include "./libft/libft.h"
-#include "./libft/ft_printf.h"
+# define PS_FLAG { 'v', 'g', 'f'}
+# define PS_INST { "sa", "sb", "ss", "pa", "pb", "ra", "rb", "rr", "rra", "rrb", "rrr"}
+# define PS_INS_SZ 11
+# define PS_FL_SZ 3
+# include "./libft/libft.h"
+# include "./libft/ft_printf.h"
 
 typedef	struct	s_flag
 {
 		int		flag[3];
 }				t_flag;
-
 
 typedef struct	s_app
 {

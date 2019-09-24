@@ -121,12 +121,13 @@ int		set_instr(int fd, t_app **app)
 	while(get_next_line(fd, &buff))
 	{
 		//get buff, and join to str, the join the newline,
+		ft_printf("line is |%s|\n", buff);
 		str = ft_strjoin(str, buff);
 		str = ft_strjoin(str, "\n");
 		(*app)->len_inst++;
 	}
 	//split the string by the newline
-	(*app)->instr = ft_strsplit(str, 's');
+	(*app)->instr = ft_strsplit(str, '\n');
 	//read if there is only sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr
 	// return  0 if unrecognized instruction from stdin, there's no instruction
 	//or badly formatted
@@ -152,7 +153,7 @@ int main(int argc, char **argv)
 
 			for(int i = 0; app->instr[i]; i++)
 			{
-				ft_printf("inst[%d] is |%s|\n", app->instr[i]);
+				ft_printf("inst[%d] is |%s|\n", i, app->instr[i]);
 			}	
 			for(int i = 0; i < app->len_stck; i++)
 			{
