@@ -47,4 +47,7 @@ void	sort_stacks(t_list *stack_a, t_list *stack_b, char **instr);
 void	set_stack(t_list **stack, t_app *app, int *num);
 t_list 	*ft_set_node(int num, void *cont, size_t size);
 void	add_new_elem(t_list **alist, int num);
+int		set_instr(int fd, t_app **app);
+int		check_instr(char **instr);
+int		set_int_arr(char **argv, int argc, t_app **app);
 #endif

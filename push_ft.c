@@ -14,10 +14,17 @@
 
 void	push(t_list **stack_dst, t_list **stack_src)
 {
-	//push the very first element from stack_src to stack_dst
-	if(stack_src == NULL)
-		return ;
 	t_list *tmp;
+
+	if (*stack_src == NULL)
+		return ;
+	if (*stack_dst == NULL)
+	{
+		*stack_dst = *stack_src;
+		*stack_src = (*stack_src)->next;
+		(*stack_dst)->next = NULL;
+		return ;
+	}
 	tmp = *stack_src;
 	(*stack_src) = (*stack_src)->next;
 	tmp->next = *stack_dst;
