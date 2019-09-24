@@ -21,7 +21,7 @@
 
 typedef	struct	s_flag
 {
-		int		flag[3];
+	int		flag[3];
 }				t_flag;
 
 typedef struct	s_app
@@ -40,14 +40,11 @@ void	rot(t_list **stack);
 void	rot_r(t_list **stack_a, t_list **stack_b);
 void	rrot(t_list **stack);
 void	rrot_r(t_list **stack_a, t_list **stack_b);
-
 int		read_instr(int fd, t_app **app);
 int		check_arg(char **argv, t_app **app);
-
 int		check_stack(t_list *stack);
 int		check_stacks(t_list *stack_a, t_list *stack_b);
 void	sort_stacks(t_list *stack_a, t_list *stack_b, char **instr);
-
 t_list 	*ft_set_node(int num, void *cont, size_t size);
 void	add_new_elem(t_list **alist, int num);
 #endif

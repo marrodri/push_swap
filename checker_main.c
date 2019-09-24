@@ -109,6 +109,30 @@ int		set_stck(char **argv, int argc, t_app **app)
 	return (0);
 }
 
+int		check_instr(char **instr)
+{
+	const char *ps_inst[PS_INS_SZ] = PS_INST;
+	int i;
+	int j;
+
+	j = 0;
+	i = 0;
+	while (instr[i])
+	{
+		j = 0;
+		while (1)
+		{
+			if(j == PS_INS_SZ)
+				return (0);
+			if(!ft_strcmp(instr[i], ps_inst[j]))
+				break;
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
 int		set_instr(int fd, t_app **app)
 {
 	char *buff;
@@ -118,7 +142,7 @@ int		set_instr(int fd, t_app **app)
 	(*app)->len_inst = 0;
 	//reads from the stdin the instruction set
 	// each instruction is separated by a new line
-	while(get_next_line(fd, &buff))
+	while (get_next_line(fd, &buff))
 	{
 		//get buff, and join to str, the join the newline,
 		ft_printf("line is |%s|\n", buff);
@@ -128,11 +152,12 @@ int		set_instr(int fd, t_app **app)
 	}
 	//split the string by the newline
 	(*app)->instr = ft_strsplit(str, '\n');
+	if(check_instr((*app)->instr))
+		return (1);
 	//read if there is only sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr
 	// return  0 if unrecognized instruction from stdin, there's no instruction
 	//or badly formatted
-
-	return (1);
+	return 0;
 }
 
 int main(int argc, char **argv)
@@ -144,21 +169,17 @@ int main(int argc, char **argv)
 	st_a = NULL;
 	st_b = NULL;
 	app = malloc(sizeof(t_app));
-	if(argc >= 2)
+	if (argc >= 2)
 	{
 		//sets the stack a from args readed and sets the instrs from stdin
-		if(set_stck(argv, argc, &app) && set_instr(0, &app))
+		if (set_stck(argv, argc, &app) && set_instr(0, &app))
 		{
 			ft_printf("------stack and instructions set read----------\n");
-
 			for(int i = 0; app->instr[i]; i++)
-			{
 				ft_printf("inst[%d] is |%s|\n", i, app->instr[i]);
-			}	
 			for(int i = 0; i < app->len_stck; i++)
-			{
 				ft_printf("stack[%d] is |%d|\n", i, app->stck[i]);
-			}
+
 			//sorts the stack a, based from the instructions list,
 			//it will be iterated until the list reach to the end point 
 			//checks stack_a if its sorted and stack b if its empty
@@ -172,8 +193,6 @@ int main(int argc, char **argv)
 		}
 	}
 	else
-	{
 		ft_printf("usage: stdin instruction | ./checker <argument integer>\n");
-	}
 	return (0);
 }
