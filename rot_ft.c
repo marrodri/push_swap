@@ -13,7 +13,7 @@
 #include "push_swap.h"
 #include "stdio.h"
 
-void	rot(t_list **stack)
+int	*rot(t_list **stack)
 {
 	t_list	*head;
 	t_list	*tail;
@@ -25,17 +25,20 @@ void	rot(t_list **stack)
 		*stack = (*stack)->next;
 	tail->next = NULL;
 	(*stack)->next = tail;
-
 	*stack = head;
+
+	return (int*)1;
 }
 
-void	rot_r(t_list **stack_a, t_list **stack_b)
+int	*rot_r(t_list **stack_a, t_list **stack_b)
 {
 	rot(stack_a);
 	rot(stack_b);
+
+	return (int*)1;
 }
 
-void	rrot(t_list **stack)
+int	*rrot(t_list **stack)
 {
 	t_list	*cur_hd;
 	t_list	*new_hd;
@@ -53,11 +56,13 @@ void	rrot(t_list **stack)
 	(*stack) = tail;
 	(*stack)->next = NULL;
 	(*stack) = new_hd;
+	return (int*)1;
 }
 
 //reverse rotation both stack a and stack b
-void	rrot_r(t_list **stack_a, t_list **stack_b)
+int	*rrot_r(t_list **stack_a, t_list **stack_b)
 {
 	rrot(stack_a);
 	rrot(stack_b);
+	return (int*)1;
 }
