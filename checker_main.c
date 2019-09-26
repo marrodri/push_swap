@@ -17,6 +17,11 @@ void	print_list(t_list **list)
 	t_list *tmp;
 
 	tmp = *list;
+	if(tmp == NULL)
+	{
+		ft_printf("list is NULL\n");
+		return ;
+	}
 	while(tmp)
 	{
 		ft_printf("[%d]->", tmp->elem);
@@ -60,6 +65,15 @@ int main(int argc, char **argv)
 			print_list(&st_a);
 			ft_printf("showing STACK B????????\n");
 			print_list(&st_b);
+			if(check_stacks(st_a, st_b))
+			{
+				ft_printf("OK\n");
+			}
+			else
+			{
+				ft_printf("KO\n");
+			}
+			
 		}
 		else
 		{
