@@ -34,7 +34,8 @@ void 	sort_stacks(t_list *stack_a, t_list *stack_b, char *instr)
 	t_sort *sort_arr[PS_INS_SZ];
 	t_sort_both *sort_both_arr[PS_INSB_SZ];
 	int i;
-
+	int *j;
+	
 	i = search_instr(instr);
 	sort_arr[0] = swap;
 	sort_arr[1] = rot;
@@ -45,33 +46,33 @@ void 	sort_stacks(t_list *stack_a, t_list *stack_b, char *instr)
 
 
 	ft_printf("sorting stacks based on instr\n");
-	if(i >= 0 && i <= 2)
+	if (i >= 0 && i <= 2)
 	{
-		return(sort_arr[i](&stack_a));
+		ft_printf("sorting stack a\n");
+		j = (sort_arr[i](&stack_a));
+		ft_printf("exit\n");
+		return;
 	}
-	else if(i >= 3 && i <= 5)
+	else if (i >= 3 && i <= 5)
 	{
 		i = i - 3;
-		return(sort_arr[i](&stack_b));
+		j = (sort_arr[i](&stack_b));
+		return;
 	}
-	else if(i >= 6 && i <= 8)
+	else if (i >= 6 && i <= 8)
 	{
 		i = i - 6;
-		return(sort_both_arr[i](&stack_a, &stack_b));
+		j = (sort_both_arr[i](&stack_a, &stack_b));
+		return;
 	}
-	else if(i == 9)
+	else if (i == 9)
 	{
 		push(&stack_a, &stack_b);
-		return 1;
+		return ;
 	}
-	else if(i == 10)
+	else if (i == 10)
 	{
 		push(&stack_b, &stack_a);
-		return 1;
+		return ;
 	}
-
-	return 0;
-
-
-
 }
