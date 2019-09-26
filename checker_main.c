@@ -17,25 +17,19 @@ void	print_list(t_list **list)
 	t_list *tmp;
 
 	tmp = *list;
-	if(tmp == NULL)
+	if (tmp == NULL)
 	{
 		ft_printf("list is NULL\n");
 		return ;
 	}
-	while(tmp)
+	while (tmp)
 	{
 		ft_printf("[%d]->", tmp->elem);
 		tmp = tmp->next;
-		if(!tmp)
+		if (!tmp)
 			ft_printf("NULL\n");
 	}
 }
-
-void	init_app(t_app **app)
-{
-
-}
-
 
 int main(int argc, char **argv)
 {
@@ -54,8 +48,7 @@ int main(int argc, char **argv)
 		if (set_int_arr(argv, argc, &app) && set_instr(0, &app))
 		{
 			set_stack(&st_a, app, app->arr_num);
-			// print_list(&st_a);
-			while(app->instr[i])
+			while (app->instr[i])
 			{
 				sort_stacks(&st_a, &st_b, app->instr[i]);
 				i++;
@@ -65,22 +58,22 @@ int main(int argc, char **argv)
 			print_list(&st_a);
 			ft_printf("showing STACK B????????\n");
 			print_list(&st_b);
-			if(check_stacks(st_a, st_b))
-			{
+			if (check_stacks(st_a, st_b))
 				ft_printf("OK\n");
-			}
 			else
-			{
 				ft_printf("KO\n");
-			}
 			
 		}
 		else
 		{
+			ft_printf("showing stack A!!!!!!!\n");
+			print_list(&st_a);
+			ft_printf("showing STACK B????????\n");
+			print_list(&st_b);
 			ft_printf("Error\n");
 		}
 	}
 	else
-		ft_printf("usage: stdin instruction | ./checker <argument integer>\n");
+		ft_printf("usage: stdin instruction | ./checker <argument integer [min = 2 args]>\n");
 	return (0);
 }
