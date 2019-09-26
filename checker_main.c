@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 			// print_list(&st_a);
 			while(app->instr[i])
 			{
-				sort_stacks(st_a, st_b, app->instr[i]);
+				sort_stacks(&st_a, &st_b, app->instr[i]);
 				i++;
 				ft_printf("int i |%d|\n", i);
 			}

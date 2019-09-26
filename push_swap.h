@@ -48,7 +48,7 @@ int		read_instr(int fd, t_app **app);
 int		check_arg(char **argv, t_app **app);
 int		check_stack(t_list *stack);
 int		check_stacks(t_list *stack_a, t_list *stack_b);
-void		sort_stacks(t_list *stack_a, t_list *stack_b, char *instr);
+void		sort_stacks(t_list **stack_a, t_list **stack_b, char *instr);
 void	set_stack(t_list **stack, t_app *app, int *num);
 t_list	*ft_set_node(int num, void *cont, size_t size);
 void	add_new_elem(t_list **alist, int num);
