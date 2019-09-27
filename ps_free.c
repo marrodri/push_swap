@@ -1,19 +1,21 @@
 
 #include "push_swap.h"
 
-void		free_words(t_app **app)
+void		free_words(char **instr)
 {
 	int i;
-
+	char	*tmp;
 	i = 0;
-	while((*app)->instr[i])
+	if(instr == NULL)
+		return ;
+	while(instr[i])
 	{
-		free((*app)->instr[i]);
-		(*app)->instr[i] = NULL;
+		// /ft_printf("freeing ins|%s|\n", (*app)->instr[i]);
+		free(instr[i]);
+		tmp = NULL;
 		i++;
 	}
-	free((*app)->instr);
-	(*app)->instr = NULL;
+	free(instr);
 }
 
 void		free_list(t_list **list)
@@ -22,7 +24,6 @@ void		free_list(t_list **list)
 
 	if(*list == NULL)
 		return ;
-
 	while (*list)
 	{
 		tmp = (*list)->next;

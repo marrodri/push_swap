@@ -42,8 +42,6 @@ void	set_stack(t_list **stack, t_app *app, int *num)
 	i = 0;
 	while(i < app->len_stck)
 	{
-		ft_printf("i is |%d|\n", i);
-		ft_printf("num[%d] p|%p|\n",i, num[i]);
 		add_new_elem(stack, num[i]);
 		i++;
 	}

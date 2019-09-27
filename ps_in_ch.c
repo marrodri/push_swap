@@ -95,19 +95,20 @@ int		set_instr(int fd, t_app **app)
 	(*app)->len_inst = 0;
 	while (get_next_line(fd, &line))
 	{
-		if((*app)->instr)
+		if ((*app)->instr)
 			free(tmp_l);
 		tmp = str;
 		str = ft_strjoin(str, line);
 		free(tmp);
 		tmp = str;
-		str = ft_strjoin(tmp, "\n");
+		str = ft_strjoin(str, "\n");
 		free(tmp);
 		(*app)->len_inst++;
 		tmp_l = line;
 	}
 	(*app)->instr = ft_strsplit(str, '\n');
-	// free(str);
+	free(str);
+	free(tmp_l);
 	ft_printf("freeing str after split\n");
 	if(check_instr((*app)->instr))
 		return (1);

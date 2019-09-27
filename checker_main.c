@@ -31,6 +31,15 @@ void	print_list(t_list **list)
 	}
 }
 
+void	init_app(t_app **app)
+{
+	*app = malloc(sizeof(t_app));
+	(*app)->arr_num = NULL;
+	(*app)->instr = NULL;
+	(*app)->len_inst = 0;
+	(*app)->len_stck = 0;
+}
+
 int main(int argc, char **argv)
 {
 	t_list	*st_a;
@@ -39,7 +48,7 @@ int main(int argc, char **argv)
 
 	st_a = NULL;
 	st_b = NULL;
-	app = malloc(sizeof(t_app));
+	init_app(&app);
 	int i;
 
 	i = 0;
@@ -76,11 +85,11 @@ int main(int argc, char **argv)
 	}
 	else
 		ft_printf("usage: stdin instruction | ./checker <argument integer [min = 2 args]>\n");
-	// free_words(&app);
-	// free(app);
-	// free_list(&st_a);
-	// free_list(&st_b);
-	// sleep(10);
+	free_words(app->instr);
+	free(app);
+	free_list(&st_a);
+	free_list(&st_b);
+	sleep(5);
 	return (0);
 }
 

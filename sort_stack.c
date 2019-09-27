@@ -50,28 +50,31 @@ void 	sort_stacks(t_list **stack_a, t_list **stack_b, char *instr)
 	{
 		ft_printf("sorting stack a\n");
 		j = (sort_arr[i](stack_a));
-		ft_printf("exit\n");
 		return;
 	}
 	else if (i >= 3 && i <= 5)
 	{
+		ft_printf("sorting stack b\n");
 		i = i - 3;
 		j = (sort_arr[i](stack_b));
 		return;
 	}
 	else if (i >= 6 && i <= 8)
 	{
+		ft_printf("sorting both\n");
 		i = i - 6;
 		j = (sort_both_arr[i](stack_a, stack_b));
 		return;
 	}
 	else if (i == 9)
 	{
+		ft_printf("pushing a\n");
 		push(stack_a, stack_b);
 		return ;
 	}
 	else if (i == 10)
 	{
+		ft_printf("pushing b\n");
 		push(stack_b, stack_a);
 		return ;
 	}

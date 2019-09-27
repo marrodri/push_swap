@@ -18,8 +18,11 @@ int	*rot(t_list **stack)
 	t_list	*head;
 	t_list	*tail;
 
-	if(*stack == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		ft_printf("stack or next is null\n");
 		return (int*)1;
+	}
 	tail = *stack;
 	*stack = (*stack)->next;
 	head = *stack;
@@ -46,6 +49,11 @@ int	*rrot(t_list **stack)
 	t_list	*new_hd;
 	t_list	*tail;
 
+	if(*stack == NULL || (*stack)->next == NULL)
+	{
+		ft_printf("stack or next is null\n");
+		return (int*)1;
+	}
 	cur_hd = *stack;
 	while((*stack)->next)
 	{

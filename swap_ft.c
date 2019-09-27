@@ -18,7 +18,11 @@ int	*swap(t_list **stack)
 	t_list	*tmp;
 	t_list  *backup;
 
-	ft_printf("entering swap a\n");
+	if(*stack == NULL || (*stack)->next == NULL)
+	{
+		ft_printf("stack or next is null\n");
+		return 0;
+	}
 	tmp = *stack;
 	*stack = (*stack)->next;
 	backup = (*stack)->next;
@@ -27,7 +31,6 @@ int	*swap(t_list **stack)
 	*stack = (*stack)->next;
 	(*stack)->next = backup;
 	*stack = tmp;
-	ft_printf("finish!!!\n");
 	return 0;
 }
 
