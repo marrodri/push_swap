@@ -12,6 +12,13 @@
 
 #include "push_swap.h"
 
+
+int		check_stack_r(t_list *stack)
+{
+
+}
+
+
 int		check_stack(t_list *stack)
 {
 	int a;

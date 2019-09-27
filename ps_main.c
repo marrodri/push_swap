@@ -26,14 +26,25 @@ int main(int argc, char **argv)
 	t_list	*st_a;
 	t_list	*st_b;
 	t_app	*app;
-
-	init_app(&app);
 	//TODO create an algo that sorts the stack
+
+	st_a = NULL;
+	st_b = NULL;
+	init_app(&app);
+	if(set_int_arr(argv, argc, &app))
+	{
+		set_stack(&st_a, app, app->arr_num);
+		while(!check_stacks(st_a, st_b))
+		{
+			// when sorting, sort and print the instr at the same time
+				//sort_stacks (st_a, st_b, "any ins in str");
+				//print instruct
+		}
+
+	}
+	else
+	{
+
+	}
 	// ft made to use
-	//set_int_arr(argv, argc, &app)
-	//set_stack(st_a, app, app->arr_num);
-	// when sorting, sort and print the instr at the same time
-	//while check_stacks(st_a, st_b) still 0, keep sorting
-		//sort_stacks (st_a, st_b, "any ins in str");
-		//print instruct
 }
