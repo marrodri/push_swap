@@ -45,11 +45,11 @@ int main(int argc, char **argv)
 	t_list	*st_a;
 	t_list	*st_b;
 	t_app	*app;
+	int		i;
 
 	st_a = NULL;
 	st_b = NULL;
 	init_app(&app);
-	int i;
 
 	i = 0;
 	if (argc >= 2)

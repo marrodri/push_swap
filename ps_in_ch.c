@@ -132,7 +132,7 @@ int		set_int_arr(char **argv, int argc, t_app **app)
 			i++;
 		}
 		else
-			return 0;
+			return (0);
 	}
 	(*app)->len_stck = argc - i;
 	stck = (int*)malloc((*app)->len_stck * sizeof(int));

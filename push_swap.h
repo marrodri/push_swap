@@ -56,5 +56,5 @@ void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);
 int				check_instr(char **instr);
 int				set_int_arr(char **argv, int argc, t_app **app);
-void		free_words(char **instr);
+void			free_words(char **instr);
 #endif
