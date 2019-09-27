@@ -75,10 +75,12 @@ int main(int argc, char **argv)
 	}
 	else
 		ft_printf("usage: stdin instruction | ./checker <argument integer [min = 2 args]>\n");
-	free(app->instr);
+	free_words(&app);
 	free(app);
 	free_list(&st_a);
 	free_list(&st_b);
 	sleep(10);
 	return (0);
 }
+
+//IMPORTANT sa, ra, rra, sa input show error

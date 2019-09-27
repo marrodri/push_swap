@@ -45,4 +45,5 @@ void	set_stack(t_list **stack, t_app *app, int *num)
 		add_new_elem(stack, num[i]);
 		i++;
 	}
+	free(app->arr_num);
 }

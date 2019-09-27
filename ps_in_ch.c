@@ -86,31 +86,26 @@ int		check_instr(char **instr)
 
 int		set_instr(int fd, t_app **app)
 {
-	char *buff;
+	char *line;
 	char *str;
 	char *tmp;
 
 	str = ft_strnew(1);
 	(*app)->len_inst = 0;
-	// reads from the stdin the instruction set
-	// each instruction is separated by a new line
-	while (get_next_line(fd, &buff))
+	while (get_next_line(fd, &line))
 	{
-		//get buff, and join to str, the join the newline,
-		ft_printf("line is |%s|\n", buff);
-		tmp = buff;
-		str = ft_strjoin(str, buff);
+		ft_printf("line is |%s|\n", line);
+		// tmp = buff;
+		str = ft_strjoin(str, line);
+		free(line); //added
+		tmp = str; //added
 		str = ft_strjoin(str, "\n");
+		free(tmp); //added
 		(*app)->len_inst++;
-		free(tmp);
 	}
-	//split the string by the newline
 	(*app)->instr = ft_strsplit(str, '\n');
 	if(check_instr((*app)->instr))
 		return (1);
-	//read if there is only sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr
-	// return  0 if unrecognized instruction from stdin, there's no instruction
-	//or badly formatted
 	return (0);
 }
 
