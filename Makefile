@@ -19,7 +19,7 @@ RM = rm -f
 
 SRC = checker_main.c check_stack.c ps_ft.c \
 	ps_in_ch.c ps_listft.c push_ft.c rot_ft.c \
-	sort_stack.c swap_ft.c
+	sort_stack.c swap_ft.c ps_free.c
 
 OBJ = $(SRC:.c=.o)
 

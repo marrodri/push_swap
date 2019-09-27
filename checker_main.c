@@ -75,5 +75,10 @@ int main(int argc, char **argv)
 	}
 	else
 		ft_printf("usage: stdin instruction | ./checker <argument integer [min = 2 args]>\n");
+	free(app->instr);
+	free(app);
+	free_list(&st_a);
+	free_list(&st_b);
+	sleep(10);
 	return (0);
 }

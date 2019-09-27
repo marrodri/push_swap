@@ -88,6 +88,7 @@ int		set_instr(int fd, t_app **app)
 {
 	char *buff;
 	char *str;
+	char *tmp;
 
 	str = ft_strnew(1);
 	(*app)->len_inst = 0;
@@ -97,9 +98,11 @@ int		set_instr(int fd, t_app **app)
 	{
 		//get buff, and join to str, the join the newline,
 		ft_printf("line is |%s|\n", buff);
+		tmp = buff;
 		str = ft_strjoin(str, buff);
 		str = ft_strjoin(str, "\n");
 		(*app)->len_inst++;
+		free(tmp);
 	}
 	//split the string by the newline
 	(*app)->instr = ft_strsplit(str, '\n');

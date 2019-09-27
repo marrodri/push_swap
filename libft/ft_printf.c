@@ -32,6 +32,7 @@ int		var_len(char *str, int *i, va_list args)
 		sum = sum + (ft_strlen(tstr));
 	}
 	free(st_flag);
+	free(tstr);
 	return (sum);
 }
 
