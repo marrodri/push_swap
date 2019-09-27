@@ -48,6 +48,7 @@ int main(int argc, char **argv)
 		if (set_int_arr(argv, argc, &app) && set_instr(0, &app))
 		{
 			set_stack(&st_a, app, app->arr_num);
+			ft_printf("^^^here^^^\n");
 			while (app->instr[i])
 			{
 				sort_stacks(&st_a, &st_b, app->instr[i]);
@@ -75,11 +76,11 @@ int main(int argc, char **argv)
 	}
 	else
 		ft_printf("usage: stdin instruction | ./checker <argument integer [min = 2 args]>\n");
-	free_words(&app);
-	free(app);
-	free_list(&st_a);
-	free_list(&st_b);
-	sleep(10);
+	// free_words(&app);
+	// free(app);
+	// free_list(&st_a);
+	// free_list(&st_b);
+	// sleep(10);
 	return (0);
 }
 

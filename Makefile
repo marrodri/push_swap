@@ -36,7 +36,7 @@ $(LIBFT):
 	@make -C libft
 
 $(NAME1): $(LIBFT) $(OBJ)
-	@gcc $(OBJ) $(LIBFT) -o $(NAME1)
+	@gcc $(OBJ) $(LIBFT) -o $(NAME1) -g
 
 clean:
 	@rm -rf $(OBJ)

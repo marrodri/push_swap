@@ -89,21 +89,26 @@ int		set_instr(int fd, t_app **app)
 	char *line;
 	char *str;
 	char *tmp;
+	char *tmp_l;
 
 	str = ft_strnew(1);
 	(*app)->len_inst = 0;
 	while (get_next_line(fd, &line))
 	{
-		ft_printf("line is |%s|\n", line);
-		// tmp = buff;
+		if((*app)->instr)
+			free(tmp_l);
+		tmp = str;
 		str = ft_strjoin(str, line);
-		free(line); //added
-		tmp = str; //added
-		str = ft_strjoin(str, "\n");
-		free(tmp); //added
+		free(tmp);
+		tmp = str;
+		str = ft_strjoin(tmp, "\n");
+		free(tmp);
 		(*app)->len_inst++;
+		tmp_l = line;
 	}
 	(*app)->instr = ft_strsplit(str, '\n');
+	// free(str);
+	ft_printf("freeing str after split\n");
 	if(check_instr((*app)->instr))
 		return (1);
 	return (0);

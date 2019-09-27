@@ -18,6 +18,8 @@ int	*rot(t_list **stack)
 	t_list	*head;
 	t_list	*tail;
 
+	if(*stack == NULL)
+		return (int*)1;
 	tail = *stack;
 	*stack = (*stack)->next;
 	head = *stack;

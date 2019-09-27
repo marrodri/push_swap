@@ -20,6 +20,9 @@ void		free_list(t_list **list)
 {
 	t_list *tmp;
 
+	if(*list == NULL)
+		return ;
+
 	while (*list)
 	{
 		tmp = (*list)->next;
