@@ -15,10 +15,13 @@
 
 int		check_stack_r(t_list *stack)
 {
-
+	stack = NULL;
+	// TODO check that is sorted by high to low
+	return 0;
 }
 
 
+//checks if its sorted by low to high
 int		check_stack(t_list *stack)
 {
 	int a;
@@ -41,7 +44,7 @@ int		check_stack(t_list *stack)
 	return (1);
 }
 
-int		check_stacks(t_list *stack_a, t_list *stack_b)
+int		check_stacks(t_list *stack_a, t_list *stack_b)	
 {
 	//TODO
 	//as safety add if stack_b is NULL;

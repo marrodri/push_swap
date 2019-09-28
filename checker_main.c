@@ -52,22 +52,22 @@ int main(int argc, char **argv)
 	init_app(&app);
 
 	i = 0;
-	if (argc >= 2)
+	if (argc > 2)
 	{
 		if (set_int_arr(argv, argc, &app) && set_instr(0, &app))
 		{
 			set_stack(&st_a, app, app->arr_num);
-			ft_printf("^^^here^^^\n");
+			// ft_printf("^^^here^^^\n");
 			while (app->instr[i])
 			{
+				ft_printf("int i |%d|\n", i);
 				sort_stacks(&st_a, &st_b, app->instr[i]);
 				i++;
-				ft_printf("int i |%d|\n", i);
 			}
 			ft_printf("showing stack A!!!!!!!\n");
-			print_list(&st_a);
+			// print_list(&st_a);
 			ft_printf("showing STACK B????????\n");
-			print_list(&st_b);
+			// print_list(&st_b);
 			if (check_stacks(st_a, st_b))
 				ft_printf("OK\n");
 			else
@@ -76,20 +76,21 @@ int main(int argc, char **argv)
 		}
 		else
 		{
-			ft_printf("showing stack A!!!!!!!\n");
-			print_list(&st_a);
-			ft_printf("showing STACK B????????\n");
-			print_list(&st_b);
+			// ft_printf("showing stack A!!!!!!!\n");
+			// print_list(&st_a);
+			// ft_printf("showing STACK B????????\n");
+			// print_list(&st_b);
 			ft_printf("Error\n");
 		}
 	}
 	else
-		ft_printf("usage: stdin instruction | ./checker <argument integer [min = 2 args]>\n");
+		ft_printf("usage: stdin instruction | ./checker <integer [min = 2 args]>\n");
 	free_words(app->instr);
+	// free(app->arr_num);
 	free(app);
 	free_list(&st_a);
 	free_list(&st_b);
-	sleep(5);
+	// sleep(5);
 	return (0);
 }
 

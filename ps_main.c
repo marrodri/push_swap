@@ -36,15 +36,13 @@ int main(int argc, char **argv)
 		set_stack(&st_a, app, app->arr_num);
 		while(!check_stacks(st_a, st_b))
 		{
+			//check_first_elem that is the highest(){} ra 
+			//check if the before_last elem is the highest rra
+			// 
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
 				//print instruct
 		}
-
 	}
-	else
-	{
-
-	}
-	// ft made to use
+	return 0;
 }

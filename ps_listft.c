@@ -57,5 +57,5 @@ void	set_stack(t_list **stack, t_app *app, int *num)
 		i++;
 	}
 	ft_printf("finish setting stack\n");
-	free(app->arr_num);
+	// free(app->arr_num);
 }

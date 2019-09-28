@@ -109,7 +109,7 @@ int		set_instr(int fd, t_app **app)
 	(*app)->instr = ft_strsplit(str, '\n');
 	free(str);
 	free(tmp_l);
-	ft_printf("freeing str after split\n");
+	// ft_printf("freeing str after split\n");
 	if(check_instr((*app)->instr))
 		return (1);
 	return (0);
@@ -123,33 +123,36 @@ int		set_int_arr(char **argv, int argc, t_app **app)
 
 	i = 1;
 	j = 0;
-	if (argv[i][0] == '-')
+	if(argc > 2)
 	{
-		//TODO set a flag checker 
-		if (!ft_isdigit(argv[i][1]))
+		if (argv[i][0] == '-')
 		{
-			ft_printf("flag founded, checking flag\n");
-			i++;
+			//TODO set a flag checker 
+			if (!ft_isdigit(argv[i][1]))
+			{
+				ft_printf("flag founded, checking flag\n");
+				i++;
+			}
+			else
+				return (0);
 		}
-		else
-			return (0);
-	}
-	(*app)->len_stck = argc - i;
-	stck = (int*)malloc((*app)->len_stck * sizeof(int));
-	// return 1 if there isn't any duplicate or 
-	// a different character than a number, or goes the limit of int
-	if (check_arg_digit(&argv[i]) && !ft_argvdup(&argv[i]))
-	{
-		ft_printf("all input are passed, setting stack\n");
-		while(argv[i])
+		(*app)->len_stck = argc - i;
+		stck = (int*)malloc((*app)->len_stck * sizeof(int));
+		// return 1 if there isn't any duplicate or 
+		// a different character than a number, or goes the limit of int
+		if (check_arg_digit(&argv[i]) && !ft_argvdup(&argv[i]))
 		{
-			//here when setting check if a num goes beyond int limit, if does return 0;
-			stck[j] = ft_atoi(argv[i]);
-			i++;
-			j++;
+			// ft_printf("all input are passed, setting stack\n");
+			while(argv[i])
+			{
+				//here when setting check if a num goes beyond int limit, if does return 0;
+				stck[j] = ft_atoi(argv[i]);
+				i++;
+				j++;
+			}
+			(*app)->arr_num = stck;
+			return (1);
 		}
-		(*app)->arr_num = stck;
-		return (1);
 	}
 	return (0);
 }
