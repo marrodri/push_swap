@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 		{
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra
-			// 
+			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
 				//print instruct
@@ -46,3 +46,22 @@ int main(int argc, char **argv)
 	}
 	return 0;
 }
+
+
+// 7:19 sun
+// 5:07 mon
+// ------
+// 12:26
+// 1:54 tues
+// ------
+// 14:20
+// 4:59 wed
+// -------
+// 19:19
+// 5:43 thurs
+//--------
+// 25:02
+// 8:46 fri
+// -------
+// 33:48
+// sat

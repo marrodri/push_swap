@@ -57,4 +57,10 @@ int				set_instr(int fd, t_app **app);
 int				check_instr(char **instr);
 int				set_int_arr(char **argv, int argc, t_app **app);
 void			free_words(char **instr);
+
+int				ch_next_hi_elem(t_list *stack);
+int				ch_first_hi_elem(t_list *stack);
+int				ch_last_hi_elem(t_list *stack);
+
+
 #endif
