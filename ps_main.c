@@ -12,6 +12,25 @@
 
 #include "push_swap.h"
 
+void	print_list(t_list **list)
+{
+	t_list *tmp;
+
+	tmp = *list;
+	if (tmp == NULL)
+	{
+		ft_printf("list is NULL\n");
+		return ;
+	}
+	while (tmp)
+	{
+		ft_printf("[%d]->", tmp->elem);
+		tmp = tmp->next;
+		if (!tmp)
+			ft_printf("NULL\n");
+	}
+}
+
 void	init_app(t_app **app)
 {
 	*app = malloc(sizeof(t_app));
@@ -38,30 +57,26 @@ int main(int argc, char **argv)
 		{
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra
+			if (ch_first_hi_elem(st_a))
+			{
+				rot(&st_a);
+				ft_printf("ra\n");
+			}
+			if (!ch_next_hi_elem(st_a))
+			{
+				swap(&st_a);
+				ft_printf("sa\n");
+			}
+			// if(check_stacks(st_a, st_b))
+			// {
+			// 	break;
+			// }
 			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
 				//print instruct
 		}
 	}
-	return 0;
+	print_list(&st_a);
+	return (0);
 }
-
-
-// 7:19 sun
-// 5:07 mon
-// ------
-// 12:26
-// 1:54 tues
-// ------
-// 14:20
-// 4:59 wed
-// -------
-// 19:19
-// 5:43 thurs
-//--------
-// 25:02
-// 8:46 fri
-// -------
-// 33:48
-// sat
