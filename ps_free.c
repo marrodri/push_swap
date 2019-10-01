@@ -4,15 +4,19 @@
 void		free_words(char **instr)
 {
 	int i;
-	char	*tmp;
+
 	i = 0;
-	if(instr == NULL)
+	if(*instr == NULL)
+	{
+		free(instr);
+		ft_printf("instr is NULL\n");
 		return ;
+	}
 	while(instr[i])
 	{
 		// /ft_printf("freeing ins|%s|\n", (*app)->instr[i]);
 		free(instr[i]);
-		tmp = NULL;
+		instr[i] = NULL;
 		i++;
 	}
 	free(instr);

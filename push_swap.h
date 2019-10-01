@@ -41,6 +41,8 @@ typedef struct	s_app
 	int		*arr_num; //change it to long num for overflow
 	int		len_inst;
 	int		len_stck;
+	int		free_av;
+	int		free_line;
 	char	**av;
 }				t_app;
 

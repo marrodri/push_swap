@@ -39,6 +39,7 @@ void	init_app(t_app **app)
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
 	(*app)->len_stck = 0;
+	(*app)->free_av = 0;
 }
 
 int main(int argc, char **argv)
@@ -68,18 +69,19 @@ int main(int argc, char **argv)
 				ft_printf("OK\n");
 			else
 				ft_printf("KO\n");
-			
 		}
 		else
 			ft_printf("Error\n");
 	}
 	else
 		ft_printf("Error\n");
-	// free(app->arr_num);
-	// free_words(app->instr);		
-	// free(app);
-	// free_list(&st_a);
-	// free_list(&st_b);
-	// system("leaks checker");
+	free(app->arr_num);
+	free_words(app->instr);
+	if(app->free_av)
+		free_words(app->av); //doesnt need to free if there's more than 2 args
+	free(app);
+	free_list(&st_a);
+	free_list(&st_b);
+	system("leaks checker");
 	return (0);
 }

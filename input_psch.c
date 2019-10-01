@@ -32,11 +32,7 @@ int		check_arg_digit(char **av)
 
 // int		int_limit(char *str)
 // {
-// 	long int l_int;
-
-// 	// l_int = ft_ato(str, 10);
-// 	if(l_int >= -2147483648 && l_int <= 2147483647)
-// 		return 1;
+// 	//TODO use a strcmp for checking if a num is higher 
 // 	return 0;
 // }
 
@@ -61,29 +57,33 @@ int		set_instr(int fd, t_app **app)
 	char *line;
 	char *str;
 	char *tmp;
-	char *tmp_l;
+	// char *tmp_l;
 
 	str = ft_strnew(1);
+	line = NULL;
 	(*app)->len_inst = 0;
 	ft_printf("here in set_instr!\n");
 	while (get_next_line(fd, &line))
 	{
-		// if ((*app)->instr)
-		// 	free(tmp_l);
 		if(!check_instr(line))
-			return 0;
+			return (0);
 		tmp = str;
 		str = ft_strjoin(str, line);
-		// free(tmp);
+		free(tmp);
+		free(line);
 		tmp = str;
 		str = ft_strjoin(str, "\n");
-		// free(tmp);
+		free(tmp);
 		(*app)->len_inst++;
-		tmp_l = line;
 	}
+	// ft_printf("line p|%p|\n", line);
+	// ft_printf("str p|%p|\n", str);
+	// ft_printf("tmp p|%p|\n", tmp);
+	// ft_printf("tmp_l p|%p|\n", tmp_l);
+	// if(tmp_l)
+		// free(line);
 	(*app)->instr = ft_strsplit(str, '\n');
 	free(str);
-	// free(tmp_l);
 	ft_printf("instruction set!\n");
 	return (1);
 }
@@ -118,6 +118,7 @@ int		check_arg(char **argv, int argc, t_app **app)
 	{
 		(*app)->len_stck = ft_word_count(argv[1], ' ');
 		(*app)->av = ft_strsplit(argv[1], ' ');
+		(*app)->free_av = 1;
 	}
 	else if (argc > 2)
 	{
@@ -125,7 +126,7 @@ int		check_arg(char **argv, int argc, t_app **app)
 		(*app)->av = argv;
 		(*app)->len_stck = argc - i;
 	}
-	if(set_int_arr(app, i))
+	if(set_int_arr(app, i) && argc > 1)
 		return (1);
 	return (0);
 }
