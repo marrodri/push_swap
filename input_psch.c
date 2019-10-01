@@ -1,7 +1,11 @@
 
 #include "push_swap.h"
 
-// check the av if they are all digit, if any other character founded return 0;
+/*
+** check the av if they are all digit,
+** if any other character founded return 0;
+*/
+
 int		check_arg_digit(char **av)
 {
 	int i;
@@ -24,7 +28,11 @@ int		check_arg_digit(char **av)
 	return (1);
 }
 
-//compare between 2 avs, if both avs are same return 1;
+/*
+** compare between 2 avs, 
+** if both avs are same return 1;
+*/
+
 int		ft_argvdup(char **av)
 {
 	int i;
@@ -57,8 +65,6 @@ int		ft_argvdup(char **av)
 // 		return 1;
 // 	return 0;
 // }
-
-
 
 int		check_instr(char **instr)
 {
@@ -109,10 +115,14 @@ int		set_instr(int fd, t_app **app)
 	(*app)->instr = ft_strsplit(str, '\n');
 	free(str);
 	free(tmp_l);
-	// ft_printf("freeing str after split\n");
 	if(check_instr((*app)->instr))
 		return (1);
 	return (0);
+}
+
+int		set_int_arr()
+{
+	
 }
 
 int		set_int_arr(char **argv, int argc, t_app **app)
@@ -121,38 +131,33 @@ int		set_int_arr(char **argv, int argc, t_app **app)
 	int j;
 	int	*stck;
 
-	i = 1;
 	j = 0;
-	if(argc > 2)
+	if(argc == 2)
 	{
-		if (argv[i][0] == '-')
-		{
-			//TODO set a flag checker 
-			if (!ft_isdigit(argv[i][1]))
-			{
-				ft_printf("flag founded, checking flag\n");
-				i++;
-			}
-			else
-				return (0);
-		}
+		i = 0;
+		(*app)->len_stck = ft_word_count(argv[1], ' ');
+		(*app)->av = ft_strsplit(argv[1], ' ');
+		//split the argv 1 to by spaces and 
+	}
+	else if (argc > 2)
+	{
+		i = 1;
+		(*app)->av = argv;
 		(*app)->len_stck = argc - i;
-		stck = (int*)malloc((*app)->len_stck * sizeof(int));
-		// return 1 if there isn't any duplicate or 
-		// a different character than a number, or goes the limit of int
-		if (check_arg_digit(&argv[i]) && !ft_argvdup(&argv[i]))
+		//INSERT HERE A FLAG CHECKER
+	}
+	// (*app)->len_stck = argc - i;
+	stck = (int*)malloc((*app)->len_stck * sizeof(int));
+	if (check_arg_digit(&argv[i]) && !ft_argvdup(&argv[i]))
+	{
+		while(argv[i])
 		{
-			// ft_printf("all input are passed, setting stack\n");
-			while(argv[i])
-			{
-				//here when setting check if a num goes beyond int limit, if does return 0;
-				stck[j] = ft_atoi(argv[i]);
-				i++;
-				j++;
-			}
-			(*app)->arr_num = stck;
-			return (1);
+			stck[j] = ft_atoi(argv[i]);
+			i++;
+			j++;
 		}
+		(*app)->arr_num = stck;
+		return (1);
 	}
 	return (0);
 }

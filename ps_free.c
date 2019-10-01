@@ -38,3 +38,8 @@ void		free_list(t_list **list)
 		*list = tmp;
 	}
 }
+
+// void	free_prog(t_app **app, t_list **st_a, t_list **st_b)
+// {
+
+// }

@@ -25,14 +25,23 @@ typedef	struct	s_flag
 	int		flag[3];
 }				t_flag;
 
+typedef struct  s_sort_fl
+{
+	int		sa;
+	int		sb;
+	int		ra;
+	int		rb;
+	int		rra;
+	int		rrb;
+}				t_sort_fl;
+
 typedef struct	s_app
 {
-	char	**instr;
-	int		*arr_num;
-	int		len_inst;
-	int		len_stck;
-	t_list	*st_a;
-	t_list	*st_b;
+	char		**instr;
+	long int	*arr_num;
+	int			len_inst;
+	int			len_stck;
+	char		**av;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
@@ -48,9 +57,10 @@ int				*rrot_r(t_list **stack_a, t_list **stack_b);
 int				read_instr(int fd, t_app **app);
 int				check_arg(char **argv, t_app **app);
 int				check_stack(t_list *stack);
+int				check_stack_r(t_list *stack);
 int				check_stacks(t_list *stack_a, t_list *stack_b);
 void			sort_stacks(t_list **stack_a, t_list **stack_b, char *instr);
-void			set_stack(t_list **stack, t_app *app, int *num);
+void			set_stack(t_list **stack, t_app *app);
 t_list			*ft_set_node(int num, void *cont, size_t size);
 void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);

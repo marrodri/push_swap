@@ -13,11 +13,26 @@
 #include "push_swap.h"
 
 
+//for stack_b if 0, activate pa
 int		check_stack_r(t_list *stack)
 {
-	stack = NULL;
-	// TODO check that is sorted by high to low
-	return 0;
+	int a;
+	int b;
+	
+	if(stack == NULL)
+		return (0);
+	a = stack->elem; //prev
+	stack = stack->next;
+	while(stack)
+	{
+		// return 0 if stack is not sorted from high to low
+		b = stack->elem; //next
+		if(a > b)
+			return (0);
+		a = stack->elem;
+		stack = stack->next;
+	}
+	return (1);
 }
 
 
@@ -36,7 +51,7 @@ int		check_stack(t_list *stack)
 		// return 0 if stack is not sorted
 		b = stack->elem; //next
 		if(a > b)
-			return 0;
+			return (0);
 		a = stack->elem;
 		stack = stack->next;
 	}

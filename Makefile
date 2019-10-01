@@ -14,12 +14,11 @@ NAME1 = checker
 NAME2 = push_swap
 
 CFLAGS += -Wall -Wextra -Werror
-# CFLAGS += -I ./libft
 RM = rm -f
 
 SRC = checker_main.c check_stack.c ps_ft.c \
-	ps_in_ch.c ps_listft.c push_ft.c rot_ft.c \
-	sort_stack.c swap_ft.c ps_free.c
+	input_psch.c ps_listft.c push_ft.c rot_ft.c \
+	sort_stack_tb.c swap_ft.c ps_free.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -39,6 +38,7 @@ $(NAME1): $(LIBFT) $(OBJ)
 	@gcc $(OBJ) $(LIBFT) -o $(NAME1) -g
 
 clean:
+	@echo "cleaning .o files"
 	@rm -rf $(OBJ)
 	@make -C libft clean
 

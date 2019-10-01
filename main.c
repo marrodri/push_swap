@@ -2,9 +2,11 @@
 
 #include "push_swap.h"
 
-int main()
+#include "stdio.h"
+int main(int argc, char **argv)
 {
-	ft_printf("%d", 20);
-	sleep(10);
+	printf("argc is |%d|\n", argc);
+	printf("first argv is |%s|\n", argv[1]);
+	// sleep(10);
 	return 0;
 }

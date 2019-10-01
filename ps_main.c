@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 	init_app(&app);
 	if(set_int_arr(argv, argc, &app))
 	{
-		set_stack(&st_a, app, app->arr_num);
+		set_stack(&st_a, app);
 		while(!check_stacks(st_a, st_b))
 		{
 			//check_first_elem that is the highest(){} ra 
@@ -62,15 +62,18 @@ int main(int argc, char **argv)
 				rot(&st_a);
 				ft_printf("ra\n");
 			}
+			//rra and rrb when to use
 			if (!ch_next_hi_elem(st_a))
 			{
 				swap(&st_a);
 				ft_printf("sa\n");
 			}
-			// if(check_stacks(st_a, st_b))
-			// {
-			// 	break;
-			// }
+			if(!check_stack(st_a))
+			{
+				push(&st_b, &st_a);
+				ft_printf("pb\n");
+			}
+			
 			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");

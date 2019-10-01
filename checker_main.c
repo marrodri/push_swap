@@ -34,6 +34,7 @@ void	print_list(t_list **list)
 void	init_app(t_app **app)
 {
 	*app = malloc(sizeof(t_app));
+	(*app)->av = NULL;
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
@@ -52,22 +53,18 @@ int main(int argc, char **argv)
 	init_app(&app);
 
 	i = 0;
-	if (argc > 2)
+	if (argc >= 1)
 	{
 		if (set_int_arr(argv, argc, &app) && set_instr(0, &app))
 		{
-			set_stack(&st_a, app, app->arr_num);
-			// ft_printf("^^^here^^^\n");
+			set_stack(&st_a, app);
+			// free(app->arr_num);
 			while (app->instr[i])
 			{
 				ft_printf("int i |%d|\n", i);
 				sort_stacks(&st_a, &st_b, app->instr[i]);
 				i++;
 			}
-			ft_printf("showing stack A!!!!!!!\n");
-			// print_list(&st_a);
-			ft_printf("showing STACK B????????\n");
-			// print_list(&st_b);
 			if (check_stacks(st_a, st_b))
 				ft_printf("OK\n");
 			else
@@ -75,22 +72,15 @@ int main(int argc, char **argv)
 			
 		}
 		else
-		{
-			// ft_printf("showing stack A!!!!!!!\n");
-			// print_list(&st_a);
-			// ft_printf("showing STACK B????????\n");
-			// print_list(&st_b);
 			ft_printf("Error\n");
-		}
+		free_words(app->instr);
+		
+		free(app);
+		free_list(&st_a);
+		free_list(&st_b);
+		// sleep(5);
 	}
-	else
-		ft_printf("usage: stdin instruction | ./checker <integer [min = 2 args]>\n");
-	free_words(app->instr);
-	// free(app->arr_num);
-	free(app);
-	free_list(&st_a);
-	free_list(&st_b);
-	// sleep(5);
+	// system("leaks checker");
 	return (0);
 }
 
