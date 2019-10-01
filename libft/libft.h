@@ -109,4 +109,5 @@ long long int		ft_power_of_lli(long long int n, long long int expo);
 char				*ft_ldtoa(long double ld_num, int prec);
 uint32_t			swap_endian(uint32_t num);
 int					ft_list_size(t_list *list);
+int					ft_check_wrd_dup(char **av);
 #endif

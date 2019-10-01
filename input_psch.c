@@ -28,32 +28,6 @@ int		check_arg_digit(char **av)
 	return (1);
 }
 
-/*
-** compare between 2 avs, 
-** if both avs are same return 1;
-*/
-
-int		ft_argvdup(char **av)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (av[i])
-	{
-		j = 0;
-		while (av[j])
-		{
-			if (i != j && !ft_strcmp(av[i], av[j]))
-				return (1);
-			j++;
-		}
-		i++;
-	}
-	return (0);
-}
-
 // !!!!!! MODIFY FOR CHECKING AN INT BEYOND
 
 // int		int_limit(char *str)
@@ -132,9 +106,9 @@ int		set_int_arr(t_app **app, int i)
 
 	j = 0;
 	stck = (int*)malloc((*app)->len_stck * sizeof(int));
-	if (check_arg_digit(&(*app)->av[i]) && !ft_argvdup(&(*app)->av[i]))
+	if (check_arg_digit(&(*app)->av[i]) && !ft_check_wrd_dup(&(*app)->av[i]))
 	{
-		while((*app)->av[i])
+		while ((*app)->av[i])
 		{
 			stck[j] = ft_atoi((*app)->av[i]);
 			i++;
