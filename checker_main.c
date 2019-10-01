@@ -75,6 +75,7 @@ int main(int argc, char **argv)
 	}
 	else
 		ft_printf("Error\n");
+	free
 	free(app->arr_num);
 	free_words(app->instr);
 	if(app->free_av)

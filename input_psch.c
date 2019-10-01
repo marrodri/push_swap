@@ -114,19 +114,22 @@ int		check_arg(char **argv, int argc, t_app **app)
 	int	i;
 
 	i = 0;
-	if(argc == 2)
+	if(argc > 1)
 	{
-		(*app)->len_stck = ft_word_count(argv[1], ' ');
-		(*app)->av = ft_strsplit(argv[1], ' ');
-		(*app)->free_av = 1;
+		if(argc == 2)
+		{
+			(*app)->len_stck = ft_word_count(argv[1], ' ');
+			(*app)->av = ft_strsplit(argv[1], ' ');
+			(*app)->free_av = 1;
+		}
+		else if (argc > 2)
+		{
+			i = 1;
+			(*app)->av = argv;
+			(*app)->len_stck = argc - i;
+		}
+		if(set_int_arr(app, i))
+			return (1);
 	}
-	else if (argc > 2)
-	{
-		i = 1;
-		(*app)->av = argv;
-		(*app)->len_stck = argc - i;
-	}
-	if(set_int_arr(app, i) && argc > 1)
-		return (1);
 	return (0);
 }
