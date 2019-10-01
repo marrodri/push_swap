@@ -54,11 +54,10 @@ int main(int argc, char **argv)
 	init_app(&app);
 	if (check_arg(argv, argc, &app))
 	{
-		ft_printf("here!\n");
 		if (set_instr(0, &app))
 		{
+			ft_printf("here!\n");
 			set_stack(&st_a, app);
-			// free(app->arr_num);
 			while (app->instr[i])
 			{
 				ft_printf("int i |%d|\n", i);
@@ -71,13 +70,16 @@ int main(int argc, char **argv)
 				ft_printf("KO\n");
 			
 		}
+		else
+			ft_printf("Error\n");
 	}
 	else
 		ft_printf("Error\n");
+	// free(app->arr_num);
 	// free_words(app->instr);		
 	// free(app);
-	free_list(&st_a);
-	free_list(&st_b);
+	// free_list(&st_a);
+	// free_list(&st_b);
 	// system("leaks checker");
 	return (0);
 }

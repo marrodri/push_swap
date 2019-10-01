@@ -74,6 +74,7 @@ int		check_instr(char **instr)
 
 	j = 0;
 	i = 0;
+
 	while (instr[i])
 	{
 		j = 0;
@@ -99,6 +100,7 @@ int		set_instr(int fd, t_app **app)
 
 	str = ft_strnew(1);
 	(*app)->len_inst = 0;
+	ft_printf("here in set_instr!\n");
 	while (get_next_line(fd, &line))
 	{
 		if ((*app)->instr)
@@ -116,7 +118,10 @@ int		set_instr(int fd, t_app **app)
 	free(str);
 	free(tmp_l);
 	if(check_instr((*app)->instr))
+	{
+		ft_printf("after in set_instr!\n");
 		return (1);
+	}
 	return (0);
 }
 
