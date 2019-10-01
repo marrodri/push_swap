@@ -65,7 +65,7 @@ void			set_stack(t_list **stack, t_app *app);
 t_list			*ft_set_node(int num, void *cont, size_t size);
 void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);
-int				check_instr(char **instr);
+int				check_instr(char *instr);
 void			free_words(char **instr);
 
 int				ch_next_hi_elem(t_list *stack);

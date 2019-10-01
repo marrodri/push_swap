@@ -40,29 +40,20 @@ int		check_arg_digit(char **av)
 // 	return 0;
 // }
 
-int		check_instr(char **instr)
+int		check_instr(char *instr)
 {
 	const char *ps_inst[PS_INS_SZ] = PS_INST;
 	int i;
-	int j;
 
-	j = 0;
 	i = 0;
 
-	while (instr[i])
+	while (i < PS_INS_SZ)
 	{
-		j = 0;
-		while (1)
-		{
-			if(j == PS_INS_SZ)
-				return (0);
-			if(!ft_strcmp(instr[i], ps_inst[j]))
-				break;
-			j++;
-		}
+		if(!ft_strcmp(instr, ps_inst[i]))
+			return 1;
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int		set_instr(int fd, t_app **app)
@@ -77,26 +68,24 @@ int		set_instr(int fd, t_app **app)
 	ft_printf("here in set_instr!\n");
 	while (get_next_line(fd, &line))
 	{
-		if ((*app)->instr)
-			free(tmp_l);
+		// if ((*app)->instr)
+		// 	free(tmp_l);
+		if(!check_instr(line))
+			return 0;
 		tmp = str;
 		str = ft_strjoin(str, line);
-		free(tmp);
+		// free(tmp);
 		tmp = str;
 		str = ft_strjoin(str, "\n");
-		free(tmp);
+		// free(tmp);
 		(*app)->len_inst++;
 		tmp_l = line;
 	}
 	(*app)->instr = ft_strsplit(str, '\n');
 	free(str);
-	free(tmp_l);
-	if(check_instr((*app)->instr))
-	{
-		ft_printf("after in set_instr!\n");
-		return (1);
-	}
-	return (0);
+	// free(tmp_l);
+	ft_printf("instruction set!\n");
+	return (1);
 }
 
 int		set_int_arr(t_app **app, int i)
