@@ -104,6 +104,7 @@ int		set_int_arr(t_app **app, int i)
 		(*app)->arr_num = stck;
 		return (1);
 	}
+	free(stck);
 	return (0);
 }
 
