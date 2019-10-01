@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   input_psch.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marrodri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 15:59:53 by marrodri          #+#    #+#             */
+/*   Updated: 2019/10/01 15:59:55 by marrodri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -19,7 +30,7 @@ int		check_arg_digit(char **av)
 			j++;
 		while (av[i][j])
 		{
-			if(!ft_isdigit(av[i][j]))
+			if (!ft_isdigit(av[i][j]))
 				return (0);
 			j++;
 		}
@@ -28,25 +39,16 @@ int		check_arg_digit(char **av)
 	return (1);
 }
 
-// !!!!!! MODIFY FOR CHECKING AN INT BEYOND
-
-// int		int_limit(char *str)
-// {
-// 	//TODO use a strcmp for checking if a num is higher 
-// 	return 0;
-// }
-
 int		check_instr(char *instr)
 {
-	const char *ps_inst[PS_INS_SZ] = PS_INST;
-	int i;
+	const char	*ps_inst[PS_INS_SZ] = PS_INST;
+	int			i;
 
 	i = 0;
-
 	while (i < PS_INS_SZ)
 	{
-		if(!ft_strcmp(instr, ps_inst[i]))
-			return 1;
+		if (!ft_strcmp(instr, ps_inst[i]))
+			return (1);
 		i++;
 	}
 	return (0);
@@ -57,15 +59,11 @@ int		set_instr(int fd, t_app **app)
 	char *line;
 	char *str;
 	char *tmp;
-	// char *tmp_l;
 
 	str = ft_strnew(1);
-	line = NULL;
-	(*app)->len_inst = 0;
-	ft_printf("here in set_instr!\n");
 	while (get_next_line(fd, &line))
 	{
-		if(!check_instr(line))
+		if (!check_instr(line))
 		{
 			free(str);
 			free(line);
@@ -92,7 +90,7 @@ int		set_int_arr(t_app **app, int i)
 
 	j = 0;
 	stck = (int*)malloc((*app)->len_stck * sizeof(int));
-	if (check_arg_digit(&(*app)->av[i]) 
+	if (check_arg_digit(&(*app)->av[i])
 		&& !ft_check_wrd_dup(&(*app)->av[i]))
 	{
 		while ((*app)->av[i])
@@ -113,9 +111,9 @@ int		check_arg(char **argv, int argc, t_app **app)
 	int	i;
 
 	i = 0;
-	if(argc > 1)
+	if (argc > 1)
 	{
-		if(argc == 2)
+		if (argc == 2)
 		{
 			(*app)->len_stck = ft_word_count(argv[1], ' ');
 			(*app)->av = ft_strsplit(argv[1], ' ');
@@ -127,7 +125,7 @@ int		check_arg(char **argv, int argc, t_app **app)
 			(*app)->av = argv;
 			(*app)->len_stck = argc - i;
 		}
-		if(set_int_arr(app, i))
+		if (set_int_arr(app, i))
 			return (1);
 	}
 	return (0);

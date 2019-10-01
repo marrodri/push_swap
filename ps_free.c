@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ps_free.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marrodri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 16:01:14 by marrodri          #+#    #+#             */
+/*   Updated: 2019/10/01 16:01:16 by marrodri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		free_words(char **instr)
+void	free_words(char **instr)
 {
 	int i;
 
@@ -20,7 +31,7 @@ void		free_words(char **instr)
 	free(instr);
 }
 
-void		free_list(t_list **list)
+void	free_list(t_list **list)
 {
 	t_list *tmp;
 

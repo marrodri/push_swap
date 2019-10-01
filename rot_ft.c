@@ -44,10 +44,7 @@ int	*rrot(t_list **stack)
 	t_list	*tail;
 
 	if (*stack == NULL || (*stack)->next == NULL)
-	{
-		ft_printf("stack or next is null\n");
 		return (0);
-	}
 	cur_hd = *stack;
 	while ((*stack)->next)
 	{

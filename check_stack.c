@@ -12,22 +12,19 @@
 
 #include "push_swap.h"
 
-
-//for stack_b if 0, activate pa
 int		check_stack_r(t_list *stack)
 {
 	int a;
 	int b;
-	
-	if(stack == NULL)
+
+	if (stack == NULL)
 		return (0);
-	a = stack->elem; //prev
+	a = stack->elem;
 	stack = stack->next;
-	while(stack)
+	while (stack)
 	{
-		// return 0 if stack is not sorted from high to low
-		b = stack->elem; //next
-		if(a > b)
+		b = stack->elem;
+		if (a > b)
 			return (0);
 		a = stack->elem;
 		stack = stack->next;
@@ -35,39 +32,30 @@ int		check_stack_r(t_list *stack)
 	return (1);
 }
 
-
-//checks if its sorted by low to high
 int		check_stack(t_list *stack)
 {
 	int a;
 	int b;
-	
-	if(stack == NULL)
+
+	if (stack == NULL)
 		return (0);
-	a = stack->elem; //prev
+	a = stack->elem;
 	stack = stack->next;
-	while(stack)
+	while (stack)
 	{
-		// return 0 if stack is not sorted
-		b = stack->elem; //next
-		if(a > b)
+		b = stack->elem;
+		if (a > b)
 			return (0);
 		a = stack->elem;
 		stack = stack->next;
 	}
-	// return 1 if stack has elements and sorted
 	return (1);
 }
 
-int		check_stacks(t_list *stack_a, t_list *stack_b)	
+int		check_stacks(t_list *stack_a, t_list *stack_b)
 {
-	//TODO
-	//as safety add if stack_b is NULL;
-	if(check_stack(stack_a) && !check_stack(stack_b))
-	{
-		//check stack_b if its empty == 0
+	if (check_stack(stack_a) && !check_stack(stack_b))
 		return (1);
-	}
 	else
 		return (0);
 }

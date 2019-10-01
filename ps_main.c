@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 	st_a = NULL;
 	st_b = NULL;
 	init_app(&app);
-	if(set_int_arr(argv, argc, &app))
+	if(check_arg(argv, argc, &app))
 	{
 		set_stack(&st_a, app);
 		while(!check_stacks(st_a, st_b))

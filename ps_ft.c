@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//TODO add the set instructions for sorting algorithm
 #include "push_swap.h"
 
-
+//TODO add the set instructions for sorting algorithm
 //stack a should return 0, stack b should return 1
 int		ch_next_hi_elem(t_list *stack)
 {

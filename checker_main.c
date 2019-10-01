@@ -23,32 +23,36 @@ void	init_app(t_app **app)
 	(*app)->free_av = 0;
 }
 
-int main(int argc, char **argv)
+void	checker(t_list **st_a, t_list **st_b, t_app **app)
+{
+	int i;
+
+	i = 0;
+	set_stack(st_a, *app);
+	while ((*app)->instr[i])
+	{
+		sort_stacks(st_a, st_b, (*app)->instr[i]);
+		i++;
+	}
+	if (check_stacks(*st_a, *st_b))
+		ft_printf("OK\n");
+	else
+		ft_printf("KO\n");
+}
+
+int		main(int argc, char **argv)
 {
 	t_list	*st_a;
 	t_list	*st_b;
 	t_app	*app;
-	int		i;
 
 	st_a = NULL;
 	st_b = NULL;
-	i = 0;
 	init_app(&app);
 	if (check_arg(argv, argc, &app))
 	{
 		if (set_instr(0, &app))
-		{
-			set_stack(&st_a, app);
-			while (app->instr[i])
-			{
-				sort_stacks(&st_a, &st_b, app->instr[i]);
-				i++;
-			}
-			if (check_stacks(st_a, st_b))
-				ft_printf("OK\n");
-			else
-				ft_printf("KO\n");
-		}
+			checker(&st_a, &st_b, &app);
 		else
 			ft_printf("Error\n");
 	}
