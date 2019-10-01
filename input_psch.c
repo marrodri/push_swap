@@ -66,7 +66,11 @@ int		set_instr(int fd, t_app **app)
 	while (get_next_line(fd, &line))
 	{
 		if(!check_instr(line))
+		{
+			free(str);
+			free(line);
 			return (0);
+		}
 		tmp = str;
 		str = ft_strjoin(str, line);
 		free(tmp);
@@ -76,15 +80,8 @@ int		set_instr(int fd, t_app **app)
 		free(tmp);
 		(*app)->len_inst++;
 	}
-	// ft_printf("line p|%p|\n", line);
-	// ft_printf("str p|%p|\n", str);
-	// ft_printf("tmp p|%p|\n", tmp);
-	// ft_printf("tmp_l p|%p|\n", tmp_l);
-	// if(tmp_l)
-		// free(line);
 	(*app)->instr = ft_strsplit(str, '\n');
 	free(str);
-	ft_printf("instruction set!\n");
 	return (1);
 }
 
@@ -95,7 +92,8 @@ int		set_int_arr(t_app **app, int i)
 
 	j = 0;
 	stck = (int*)malloc((*app)->len_stck * sizeof(int));
-	if (check_arg_digit(&(*app)->av[i]) && !ft_check_wrd_dup(&(*app)->av[i]))
+	if (check_arg_digit(&(*app)->av[i]) 
+		&& !ft_check_wrd_dup(&(*app)->av[i]))
 	{
 		while ((*app)->av[i])
 		{

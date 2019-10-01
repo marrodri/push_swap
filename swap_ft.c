@@ -14,15 +14,11 @@
 
 int	*swap(t_list **stack)
 {
-
 	t_list	*tmp;
-	t_list  *backup;
+	t_list	*backup;
 
-	if(*stack == NULL || (*stack)->next == NULL)
-	{
-		ft_printf("stack or next is null\n");
-		return 0;
-	}
+	if (*stack == NULL || (*stack)->next == NULL)
+		return (0);
 	tmp = *stack;
 	*stack = (*stack)->next;
 	backup = (*stack)->next;
@@ -31,12 +27,12 @@ int	*swap(t_list **stack)
 	*stack = (*stack)->next;
 	(*stack)->next = backup;
 	*stack = tmp;
-	return 0;
+	return (0);
 }
 
 int	*swap_s(t_list **stack_a, t_list **stack_b)
 {
- 	swap(stack_a);
+	swap(stack_a);
 	swap(stack_b);
-	return 0;
+	return (0);
 }

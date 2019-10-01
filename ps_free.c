@@ -6,15 +6,13 @@ void		free_words(char **instr)
 	int i;
 
 	i = 0;
-	if(*instr == NULL)
+	if (*instr == NULL)
 	{
 		free(instr);
-		ft_printf("instr is NULL\n");
 		return ;
 	}
-	while(instr[i])
+	while (instr[i])
 	{
-		// /ft_printf("freeing ins|%s|\n", (*app)->instr[i]);
 		free(instr[i]);
 		instr[i] = NULL;
 		i++;
@@ -26,7 +24,7 @@ void		free_list(t_list **list)
 {
 	t_list *tmp;
 
-	if(*list == NULL)
+	if (*list == NULL)
 		return ;
 	while (*list)
 	{
@@ -43,7 +41,15 @@ void		free_list(t_list **list)
 	}
 }
 
-// void	free_prog(t_app **app, t_list **st_a, t_list **st_b)
-// {
-
-// }
+void	free_prog(t_app **app, t_list **st_a, t_list **st_b)
+{
+	if ((*app)->arr_num)
+		free((*app)->arr_num);
+	if ((*app)->instr)
+		free_words((*app)->instr);
+	if ((*app)->free_av)
+		free_words((*app)->av);
+	free(*app);
+	free_list(st_a);
+	free_list(st_b);
+}

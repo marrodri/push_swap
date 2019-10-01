@@ -69,6 +69,7 @@ void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);
 int				check_instr(char *instr);
 void			free_words(char **instr);
+void			free_prog(t_app **app, t_list **st_a, t_list **st_b);
 
 int				ch_next_hi_elem(t_list *stack);
 int				ch_first_hi_elem(t_list *stack);

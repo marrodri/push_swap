@@ -12,25 +12,6 @@
 
 #include "push_swap.h"
 
-void	print_list(t_list **list)
-{
-	t_list *tmp;
-
-	tmp = *list;
-	if (tmp == NULL)
-	{
-		ft_printf("list is NULL\n");
-		return ;
-	}
-	while (tmp)
-	{
-		ft_printf("[%d]->", tmp->elem);
-		tmp = tmp->next;
-		if (!tmp)
-			ft_printf("NULL\n");
-	}
-}
-
 void	init_app(t_app **app)
 {
 	*app = malloc(sizeof(t_app));
@@ -57,11 +38,9 @@ int main(int argc, char **argv)
 	{
 		if (set_instr(0, &app))
 		{
-			ft_printf("here!\n");
 			set_stack(&st_a, app);
 			while (app->instr[i])
 			{
-				ft_printf("int i |%d|\n", i);
 				sort_stacks(&st_a, &st_b, app->instr[i]);
 				i++;
 			}
@@ -75,14 +54,7 @@ int main(int argc, char **argv)
 	}
 	else
 		ft_printf("Error\n");
-	free
-	free(app->arr_num);
-	free_words(app->instr);
-	if(app->free_av)
-		free_words(app->av); //doesnt need to free if there's more than 2 args
-	free(app);
-	free_list(&st_a);
-	free_list(&st_b);
+	free_prog(&app, &st_a, &st_b);
 	system("leaks checker");
 	return (0);
 }
