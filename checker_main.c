@@ -50,12 +50,12 @@ int main(int argc, char **argv)
 
 	st_a = NULL;
 	st_b = NULL;
-	init_app(&app);
-
 	i = 0;
-	if (argc >= 1)
+	init_app(&app);
+	if (check_arg(argv, argc, &app))
 	{
-		if (set_int_arr(argv, argc, &app) && set_instr(0, &app))
+		ft_printf("here!\n");
+		if (set_instr(0, &app))
 		{
 			set_stack(&st_a, app);
 			// free(app->arr_num);
@@ -71,17 +71,13 @@ int main(int argc, char **argv)
 				ft_printf("KO\n");
 			
 		}
-		else
-			ft_printf("Error\n");
-		free_words(app->instr);
-		
-		free(app);
-		free_list(&st_a);
-		free_list(&st_b);
-		// sleep(5);
 	}
+	else
+		ft_printf("Error\n");
+	// free_words(app->instr);		
+	// free(app);
+	free_list(&st_a);
+	free_list(&st_b);
 	// system("leaks checker");
 	return (0);
 }
-
-//IMPORTANT sa, ra, rra, sa input show error

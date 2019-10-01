@@ -120,44 +120,44 @@ int		set_instr(int fd, t_app **app)
 	return (0);
 }
 
-int		set_int_arr()
+int		set_int_arr(t_app **app, int i)
 {
-	
-}
-
-int		set_int_arr(char **argv, int argc, t_app **app)
-{
-	int	i;
 	int j;
-	int	*stck;
+	int *stck;
 
 	j = 0;
-	if(argc == 2)
-	{
-		i = 0;
-		(*app)->len_stck = ft_word_count(argv[1], ' ');
-		(*app)->av = ft_strsplit(argv[1], ' ');
-		//split the argv 1 to by spaces and 
-	}
-	else if (argc > 2)
-	{
-		i = 1;
-		(*app)->av = argv;
-		(*app)->len_stck = argc - i;
-		//INSERT HERE A FLAG CHECKER
-	}
-	// (*app)->len_stck = argc - i;
 	stck = (int*)malloc((*app)->len_stck * sizeof(int));
-	if (check_arg_digit(&argv[i]) && !ft_argvdup(&argv[i]))
+	if (check_arg_digit(&(*app)->av[i]) && !ft_argvdup(&(*app)->av[i]))
 	{
-		while(argv[i])
+		while((*app)->av[i])
 		{
-			stck[j] = ft_atoi(argv[i]);
+			stck[j] = ft_atoi((*app)->av[i]);
 			i++;
 			j++;
 		}
 		(*app)->arr_num = stck;
 		return (1);
 	}
+	return (0);
+}
+
+int		check_arg(char **argv, int argc, t_app **app)
+{
+	int	i;
+
+	i = 0;
+	if(argc == 2)
+	{
+		(*app)->len_stck = ft_word_count(argv[1], ' ');
+		(*app)->av = ft_strsplit(argv[1], ' ');
+	}
+	else if (argc > 2)
+	{
+		i = 1;
+		(*app)->av = argv;
+		(*app)->len_stck = argc - i;
+	}
+	if(set_int_arr(app, i))
+		return (1);
 	return (0);
 }

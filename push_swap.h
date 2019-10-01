@@ -37,11 +37,11 @@ typedef struct  s_sort_fl
 
 typedef struct	s_app
 {
-	char		**instr;
-	long int	*arr_num;
-	int			len_inst;
-	int			len_stck;
-	char		**av;
+	char	**instr;
+	int		*arr_num; //change it to long num for overflow
+	int		len_inst;
+	int		len_stck;
+	char	**av;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
@@ -55,7 +55,8 @@ int				*rot_r(t_list **stack_a, t_list **stack_b);
 int				*rrot(t_list **stack);
 int				*rrot_r(t_list **stack_a, t_list **stack_b);
 int				read_instr(int fd, t_app **app);
-int				check_arg(char **argv, t_app **app);
+int				check_arg(char **argv, int argc, t_app **app);
+int				set_int_arr(t_app **app, int i);
 int				check_stack(t_list *stack);
 int				check_stack_r(t_list *stack);
 int				check_stacks(t_list *stack_a, t_list *stack_b);
@@ -65,7 +66,6 @@ t_list			*ft_set_node(int num, void *cont, size_t size);
 void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);
 int				check_instr(char **instr);
-int				set_int_arr(char **argv, int argc, t_app **app);
 void			free_words(char **instr);
 
 int				ch_next_hi_elem(t_list *stack);
