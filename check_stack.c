@@ -19,12 +19,12 @@ int		check_stack_r(t_list *stack)
 
 	if (stack == NULL)
 		return (0);
-	a = stack->elem;
+	a = stack->elem; //prev
 	stack = stack->next;
 	while (stack)
 	{
 		b = stack->elem;
-		if (a > b)
+		if (a < b)
 			return (0);
 		a = stack->elem;
 		stack = stack->next;
@@ -54,7 +54,7 @@ int		check_stack(t_list *stack)
 
 int		check_stacks(t_list *stack_a, t_list *stack_b)
 {
-	if (check_stack(stack_a) && !check_stack(stack_b))
+	if (check_stack(stack_a) && stack_b == NULL)
 		return (1);
 	else
 		return (0);

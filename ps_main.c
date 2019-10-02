@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	print_list(t_list **list)
+void	print_stack(t_list **list)
 {
 	t_list *tmp;
 
@@ -53,8 +53,9 @@ int main(int argc, char **argv)
 	if(check_arg(argv, argc, &app))
 	{
 		set_stack(&st_a, app);
-		while(!check_stacks(st_a, st_b))
+		while (!check_stacks(st_a, st_b))
 		{
+			
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra
 			if (ch_first_hi_elem(st_a))
@@ -63,23 +64,32 @@ int main(int argc, char **argv)
 				ft_printf("ra\n");
 			}
 			//rra and rrb when to use
-			if (!ch_next_hi_elem(st_a))
+			else if (!ch_next_hi_elem(st_a))
 			{
 				swap(&st_a);
 				ft_printf("sa\n");
 			}
-			if(!check_stack(st_a))
+			else if (!check_stack(st_a))
 			{
 				push(&st_b, &st_a);
 				ft_printf("pb\n");
 			}
-			
+			else if (check_stack_r(st_b))
+			{
+				push(&st_a, &st_b);
+				ft_printf("pa\n");
+			}
+			// ft_printf("printing stack a\n");
+			// print_stack(&st_a);
+			// ft_printf("printing stack b\n");
+			// print_stack(&st_b);
 			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
 				//print instruct
 		}
 	}
-	print_list(&st_a);
+	// ft_printf("stack is sorted\n");
+	// print_stack(&st_a);
 	return (0);
 }

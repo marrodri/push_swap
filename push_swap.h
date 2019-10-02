@@ -25,7 +25,7 @@ typedef	struct	s_flag
 	int		flag[3];
 }				t_flag;
 
-typedef struct  s_sort_fl
+typedef struct	s_sort_fl
 {
 	int		sa;
 	int		sb;
@@ -38,12 +38,11 @@ typedef struct  s_sort_fl
 typedef struct	s_app
 {
 	char	**instr;
-	int		*arr_num; //change it to long num for overflow
+	char	**av;
+	int		*arr_num;
 	int		len_inst;
 	int		len_stck;
 	int		free_av;
-	int		free_line;
-	char	**av;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
@@ -70,10 +69,10 @@ int				set_instr(int fd, t_app **app);
 int				check_instr(char *instr);
 void			free_words(char **instr);
 void			free_prog(t_app **app, t_list **st_a, t_list **st_b);
-
 int				ch_next_hi_elem(t_list *stack);
 int				ch_first_hi_elem(t_list *stack);
 int				ch_last_hi_elem(t_list *stack);
+void			set_ft(t_sort_fl **sort_fl, t_list *st_a, t_list *st_b);
 
-
+void	print_stack(t_list **list);
 #endif
