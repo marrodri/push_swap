@@ -12,7 +12,9 @@
 
 #include "push_swap.h"
 
-void		
+void	sort_sta(){}
+
+void	sort_stb(){}
 
 void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 {

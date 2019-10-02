@@ -72,6 +72,8 @@ int				ch_next_hi_elem(t_list *stack);
 int				ch_first_hi_elem(t_list *stack);
 int				ch_last_hi_elem(t_list *stack);
 void			set_ft(t_app **app, t_list *st_a, t_list *st_b);
+int				ch_first_low_elem(t_list *stack);
+int				ch_last_low_elem(t_list *stack);
 
 void	print_stack(t_list **list);
 #endif

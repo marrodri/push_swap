@@ -70,25 +70,38 @@ int main(int argc, char **argv)
 			
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra
+			if(ch_last_low_elem(st_a))
+			{
+				rrot(&st_a);
+				ft_printf("rra\n");
+			}
+			else if(ch_first_low_elem(st_b))
+			{
+				rot(&st_b);
+				ft_printf("rb\n");
+			}
+			else if (ch_last_hi_elem(st_b))
+			{
+				rrot(&st_b);
+				// ft_printf("the last element is the highest\n");
+				ft_printf("rrb\n");
+				return 0;
+			}
 
-			if (ch_first_hi_elem(st_a))
+			else if (ch_first_hi_elem(st_a))
 			{
 				rot(&st_a);
 				ft_printf("ra\n");
 			}
 			//rra and rrb when to use
-			if (ch_last_hi_elem(st_b))
-			{
-				rot(&st_b);
-				ft_printf("the last element is the highest\n");
-				return 0;
-			}
 
 			else if (!ch_next_hi_elem(st_a))
 			{
 				swap(&st_a);
 				ft_printf("sa\n");
 			}
+
+
 			else if (!check_stack(st_a))
 			{
 				push(&st_b, &st_a);
@@ -109,8 +122,8 @@ int main(int argc, char **argv)
 				//print instruct
 		}
 	}
-	// ft_printf("stack is sorted\n");
-	// print_stack(&st_a);
+	ft_printf("stack is sorted\n");
+	print_stack(&st_a);
 	return (0);
 }
 
