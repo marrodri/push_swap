@@ -66,9 +66,20 @@ int		ch_last_hi_elem(t_list *stack)
 	tmp = head;
 	while(tmp)
 	{
+		ft_printf("tmp elem is |%d|\n", tmp->elem);
 		if(tmp->elem > high_elem)
 			return (0);
 		tmp = tmp->next;
 	}
 	return (1);
+}
+
+int		ch_first_low_elem(t_list *stack)
+{
+	
+}
+
+int		ch_last_low_elem(t_list *stack)
+{
+	
 }

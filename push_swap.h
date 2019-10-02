@@ -14,9 +14,10 @@
 # define PUSH_SWAP_H
 # define PS_FLAG { 'v', 'g', 'f'}
 # define PS_INST { "sa", "ra", "rra", "sb", "rb", "rrb", "ss" , "rr", "rrr", "pa", "pb"}
-# define SRT_INST {"sa", "ra", "rra", "sb", "rb", "rrb"}
+# define SRT_INST {"sa", "ra", "rra", "pb", "sb", "rb", "rrb", "pa"}
 # define PS_INST_BOTH {"ss" ,"rr", "rrr"}
 # define PS_INS_SZ 11
+
 # define PS_INSB_SZ 5
 # define PS_FL_SZ 3
 # define SORT_FT_SZ 8
@@ -28,21 +29,13 @@ typedef	struct	s_flag
 	int		flag[3];
 }				t_flag;
 
-typedef struct	s_sort_fl
-{
-	int		sort_ft_flag[8];
-	// int		sa;
-	// int		ra;
-	// int		rra;
-	// int		sb;
-	// int		rb;
-	// int		rrb;
-	// int		pa;
-	// int		pb;
-}				t_sort_fl;
+	//if flag[0] and flag[4] are 1 active ss
+	// if flag[1] and flag[5] are 1 activate rr
+	// if flag[2] ans flag[6] are 1 activate rrr
 
 typedef struct	s_app
 {
+	int		sort_ft_flag[8];
 	char	**instr;
 	char	**av;
 	int		*arr_num;
@@ -78,7 +71,7 @@ void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 int				ch_next_hi_elem(t_list *stack);
 int				ch_first_hi_elem(t_list *stack);
 int				ch_last_hi_elem(t_list *stack);
-void			set_ft(t_sort_fl **sort_fl, t_list *st_a, t_list *st_b);
+void			set_ft(t_app **app, t_list *st_a, t_list *st_b);
 
 void	print_stack(t_list **list);
 #endif

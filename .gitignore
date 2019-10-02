@@ -2,3 +2,5 @@ test_ft.c
 junk_file
 *.dSYM
 .vscode
+checker
+a.out

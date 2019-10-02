@@ -12,18 +12,32 @@
 
 #include "push_swap.h"
 
-void	set_sort_ft(t_sort_fl **sort_fl, t_list *st_a, t_list *st_b)
+void		
+
+void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 {
+	//set a special algo for ra, rb,
 	if (ch_first_hi_elem(st_a))
 	{
-		(*sort_fl)->ra = 1;
+		(*app)->sort_ft_flag[1] = 1;
 		// rot(&st_a);
 		// ft_printf("ra\n");
 	}
+	// rra, rrb
+
+
+	//for sa, sb, if both are 1 active, ss
 	if (!ch_next_hi_elem(st_a))
 	{
-		(*sort_fl)->sa = 1;
+		(*app)->sort_ft_flag[0] = 1;
 		// swap(&st_a);
 		// ft_printf("sa\n");
 	}
+	if (ch_next_hi_elem(st_b))
+	{
+		(*app)->sort_ft_flag[4] = 1;
+		// swap(&st_b);
+		// ft_printf("sb\n");
+	}
+	//if all are 0, activate pa or pb,
 }

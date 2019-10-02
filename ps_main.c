@@ -31,20 +31,19 @@ void	print_stack(t_list **list)
 	}
 }
 
-void	init_ps(t_app **app, t_sort_fl **sort_fl)
+void	init_ps(t_app **app)
 {
 	int i;
 
 	i = 0;
 	*app = malloc(sizeof(t_app));
-	*sort_fl = malloc(sizeof(t_sort_fl));
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
 	(*app)->len_stck = 0;
 	while (i < SORT_FT_SZ)
 	{
-		(*sort_fl)->sort_ft_flag[i] = 0;
+		(*app)->sort_ft_flag[i] = 0;
 		i++;
 	}
 }
@@ -54,26 +53,37 @@ int main(int argc, char **argv)
 	t_list		*st_a;
 	t_list		*st_b;
 	t_app		*app;
-	t_sort_fl	*sort_fl;
 	//TODO create an algo that sorts the stack
 
 	st_a = NULL;
 	st_b = NULL;
-	init_ps(&app, &sort_fl);
-	if(check_arg(argv, argc, &app))
+	init_ps(&app);
+	if (check_arg(argv, argc, &app))
 	{
 		set_stack(&st_a, app);
 		while (!check_stacks(st_a, st_b))
 		{
+			//TODO create a function that sets 1 to which instructions to use
+
+			//TODO move all instructions to another function that sorts based
+			//from the 1s in the sort_ft_flag, and run a dispatch table
 			
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra
+
 			if (ch_first_hi_elem(st_a))
 			{
 				rot(&st_a);
 				ft_printf("ra\n");
 			}
 			//rra and rrb when to use
+			if (ch_last_hi_elem(st_b))
+			{
+				rot(&st_b);
+				ft_printf("the last element is the highest\n");
+				return 0;
+			}
+
 			else if (!ch_next_hi_elem(st_a))
 			{
 				swap(&st_a);
@@ -103,3 +113,11 @@ int main(int argc, char **argv)
 	// print_stack(&st_a);
 	return (0);
 }
+
+//mon 8:44
+//tues 6:07
+//_-------
+// 14:51
+// 2:20 wed
+// ---------
+// 17:11
