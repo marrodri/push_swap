@@ -52,7 +52,7 @@ void	free_list(t_list **list)
 	}
 }
 
-void	free_prog(t_app **app, t_list **st_a, t_list **st_b)
+void	free_checker(t_app **app, t_list **st_a, t_list **st_b)
 {
 	if ((*app)->arr_num)
 		free((*app)->arr_num);

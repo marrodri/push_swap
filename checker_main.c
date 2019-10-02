@@ -58,7 +58,7 @@ int		main(int argc, char **argv)
 	}
 	else
 		ft_printf("Error\n");
-	free_prog(&app, &st_a, &st_b);
+	free_checker(&app, &st_a, &st_b);
 	system("leaks checker");
 	return (0);
 }

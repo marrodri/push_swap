@@ -14,9 +14,12 @@
 # define PUSH_SWAP_H
 # define PS_FLAG { 'v', 'g', 'f'}
 # define PS_INST { "sa", "ra", "rra", "sb", "rb", "rrb", "ss" , "rr", "rrr", "pa", "pb"}
+# define SRT_INST {"sa", "ra", "rra", "sb", "rb", "rrb"}
+# define PS_INST_BOTH {"ss" ,"rr", "rrr"}
 # define PS_INS_SZ 11
 # define PS_INSB_SZ 5
 # define PS_FL_SZ 3
+# define SORT_FT_SZ 8
 # include "./libft/libft.h"
 # include "./libft/ft_printf.h"
 
@@ -27,12 +30,15 @@ typedef	struct	s_flag
 
 typedef struct	s_sort_fl
 {
-	int		sa;
-	int		sb;
-	int		ra;
-	int		rb;
-	int		rra;
-	int		rrb;
+	int		sort_ft_flag[8];
+	// int		sa;
+	// int		ra;
+	// int		rra;
+	// int		sb;
+	// int		rb;
+	// int		rrb;
+	// int		pa;
+	// int		pb;
 }				t_sort_fl;
 
 typedef struct	s_app
@@ -68,7 +74,7 @@ void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);
 int				check_instr(char *instr);
 void			free_words(char **instr);
-void			free_prog(t_app **app, t_list **st_a, t_list **st_b);
+void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 int				ch_next_hi_elem(t_list *stack);
 int				ch_first_hi_elem(t_list *stack);
 int				ch_last_hi_elem(t_list *stack);

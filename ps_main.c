@@ -31,25 +31,35 @@ void	print_stack(t_list **list)
 	}
 }
 
-void	init_app(t_app **app)
+void	init_ps(t_app **app, t_sort_fl **sort_fl)
 {
+	int i;
+
+	i = 0;
 	*app = malloc(sizeof(t_app));
+	*sort_fl = malloc(sizeof(t_sort_fl));
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
 	(*app)->len_stck = 0;
+	while (i < SORT_FT_SZ)
+	{
+		(*sort_fl)->sort_ft_flag[i] = 0;
+		i++;
+	}
 }
 
 int main(int argc, char **argv)
 {
-	t_list	*st_a;
-	t_list	*st_b;
-	t_app	*app;
+	t_list		*st_a;
+	t_list		*st_b;
+	t_app		*app;
+	t_sort_fl	*sort_fl;
 	//TODO create an algo that sorts the stack
 
 	st_a = NULL;
 	st_b = NULL;
-	init_app(&app);
+	init_ps(&app, &sort_fl);
 	if(check_arg(argv, argc, &app))
 	{
 		set_stack(&st_a, app);
