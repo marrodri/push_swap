@@ -42,6 +42,7 @@ typedef struct	s_app
 	int		len_inst;
 	int		len_stck;
 	int		free_av;
+	int		instr_count;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);

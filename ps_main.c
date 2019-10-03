@@ -46,6 +46,7 @@ void	init_ps(t_app **app)
 		(*app)->sort_ft_flag[i] = 0;
 		i++;
 	}
+	(*app)->instr_count = 0;
 }
 
 int main(int argc, char **argv)
@@ -74,24 +75,27 @@ int main(int argc, char **argv)
 			{
 				rrot(&st_a);
 				ft_printf("rra\n");
+				app->instr_count++;
 			}
 			else if(ch_first_low_elem(st_b))
 			{
 				rot(&st_b);
 				ft_printf("rb\n");
+				app->instr_count++;
 			}
 			else if (ch_last_hi_elem(st_b))
 			{
 				rrot(&st_b);
 				// ft_printf("the last element is the highest\n");
 				ft_printf("rrb\n");
-				return 0;
+				app->instr_count++;
 			}
 
 			else if (ch_first_hi_elem(st_a))
 			{
 				rot(&st_a);
 				ft_printf("ra\n");
+				app->instr_count++;
 			}
 			//rra and rrb when to use
 
@@ -99,6 +103,7 @@ int main(int argc, char **argv)
 			{
 				swap(&st_a);
 				ft_printf("sa\n");
+				app->instr_count++;
 			}
 
 
@@ -106,11 +111,13 @@ int main(int argc, char **argv)
 			{
 				push(&st_b, &st_a);
 				ft_printf("pb\n");
+				app->instr_count++;
 			}
 			else if (check_stack_r(st_b))
 			{
 				push(&st_a, &st_b);
 				ft_printf("pa\n");
+				app->instr_count++;
 			}
 			// ft_printf("printing stack a\n");
 			// print_stack(&st_a);
@@ -120,6 +127,7 @@ int main(int argc, char **argv)
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
 				//print instruct
+		ft_printf("intructions used |%d|\n", app->instr_count);
 		}
 	}
 	ft_printf("stack is sorted\n");
