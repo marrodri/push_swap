@@ -41,6 +41,7 @@ void	init_ps(t_app **app)
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
 	(*app)->len_stck = 0;
+	(*app)->len_stck_b = 0;
 	while (i < SORT_FT_SZ)
 	{
 		(*app)->sort_ft_flag[i] = 0;
@@ -64,20 +65,23 @@ int main(int argc, char **argv)
 		set_stack(&st_a, app);
 		while (!check_stacks(st_a, st_b))
 		{
-			//TODO create a function that sets 1 to which instructions to use
+			app->len_stck = ft_list_size(st_a);
+			app->len_stck_b = ft_list_size(st_b);
+			//TODO create a function that sets 1 to which instructions to use 
+			// set_sort_ft(&app, st_a, st_b);
 
-			//TODO move all instructions to another function that sorts based
-			//from the 1s in the sort_ft_flag, and run a dispatch table
-			
+			//TODO move all instructions to another function that sorts based 
+			//from the 1s in the sort_ft_flag, and run a dispatch table 
+
 			//check_first_elem that is the highest(){} ra 
-			//check if the before_last elem is the highest rra
-			if(ch_last_low_elem(st_a))
+			//check if the before_last elem is the highest rra 
+			if (ch_last_low_elem(st_a))
 			{
 				rrot(&st_a);
 				ft_printf("rra\n");
 				app->instr_count++;
 			}
-			else if(ch_first_low_elem(st_b))
+			else if (ch_first_low_elem(st_b))
 			{
 				rot(&st_b);
 				ft_printf("rb\n");
@@ -86,11 +90,9 @@ int main(int argc, char **argv)
 			else if (ch_last_hi_elem(st_b))
 			{
 				rrot(&st_b);
-				// ft_printf("the last element is the highest\n");
 				ft_printf("rrb\n");
 				app->instr_count++;
 			}
-
 			else if (ch_first_hi_elem(st_a))
 			{
 				rot(&st_a);
@@ -98,15 +100,18 @@ int main(int argc, char **argv)
 				app->instr_count++;
 			}
 			//rra and rrb when to use
-
 			else if (!ch_next_hi_elem(st_a))
 			{
 				swap(&st_a);
 				ft_printf("sa\n");
 				app->instr_count++;
 			}
-
-
+			else if (ch_next_hi_elem(st_b))
+			{
+				// (*app)->sort_ft_flag[4] = 1;
+				swap(&st_b);
+				ft_printf("sb\n");
+			}
 			else if (!check_stack(st_a))
 			{
 				push(&st_b, &st_a);
@@ -139,6 +144,6 @@ int main(int argc, char **argv)
 //tues 6:07
 //_-------
 // 14:51
-// 2:20 wed
+// 4:43 wed
 // ---------
-// 17:11
+// 19:34

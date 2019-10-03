@@ -41,6 +41,7 @@ typedef struct	s_app
 	int		*arr_num;
 	int		len_inst;
 	int		len_stck;
+	int		len_stck_b;
 	int		free_av;
 	int		instr_count;
 }				t_app;

@@ -18,7 +18,29 @@ void	sort_stb(){}
 
 void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 {
+	// rra, rrb
+	if (ch_last_low_elem(st_a))
+	{
+		rrot(&st_a);
+		ft_printf("rra\n");
+		(*app)->instr_count++;
+	}
+	else if (ch_last_hi_elem(st_b))
+	{
+		rrot(&st_b);
+		ft_printf("rrb\n");
+		(*app)->instr_count++;
+	}
+
+	//rb, ra
 	//set a special algo for ra, rb,
+	else if (ch_first_low_elem(st_b))
+	{
+		rot(&st_b);
+		ft_printf("rb\n");
+		(*app)->instr_count++;
+	}
+	
 	if (ch_first_hi_elem(st_a))
 	{
 		(*app)->sort_ft_flag[1] = 1;
@@ -41,5 +63,6 @@ void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 		// swap(&st_b);
 		// ft_printf("sb\n");
 	}
+
 	//if all are 0, activate pa or pb,
 }
