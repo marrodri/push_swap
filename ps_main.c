@@ -118,16 +118,25 @@ int main(int argc, char **argv)
 				ft_printf("pb\n");
 				app->instr_count++;
 			}
-			else if (check_stack_r(st_b))
+			else if (!check_stack_r(st_b))
 			{
 				push(&st_a, &st_b);
 				ft_printf("pa\n");
 				app->instr_count++;
 			}
-			// ft_printf("printing stack a\n");
-			// print_stack(&st_a);
-			// ft_printf("printing stack b\n");
-			// print_stack(&st_b);
+			ft_printf("printing stack a\n");
+			print_stack(&st_a);
+			ft_printf("printing stack b\n");
+			print_stack(&st_b);
+			if(check_stack(st_a) && check_stack_r(st_b))
+			{
+				while(check_stack_r(st_b))
+				{
+					push(&st_a, &st_b);
+					app->instr_count++;
+					ft_printf("pa\n");
+				}
+			}
 			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
@@ -144,6 +153,6 @@ int main(int argc, char **argv)
 //tues 6:07
 //_-------
 // 14:51
-// 4:43 wed
+// 6:17 wed
 // ---------
-// 19:34
+// 21:08
