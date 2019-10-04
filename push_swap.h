@@ -44,10 +44,20 @@ typedef struct	s_app
 	int		instr_count;
 }				t_app;
 
+typedef	void	t_sort_both_ft(t_list **st_a, t_list **st_b);
 typedef int		*t_sort(t_list **stack);
-typedef int		*t_stack_ft(t_list *stack);
+typedef int		t_stack_ft(t_list *stack);
 typedef int		*t_sort_both(t_list **stack_a, t_list **stack_b);
 int				*swap(t_list **stack);
+void			sa(t_list **st_a);
+void			ra(t_list **st_a);
+void			rra(t_list **st_a);
+void			sb(t_list **st_b);
+void			rb(t_list **st_b);
+void			rrb(t_list **st_b);
+int				rr(t_list **st_a, t_list **st_b);
+int				rrr(t_list **st_a, t_list **st_b);
+int				ss(t_list **st_a, t_list **st_b);
 void			free_list(t_list **list);
 int				*swap_s(t_list **stack_a, t_list **stack_b);
 void			push(t_list **stack_a, t_list **stack_b);
@@ -79,6 +89,4 @@ int				ch_last_low_elem(t_list *stack);
 
 
 void	print_stack(t_list **list);
-int		ft_arriszero(int *num, int size);
-
 #endif

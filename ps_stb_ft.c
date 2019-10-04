@@ -7,10 +7,7 @@ int		ch_next_hi_elem(t_list *stack)
 	int		prev_elem;
 
 	if (stack == NULL || stack->next == NULL)
-	{
-		ft_printf("stack is null\n");
 		return (0);
-	}
 	tmp = stack;
 	prev_elem = tmp->elem;
 	tmp = tmp->next;
@@ -35,7 +32,6 @@ int		ch_last_hi_elem(t_list *stack)
 	tmp = head;
 	while (tmp)
 	{
-		// ft_printf("tmp elem is |%d|\n", tmp->elem);
 		if(tmp->elem > high_elem)
 			return (0);
 		tmp = tmp->next;

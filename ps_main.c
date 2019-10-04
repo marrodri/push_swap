@@ -125,10 +125,10 @@ int main(int argc, char **argv)
 				ft_printf("pa\n");
 				app->instr_count++;
 			}
-			ft_printf("printing stack a\n");
-			print_stack(&st_a);
-			ft_printf("printing stack b\n");
-			print_stack(&st_b);
+			// ft_printf("printing stack a\n");
+			// print_stack(&st_a);
+			// ft_printf("printing stack b\n");
+			// print_stack(&st_b);
 			if (check_stack(st_a) && check_stack_r(st_b))
 			{
 				while(check_stack_r(st_b))
@@ -142,10 +142,10 @@ int main(int argc, char **argv)
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
 				//print instruct
-		ft_printf("intructions used |%d|\n", app->instr_count);
 		}
 	}
-	ft_printf("stack is sorted\n");
+	ft_printf("intructions used |%d|\n", app->instr_count);
+	// ft_printf("stack is sorted\n");
 	print_stack(&st_a);
 	return (0);
 }
@@ -157,3 +157,6 @@ int main(int argc, char **argv)
 // 6:17 wed
 // ---------
 // 21:08
+// 5:41 thurs
+//  ------
+// 26:49

@@ -18,15 +18,16 @@ void	sort_stb(t_app **app, t_list *st_b)
 	int			i;
 
 	i = 0;
-	stb_ft[0] = ch_next_hi_elem;
-	stb_ft[1] = ch_first_low_elem;
-	stb_ft[2] = ch_last_hi_elem;
-	while (i < 3)
+	stb_ft[0] = ch_first_low_elem; //rb
+	stb_ft[1] = ch_last_hi_elem; //rrb
+	stb_ft[2] = ch_next_hi_elem; //sb
+	while (i < 3 && ft_arriszero((*app)->sort_stb_flag, 3))
 	{
 		(*app)->sort_stb_flag[i] = stb_ft[i](st_b);
 		i++;
 	}
-	if (ft_arriszero((*app)->sort_stb_flag, 3))
+	if (ft_arriszero((*app)->sort_stb_flag, 3) &&
+		ft_arriszero((*app)->sort_sta_flag, 4))
 		(*app)->sort_stb_flag[3] = 1;
 }
 
@@ -36,15 +37,16 @@ void	sort_sta(t_app **app, t_list *st_a)
 	int			i;
 
 	i = 0;
-	sta_ft[0] = ch_next_low_elem;
-	sta_ft[1] = ch_first_hi_elem;
-	sta_ft[2] = ch_last_low_elem;
-	while (i < 3)
+	sta_ft[0] = ch_first_hi_elem; //ra
+	sta_ft[1] = ch_last_low_elem; //rra
+	sta_ft[2] = ch_next_low_elem; //sa
+	while (i < 3 && ft_arriszero((*app)->sort_sta_flag, 3))
 	{
 		(*app)->sort_sta_flag[i] = sta_ft[i](st_a);
 		i++;
 	}
-	if (ft_arriszero((*app)->sort_sta_flag, 3))
+	if (ft_arriszero((*app)->sort_sta_flag, 3) 
+		&& ft_arriszero((*app)->sort_stb_flag, 4))
 		(*app)->sort_sta_flag[3] = 1;
 }
 
