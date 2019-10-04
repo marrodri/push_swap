@@ -16,9 +16,9 @@ NAME2 = push_swap
 CFLAGS += -Wall -Wextra -Werror
 RM = rm -f
 
-SRC = checker_main.c check_stack.c ps_ft.c \
-	input_psch.c ps_listft.c push_ft.c rot_ft.c \
-	sort_stack_tb.c swap_ft.c ps_free.c
+SRC = checker_main.c check_stack.c  \
+	psch_input.c psch_listft.c push_ft.c rot_ft.c \
+	sort_stack_tb.c swap_ft.c psch_free.c \
 
 OBJ = $(SRC:.c=.o)
 
