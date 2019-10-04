@@ -42,9 +42,10 @@ void	init_ps(t_app **app)
 	(*app)->len_inst = 0;
 	(*app)->len_stck = 0;
 	(*app)->len_stck_b = 0;
-	while (i < SORT_FT_SZ)
+	while (i < 3)
 	{
-		(*app)->sort_ft_flag[i] = 0;
+		(*app)->sort_sta_flag[i] = 0;
+		(*app)->sort_stb_flag[i] = 0;
 		i++;
 	}
 	(*app)->instr_count = 0;
