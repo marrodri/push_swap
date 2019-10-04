@@ -15,9 +15,10 @@
 # define PS_FLAG { 'v', 'g', 'f'}
 # define PS_INST { "sa", "ra", "rra", "sb", "rb", "rrb", "ss" , "rr", "rrr", "pa", "pb"}
 # define SRT_INST {"sa", "ra", "rra", "pb", "sb", "rb", "rrb", "pa"}
-# define PS_INST_BOTH {"ss" ,"rr", "rrr"}
+// # define PS_STA {"sa", "ra", "rra"}
+// # define PS_STB {"sb", "rb", "rrb"}
+# define PS_INST_BOTH {"ss", "rr", "rrr"}
 # define PS_INS_SZ 11
-
 # define PS_INSB_SZ 5
 # define PS_FL_SZ 3
 # define SORT_FT_SZ 8
@@ -29,14 +30,10 @@ typedef	struct	s_flag
 	int		flag[3];
 }				t_flag;
 
-	//if flag[0] and flag[4] are 1 active ss
-	// if flag[1] and flag[5] are 1 activate rr
-	// if flag[2] ans flag[6] are 1 activate rrr
-
 typedef struct	s_app
 {
-	int		sort_sta_flag[3];
-	int		sort_stb_flag[3];
+	int		sort_sta_flag[4];
+	int		sort_stb_flag[4];
 	char	**instr;
 	char	**av;
 	int		*arr_num;
@@ -48,10 +45,7 @@ typedef struct	s_app
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
-
-
 typedef int		*t_stack_ft(t_list *stack);
-
 typedef int		*t_sort_both(t_list **stack_a, t_list **stack_b);
 int				*swap(t_list **stack);
 void			free_list(t_list **list);

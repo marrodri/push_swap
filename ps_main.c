@@ -42,7 +42,7 @@ void	init_ps(t_app **app)
 	(*app)->len_inst = 0;
 	(*app)->len_stck = 0;
 	(*app)->len_stck_b = 0;
-	while (i < 3)
+	while (i < 4)
 	{
 		(*app)->sort_sta_flag[i] = 0;
 		(*app)->sort_stb_flag[i] = 0;
