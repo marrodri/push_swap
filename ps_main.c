@@ -129,7 +129,7 @@ int main(int argc, char **argv)
 			print_stack(&st_a);
 			ft_printf("printing stack b\n");
 			print_stack(&st_b);
-			if(check_stack(st_a) && check_stack_r(st_b))
+			if (check_stack(st_a) && check_stack_r(st_b))
 			{
 				while(check_stack_r(st_b))
 				{
