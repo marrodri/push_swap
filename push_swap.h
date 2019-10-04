@@ -35,7 +35,8 @@ typedef	struct	s_flag
 
 typedef struct	s_app
 {
-	int		sort_ft_flag[8];
+	int		sort_sta_flag[3];
+	int		sort_stb_flag[3];
 	char	**instr;
 	char	**av;
 	int		*arr_num;
@@ -47,6 +48,10 @@ typedef struct	s_app
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
+
+
+typedef int		*t_stack_ft(t_list *stack);
+
 typedef int		*t_sort_both(t_list **stack_a, t_list **stack_b);
 int				*swap(t_list **stack);
 void			free_list(t_list **list);

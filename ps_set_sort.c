@@ -12,26 +12,47 @@
 
 #include "push_swap.h"
 
-void	sort_sta()
-{
-
-}
-
-void	sort_stb()
+void	sort_stb(t_app **app, t_list *st_b)
 {
 	
+}
+
+void	sort_sta(t_app **app, t_list *st_a)
+{
+	t_stack_ft *sta_ft[3];
+	if (ch_last_low_elem(st_a))
+	{
+		(*app)->sort_sta_flag[2] = 1;
+		rrot(&st_a);
+		ft_printf("rra\n");
+		(*app)->instr_count++;
+	}
+	if (ch_first_hi_elem(st_a))
+	{
+		(*app)->sort_sta_flag[1] = 1;
+		rot(&st_a);
+		ft_printf("ra\n");
+		(*app)->instr_count++;
+	}
+	if (!ch_next_hi_elem(st_a))
+	{
+		(*app)->sort_sta_flag[0] = 1;
+		swap(&st_a);
+		ft_printf("sa\n");
+		(*app)->instr_count++;
+	}
 }
 
 void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 {
 	// rra, rrb
-	if (ch_last_low_elem(st_a))
-	{
-		rrot(&st_a);
-		ft_printf("rra\n");
-		(*app)->instr_count++;
-	}
-	else if (ch_last_hi_elem(st_b))
+	// if (ch_last_low_elem(st_a))
+	// {
+	// 	rrot(&st_a);
+	// 	ft_printf("rra\n");
+	// 	(*app)->instr_count++;
+	// }
+	 if (ch_last_hi_elem(st_b))
 	{
 		rrot(&st_b);
 		ft_printf("rrb\n");
@@ -47,12 +68,12 @@ void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 		(*app)->instr_count++;
 	}
 	
-	if (ch_first_hi_elem(st_a))
-	{
-		(*app)->sort_ft_flag[1] = 1;
-		// rot(&st_a);
-		// ft_printf("ra\n");
-	}
+	// if (ch_first_hi_elem(st_a))
+	// {
+	// 	(*app)->sort_ft_flag[1] = 1;
+	// 	rot(&st_a);
+	// 	ft_printf("ra\n");
+	// }
 	// rra, rrb
 
 
@@ -71,4 +92,12 @@ void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
 	}
 
 	//if all are 0, activate pa or pb,
+	int i;
+
+	i = 0;
+	while()
+	{
+		i++;
+	}
+	return ;
 }
