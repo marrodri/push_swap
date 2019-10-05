@@ -113,7 +113,7 @@ int main(int argc, char **argv)
 				swap(&st_b);
 				ft_printf("sb\n");
 			}
-			else if (!check_stack(st_a))
+			if (!check_stack(st_a))
 			{
 				push(&st_b, &st_a);
 				ft_printf("pb\n");
@@ -160,3 +160,6 @@ int main(int argc, char **argv)
 // 5:41 thurs
 //  ------
 // 26:49
+// 3:24 fri
+// -------
+// 30:13 

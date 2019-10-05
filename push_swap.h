@@ -32,8 +32,8 @@ typedef	struct	s_flag
 
 typedef struct	s_app
 {
-	int		sort_sta_flag[4];
-	int		sort_stb_flag[4];
+	int		sort_sta_flag[3];
+	int		sort_stb_flag[3];
 	char	**instr;
 	char	**av;
 	int		*arr_num;
@@ -44,10 +44,11 @@ typedef struct	s_app
 	int		instr_count;
 }				t_app;
 
-typedef	void	t_sort_both_ft(t_list **st_a, t_list **st_b);
 typedef int		*t_sort(t_list **stack);
-typedef int		t_stack_ft(t_list *stack);
 typedef int		*t_sort_both(t_list **stack_a, t_list **stack_b);
+typedef int		t_stack_fl(t_list *stack);
+typedef	void	t_ps_ft(t_list **stack);
+typedef	void	t_ps_both_ft(t_list **st_a, t_list **st_b);
 int				*swap(t_list **stack);
 void			sa(t_list **st_a);
 void			ra(t_list **st_a);
@@ -86,6 +87,8 @@ int				ch_last_hi_elem(t_list *stack);
 void			set_ft(t_app **app, t_list *st_a, t_list *st_b);
 int				ch_first_low_elem(t_list *stack);
 int				ch_last_low_elem(t_list *stack);
+
+void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
 
 
 void	print_stack(t_list **list);

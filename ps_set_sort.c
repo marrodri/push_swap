@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-void	sort_stb(t_app **app, t_list *st_b)
+void	stb_flag(t_app **app, t_list *st_b)
 {
-	t_stack_ft	*stb_ft[3];
+	t_stack_fl	*stb_ft[3];
 	int			i;
 
 	i = 0;
@@ -26,14 +26,14 @@ void	sort_stb(t_app **app, t_list *st_b)
 		(*app)->sort_stb_flag[i] = stb_ft[i](st_b);
 		i++;
 	}
-	if (ft_arriszero((*app)->sort_stb_flag, 3) &&
-		ft_arriszero((*app)->sort_sta_flag, 4))
-		(*app)->sort_stb_flag[3] = 1;
+	// if (ft_arriszero((*app)->sort_stb_flag, 3) &&
+	// 	ft_arriszero((*app)->sort_sta_flag, 4))
+	// 	(*app)->sort_stb_flag[3] = 1;
 }
 
-void	sort_sta(t_app **app, t_list *st_a)
+void	sta_flag(t_app **app, t_list *st_a)
 {
-	t_stack_ft	*sta_ft[3];
+	t_stack_fl	*sta_ft[3];
 	int			i;
 
 	i = 0;
@@ -45,17 +45,14 @@ void	sort_sta(t_app **app, t_list *st_a)
 		(*app)->sort_sta_flag[i] = sta_ft[i](st_a);
 		i++;
 	}
-	if (ft_arriszero((*app)->sort_sta_flag, 3) 
-		&& ft_arriszero((*app)->sort_stb_flag, 4))
-		(*app)->sort_sta_flag[3] = 1;
+	// if (ft_arriszero((*app)->sort_sta_flag, 3) 
+	// 	&& ft_arriszero((*app)->sort_stb_flag, 4))
+	// 	(*app)->sort_sta_flag[3] = 1;
 }
 
-void	set_sort_ft(t_app **app, t_list *st_a, t_list *st_b)
+void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
-
-	// if (ft_arriszero((*app)->sort_sta_flag, 3))
-	// 	(*app)->sort_sta_flag[3] = 1;
-	// if (ft_arriszero((*app)->sort_stb_flag, 3))
-	// 	(*app)->sort_stb_flag[3] = 1;
+	sta_flag(app, st_a);
+	stb_flag(app, st_b);
 	return ;
 }
