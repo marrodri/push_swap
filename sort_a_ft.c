@@ -24,7 +24,7 @@ int	sa(t_list **st_a)
 	return (*i);
 }
 
-int	ra(t_list **st_a)
+int	ra(t_list **st_a) //segfaults when accessing ra
 {
 	int *i;
 

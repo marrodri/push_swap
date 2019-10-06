@@ -89,7 +89,7 @@ int				ch_first_low_elem(t_list *stack);
 int				ch_last_low_elem(t_list *stack);
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
-
+void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);
 
 void	print_stack(t_list **list);
 #endif

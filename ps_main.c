@@ -70,74 +70,21 @@ int main(int argc, char **argv)
 			app->len_stck_b = ft_list_size(st_b);
 			//TODO create a function that sets 1 to which instructions to use 
 			// set_sort_ft(&app, st_a, st_b);
+			set_sort_flag(&app, st_a, st_b);
+			ft_printf("#1.- passing set sort_flag !!!\n");
+			st_act_ft(&app, &st_a, &st_b);
 
 			//TODO move all instructions to another function that sorts based 
 			//from the 1s in the sort_ft_flag, and run a dispatch table 
 
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra 
-			if (ch_last_low_elem(st_a))
-			{
-				rrot(&st_a);
-				ft_printf("rra\n");
-				app->instr_count++;
-			}
-			else if (ch_first_low_elem(st_b))
-			{
-				rot(&st_b);
-				ft_printf("rb\n");
-				app->instr_count++;
-			}
-			else if (ch_last_hi_elem(st_b))
-			{
-				rrot(&st_b);
-				ft_printf("rrb\n");
-				app->instr_count++;
-			}
-			else if (ch_first_hi_elem(st_a))
-			{
-				rot(&st_a);
-				ft_printf("ra\n");
-				app->instr_count++;
-			}
-			//rra and rrb when to use
-			else if (!ch_next_hi_elem(st_a))
-			{
-				swap(&st_a);
-				ft_printf("sa\n");
-				app->instr_count++;
-			}
-			else if (ch_next_hi_elem(st_b))
-			{
-				// (*app)->sort_ft_flag[4] = 1;
-				swap(&st_b);
-				ft_printf("sb\n");
-			}
-			if (!check_stack(st_a))
-			{
-				push(&st_b, &st_a);
-				ft_printf("pb\n");
-				app->instr_count++;
-			}
-			else if (!check_stack_r(st_b))
-			{
-				push(&st_a, &st_b);
-				ft_printf("pa\n");
-				app->instr_count++;
-			}
-			// ft_printf("printing stack a\n");
-			// print_stack(&st_a);
-			// ft_printf("printing stack b\n");
-			// print_stack(&st_b);
-			if (check_stack(st_a) && check_stack_r(st_b))
-			{
-				while(check_stack_r(st_b))
-				{
-					push(&st_a, &st_b);
-					app->instr_count++;
-					ft_printf("pa\n");
-				}
-			}
+
+			// // ft_printf("printing stack a\n");
+			// // print_stack(&st_a);
+			// // ft_printf("printing stack b\n");
+			// // print_stack(&st_b);
+
 			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time
 				//sort_stacks (st_a, st_b, "any ins in str");
