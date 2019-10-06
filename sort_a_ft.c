@@ -15,20 +15,29 @@
 #include "push_swap.h"
 
 // for sa if false, sb if true
-void	sa(t_list **st_a)
+int	sa(t_list **st_a)
 {
-	swap(&st_a);
+	int *i;
+
+	i = swap(st_a);
 	ft_printf("sa\n");
+	return (*i);
 }
 
-void	ra(t_list **st_a)
+int	ra(t_list **st_a)
 {
-	rot(&st_a);
+	int *i;
+
+	i = rot(st_a);
 	ft_printf("ra\n");
+	return (*i);
 }
 
-void	rra(t_list **st_a)
+int	rra(t_list **st_a)
 {
-	rrot(&st_a);
+	int *i;
+
+	i = rrot(st_a);
 	ft_printf("rra\n");
+	return (*i);
 }

@@ -48,7 +48,7 @@ void	act_stb(t_app **app, t_list **st_b)
 	}
 	if((*app)->sort_stb_flag[i])
 	{
-		sort_b[i](st_b);
+		j = sort_b[i](st_b);
 		(*app)->sort_stb_flag[i]--;
 	}
 }
@@ -76,19 +76,21 @@ void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
 
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 {
-	act_st_both(app, st_a, st_b);
 
+	act_st_both(app, st_a, st_b);
+	act_sta(app, st_a);
+	act_stb(app, st_b);
 
 	//add here the push method
-	if (!check_stack(st_a))
+	if (!check_stack(*st_a))
 	{
-		push(&st_b, &st_a);
+		push(st_b, st_a);
 		ft_printf("pb\n");
 		(*app)->instr_count++;
 	}
-	else if (!check_stack_r(st_b))
+	else if (!check_stack_r(*st_b))
 	{
-		push(&st_a, &st_b);
+		push(st_a, st_b);
 		ft_printf("pa\n");
 		(*app)->instr_count++;
 	}
@@ -98,11 +100,8 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 	*/
 	if (check_stack(*st_a) && check_stack_r(*st_b))
 	{
-		while(check_stack_r(*st_b))
-		{
-			push(st_a, st_b);
-			(*app)->instr_count++;
-			ft_printf("pa\n");
-		}
+		push(st_a, st_b);
+		(*app)->instr_count++;
+		ft_printf("pa\n");
 	}
 }

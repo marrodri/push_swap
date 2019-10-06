@@ -52,3 +52,7 @@ fclean: clean
 	@make -C libft fclean
 
 re: fclean all
+
+
+# use this for compiling the push_swap program
+# gcc ps_main.c ps_sta_ft.c ps_stb_ft.c psch_input.c check_stack.c rot_ft.c swap_ft.c psch_listft.c push_ft.c ps_set_sort.c ps_act_ft.c sort_a_ft.c sort_b_ft.c sort_both.c libft/libft.a
