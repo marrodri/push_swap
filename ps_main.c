@@ -74,42 +74,13 @@ int main(int argc, char **argv)
 			// ft_printf("#1.- passing set sort_flag !!!\n");
 			st_act_ft(&app, &st_a, &st_b);
 
-			//TODO move all instructions to another function that sorts based 
-			//from the 1s in the sort_ft_flag, and run a dispatch table 
-
-			//check_first_elem that is the highest(){} ra 
-			//check if the before_last elem is the highest rra 
-
 			// ft_printf("printing stack a\n");
 			// print_stack(&st_a);
 			// ft_printf("printing stack b\n");
 			// print_stack(&st_b);
-
-			// check if next elem is lower than the prev_elem;
-			// when sorting, sort and print the instr at the same time
-				//sort_stacks (st_a, st_b, "any ins in str");
-				//print instruct
 		}
 	}
-	ft_printf("intructions used |%d|\n", app->instr_count);
-	// ft_printf("stack is sorted\n");
-	print_stack(&st_a);
+	// print_stack(&st_a);
+	// ft_printf("intructions used |%d|\n", app->instr_count);
 	return (0);
 }
-
-//mon 8:44
-//tues 6:07
-//_-------
-// 14:51
-// 6:17 wed
-// ---------
-// 21:08
-// 5:41 thurs
-//  ------
-// 26:49
-// 3:24 fri
-// -------
-// 30:13 
-//  3:15 sat
-// ---------
-// 33:28

@@ -15,7 +15,7 @@ int		rrr(t_list **st_a, t_list **st_b)
 {
 	int *i;
 
-	rrot_r(st_a, st_b);
+	i = rrot_r(st_a, st_b);
 	ft_printf("rrr\n");
 	return (0);
 }
@@ -24,7 +24,7 @@ int		ss(t_list **st_a, t_list **st_b)
 {
 	int *i;
 
-	swap_s(st_a, st_b);
+	i = swap_s(st_a, st_b);
 	ft_printf("ss\n");
 	return (0);
 }
