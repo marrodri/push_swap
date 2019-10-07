@@ -15,23 +15,26 @@
 int		sb(t_list **st_b)
 {
 	int *i;
+
 	i = swap(st_b);
 	ft_printf("sb\n");
-	return (*i);
+	return (0);
 }
 
 int	rb(t_list **st_b)
 {
 	int *i;
+
 	i = rot(st_b);
 	ft_printf("rb\n");
-	return (*i);
+	return (0);
 }
 
 int	rrb(t_list **st_b)
 {
 	int *i;
+
 	i = rrot(st_b);
 	ft_printf("rrb\n");
-	return (*i);
+	return (0);
 }

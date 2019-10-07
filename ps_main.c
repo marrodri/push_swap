@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 			//TODO create a function that sets 1 to which instructions to use 
 			// set_sort_ft(&app, st_a, st_b);
 			set_sort_flag(&app, st_a, st_b);
-			ft_printf("#1.- passing set sort_flag !!!\n");
+			// ft_printf("#1.- passing set sort_flag !!!\n");
 			st_act_ft(&app, &st_a, &st_b);
 
 			//TODO move all instructions to another function that sorts based 
@@ -80,10 +80,10 @@ int main(int argc, char **argv)
 			//check_first_elem that is the highest(){} ra 
 			//check if the before_last elem is the highest rra 
 
-			// // ft_printf("printing stack a\n");
-			// // print_stack(&st_a);
-			// // ft_printf("printing stack b\n");
-			// // print_stack(&st_b);
+			// ft_printf("printing stack a\n");
+			// print_stack(&st_a);
+			// ft_printf("printing stack b\n");
+			// print_stack(&st_b);
 
 			// check if next elem is lower than the prev_elem;
 			// when sorting, sort and print the instr at the same time

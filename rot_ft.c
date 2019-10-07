@@ -27,6 +27,7 @@ int	*rot(t_list **stack)
 	tail->next = NULL;
 	(*stack)->next = tail;
 	*stack = head;
+	
 	return (0);
 }
 
