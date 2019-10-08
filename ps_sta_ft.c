@@ -43,6 +43,7 @@ int		ch_first_hi_elem(t_list *stack, t_app *app)
 	return (0);
 }
 
+//double check this one
 int		ch_last_low_elem(t_list *stack, t_app *app)
 {
 	t_list	*tmp;
@@ -57,17 +58,14 @@ int		ch_last_low_elem(t_list *stack, t_app *app)
 		tmp = tmp->next;
 	low_elem = tmp->elem;
 	tmp = head;
-	while (tmp)
-	{
-		// ft_printf("tmp elem is |%d|\n", tmp->elem);
-		if (tmp->elem < low_elem)
-			return (0);
+	while (tmp->next)
 		tmp = tmp->next;
-	}
-	return (1);
+	if (tmp->elem > low_elem)
+		return (1);
+	return (0);
 }
 
-int		ch_special_case(t_list *stack, t_app *app)
+int		ch_special_case_a(t_list *stack, t_app *app)
 {
 	stack = NULL;
 	app = NULL;

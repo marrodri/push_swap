@@ -27,9 +27,9 @@ void	stb_flag(t_app **app, t_list *st_b)
 		i++;
 	}
 	//add special cases for pa
-	if (ft_arriszero((*app)->sort_stb_flag, 3) &&
-		ft_arriszero((*app)->sort_sta_flag, 4))
-		(*app)->sort_stb_flag[3] = 1;
+	// if (ft_arriszero((*app)->sort_stb_flag, 3) &&
+	// 	ft_arriszero((*app)->sort_sta_flag, 4))
+	// 	(*app)->sort_stb_flag[3] = 1;
 }
 
 void	sta_flag(t_app **app, t_list *st_a)
@@ -43,18 +43,22 @@ void	sta_flag(t_app **app, t_list *st_a)
 	sta_ft[2] = ch_next_low_elem; //sa
 	while (i < 3 && ft_arriszero((*app)->sort_sta_flag, 3))
 	{
+		// ft_printf("i is |%d|\n",i);
 		(*app)->sort_sta_flag[i] = sta_ft[i](st_a, *app);
 		i++;
 	}
 	//add special cases for pb
-	if (ft_arriszero((*app)->sort_sta_flag, 3) 
-		&& ft_arriszero((*app)->sort_stb_flag, 4))
-		(*app)->sort_sta_flag[3] = 1;
+	// if (ft_arriszero((*app)->sort_sta_flag, 3) 
+	// 	&& ft_arriszero((*app)->sort_stb_flag, 4) && check_stack(st_a))
+	// 	(*app)->sort_sta_flag[3] = 1;
 }
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
+	// ft_printf("seting flags\n");
 	sta_flag(app, st_a);
+	// ft_printf("flag a SET\n");
 	stb_flag(app, st_b);
+	// ft_printf("flag b SET\n");
 	return ;
 }
