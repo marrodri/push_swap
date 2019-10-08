@@ -30,7 +30,6 @@ int		ch_next_low_elem(t_list *stack, t_app *app)
 int		ch_first_hi_elem(t_list *stack, t_app *app)
 {
 	t_list	*tmp;
-	// int		rot;
 	int		high_elem;
 
 	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
@@ -70,5 +69,7 @@ int		ch_last_low_elem(t_list *stack, t_app *app)
 
 int		ch_special_case(t_list *stack, t_app *app)
 {
-
+	stack = NULL;
+	app = NULL;
+	return 0;
 }

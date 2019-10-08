@@ -16,6 +16,22 @@ int		ch_next_hi_elem(t_list *stack, t_app *app)
 	return (0);
 }
 
+int		ch_first_low_elem(t_list *stack, t_app *app)
+{
+	t_list	*tmp;
+	int		low_elem;
+
+	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
+		return (0);
+	tmp = stack;
+	low_elem = tmp->elem;
+	while (tmp->next)
+		tmp = tmp->next;
+	if (tmp->elem < low_elem)
+		return (1);
+	return (0);
+}
+
 int		ch_last_hi_elem(t_list *stack, t_app *app)
 {
 	t_list	*tmp;
@@ -39,20 +55,9 @@ int		ch_last_hi_elem(t_list *stack, t_app *app)
 	return (1);
 }
 
-int		ch_first_low_elem(t_list *stack, t_app *app)
+int		ch_special_case(t_list *stack, t_app *app)
 {
-	t_list	*tmp;
-	int		low_elem;
-
-	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
-		return (0);
-	tmp = stack;
-	low_elem = tmp->elem;
-	while (tmp)
-	{
-		if (tmp->elem < low_elem)
-			return (0);
-		tmp = tmp->next;
-	}
-	return (1);
+	stack = NULL;
+	app = NULL;
+	return 0;
 }
