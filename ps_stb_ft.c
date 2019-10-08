@@ -1,7 +1,7 @@
 
 #include "push_swap.h"
 
-int		ch_next_hi_elem(t_list *stack)
+int		ch_next_hi_elem(t_list *stack, t_app *app)
 {
 	t_list	*tmp;
 	int		prev_elem;
@@ -16,13 +16,13 @@ int		ch_next_hi_elem(t_list *stack)
 	return (0);
 }
 
-int		ch_last_hi_elem(t_list *stack)
+int		ch_last_hi_elem(t_list *stack, t_app *app)
 {
 	t_list	*tmp;
 	t_list	*head;
 	int		high_elem;
 
-	if (stack == NULL || stack->next == NULL)
+	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
 		return (0);
 	tmp = stack;
 	head = stack;
@@ -39,12 +39,12 @@ int		ch_last_hi_elem(t_list *stack)
 	return (1);
 }
 
-int		ch_first_low_elem(t_list *stack)
+int		ch_first_low_elem(t_list *stack, t_app *app)
 {
 	t_list	*tmp;
 	int		low_elem;
 
-	if (stack == NULL || stack->next == NULL)
+	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
 		return (0);
 	tmp = stack;
 	low_elem = tmp->elem;

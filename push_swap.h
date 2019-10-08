@@ -32,30 +32,35 @@ typedef	struct	s_flag
 
 typedef struct	s_app
 {
-	int		sort_sta_flag[3];
-	int		sort_stb_flag[3];
+
+	int		sort_sta_flag[4];
+	int		sort_stb_flag[4];
 	char	**instr;
 	char	**av;
 	int		*arr_num;
 	int		len_inst;
 	int		len_stck;
+	int		len_mid_a;
 	int		len_stck_b;
+	int		len_mid_b;
 	int		free_av;
 	int		instr_count;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
 typedef int		*t_sort_both(t_list **stack_a, t_list **stack_b);
-typedef int		t_stack_fl(t_list *stack);
+typedef int		t_stack_fl(t_list *stack, t_app *app);
 typedef	int		t_ps_ft(t_list **stack);
 typedef	int		t_ps_both_ft(t_list **st_a, t_list **st_b);
 int				*swap(t_list **stack);
 int				sa(t_list **st_a);
 int				ra(t_list **st_a);
 int				rra(t_list **st_a);
+int				pa(t_list **st_a, t_list **st_b);
 int				sb(t_list **st_b);
 int				rb(t_list **st_b);
 int				rrb(t_list **st_b);
+int				pb(t_list **st_a, t_list **st_b);
 int				rr(t_list **st_a, t_list **st_b);
 int				rrr(t_list **st_a, t_list **st_b);
 int				ss(t_list **st_a, t_list **st_b);
@@ -80,13 +85,17 @@ int				set_instr(int fd, t_app **app);
 int				check_instr(char *instr);
 void			free_words(char **instr);
 void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
-int				ch_next_hi_elem(t_list *stack);
-int				ch_next_low_elem(t_list *stack);
-int				ch_first_hi_elem(t_list *stack);
-int				ch_last_hi_elem(t_list *stack);
+
+int		ch_next_hi_elem(t_list *stack, t_app *app);
+int		ch_last_hi_elem(t_list *stack, t_app *app);
+int		ch_first_low_elem(t_list *stack, t_app *app);
+
+
+int				ch_next_low_elem(t_list *stack, t_app *app);
+int				ch_first_hi_elem(t_list *stack, t_app *app);
+int				ch_last_low_elem(t_list *stack, t_app *app);
+
 void			set_ft(t_app **app, t_list *st_a, t_list *st_b);
-int				ch_first_low_elem(t_list *stack);
-int				ch_last_low_elem(t_list *stack);
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);

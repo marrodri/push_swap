@@ -40,3 +40,10 @@ int	rra(t_list **st_a)
 	ft_printf("rra\n");
 	return (0);
 }
+
+int	pa(t_list **st_a, t_list **st_b)
+{
+	push(st_a, st_b);
+	ft_printf("pa\n");
+	return (0);
+}

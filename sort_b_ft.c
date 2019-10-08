@@ -38,3 +38,10 @@ int	rrb(t_list **st_b)
 	ft_printf("rrb\n");
 	return (0);
 }
+
+int	pb(t_list **st_a, t_list **st_b)
+{
+	push(st_b, st_a);
+	ft_printf("pb\n");
+	return (0);
+}

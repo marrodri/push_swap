@@ -23,12 +23,13 @@ void	stb_flag(t_app **app, t_list *st_b)
 	stb_ft[2] = ch_next_hi_elem; //sb
 	while (i < 3 && ft_arriszero((*app)->sort_stb_flag, 3))
 	{
-		(*app)->sort_stb_flag[i] = stb_ft[i](st_b);
+		(*app)->sort_stb_flag[i] = stb_ft[i](st_b, *app);
 		i++;
 	}
-	// if (ft_arriszero((*app)->sort_stb_flag, 3) &&
-	// 	ft_arriszero((*app)->sort_sta_flag, 4))
-	// 	(*app)->sort_stb_flag[3] = 1;
+	//add special cases for pa
+	if (ft_arriszero((*app)->sort_stb_flag, 3) &&
+		ft_arriszero((*app)->sort_sta_flag, 4))
+		(*app)->sort_stb_flag[3] = 1;
 }
 
 void	sta_flag(t_app **app, t_list *st_a)
@@ -42,12 +43,13 @@ void	sta_flag(t_app **app, t_list *st_a)
 	sta_ft[2] = ch_next_low_elem; //sa
 	while (i < 3 && ft_arriszero((*app)->sort_sta_flag, 3))
 	{
-		(*app)->sort_sta_flag[i] = sta_ft[i](st_a);
+		(*app)->sort_sta_flag[i] = sta_ft[i](st_a, *app);
 		i++;
 	}
-	// if (ft_arriszero((*app)->sort_sta_flag, 3) 
-	// 	&& ft_arriszero((*app)->sort_stb_flag, 4))
-	// 	(*app)->sort_sta_flag[3] = 1;
+	//add special cases for pb
+	if (ft_arriszero((*app)->sort_sta_flag, 3) 
+		&& ft_arriszero((*app)->sort_stb_flag, 4))
+		(*app)->sort_sta_flag[3] = 1;
 }
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)

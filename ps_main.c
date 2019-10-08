@@ -40,8 +40,10 @@ void	init_ps(t_app **app)
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
+	(*app)->len_mid_a = 0;
 	(*app)->len_stck = 0;
 	(*app)->len_stck_b = 0;
+	(*app)->len_mid_b = 0;
 	while (i < 4)
 	{
 		(*app)->sort_sta_flag[i] = 0;
