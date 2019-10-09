@@ -82,7 +82,7 @@ int main(int argc, char **argv)
 			// print_stack(&st_b);
 		}
 	}
-	print_stack(&st_a);
+	// print_stack(&st_a);
 	// ft_printf("intructions used |%d|\n", app->instr_count);
 	return (0);
 }
