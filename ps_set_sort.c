@@ -47,6 +47,16 @@ void	sta_flag(t_app **app, t_list *st_a)
 		(*app)->sort_sta_flag[i] = sta_ft[i](st_a, *app);
 		i++;
 	}
+	if (ch_special_case_a(st_a, *app))
+	{
+		ft_printf("we got double double pb");
+		(*app)->sort_sta_flag[0] = 0;
+		(*app)->sort_sta_flag[1] = 0;
+		(*app)->sort_sta_flag[2] = 0;
+		(*app)->sort_sta_flag[3] = 2;
+	}
+	else if (ft_arriszero((*app)->sort_sta_flag, 3))
+		(*app)->sort_sta_flag[3] = 1;
 	//add special cases for pb
 	// if (ft_arriszero((*app)->sort_sta_flag, 3) 
 	// 	&& ft_arriszero((*app)->sort_stb_flag, 4) && check_stack(st_a))

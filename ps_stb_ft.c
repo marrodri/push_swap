@@ -53,9 +53,9 @@ int		ch_last_hi_elem(t_list *stack, t_app *app)
 	return (0);
 }
 
-int		ch_special_case_b(t_list *stack, t_app *app)
-{
-	stack = NULL;
-	app = NULL;
-	return 0;
-}
+// int		ch_special_case_b(t_list *stack, t_app *app)
+// {
+// 	stack = NULL;
+// 	app = NULL;
+// 	return 0;
+// }

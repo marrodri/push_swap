@@ -17,7 +17,7 @@ int		ch_next_low_elem(t_list *stack, t_app *app)
 	t_list	*tmp;
 	int		prev_elem;
 
-	if (stack == NULL || stack->next == NULL)
+	if (stack == NULL || app->len_stck <= 1)
 		return (0);
 	tmp = stack;
 	prev_elem = tmp->elem;
@@ -67,7 +67,19 @@ int		ch_last_low_elem(t_list *stack, t_app *app)
 
 int		ch_special_case_a(t_list *stack, t_app *app)
 {
-	stack = NULL;
-	app = NULL;
+	int		i;
+	t_list	*prev;
+	t_list	*ahead;
+	if(app->sort_sta_flag[0])
+		return 0;
+	prev = stack;
+	stack = stack->next;
+	stack = stack->next;
+	ft_printf("prev\n");
+	print_stack(&prev);
+	ft_printf("stack ahead\n");
+	print_stack(&stack);
+	if(gitm(stack, app) && ch_next_hi_elem(prev, app))
+		return 2;
 	return 0;
 }

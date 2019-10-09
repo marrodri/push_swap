@@ -78,18 +78,27 @@ void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
 
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 {
-	// ft_printf("------new session!---------\n");
+	ft_printf("------new session!---------\n");
+	ft_printf("flags are\n");
+	ft_printf("i[%d]=|%d|\n", 0, (*app)->sort_sta_flag[0]);
+	ft_printf("i[%d]=|%d|\n", 1, (*app)->sort_sta_flag[1]);
+	ft_printf("i[%d]=|%d|\n", 2, (*app)->sort_sta_flag[2]);
+	ft_printf("i[%d]=|%d|\n", 3, (*app)->sort_sta_flag[3]);
 	if (ft_arriszero((*app)->sort_sta_flag, 3) &&
 		ft_arriszero((*app)->sort_stb_flag, 3))
 	{
 		//add here the push method
 		if (!check_stack(*st_a))
 		{
-			push(st_b, st_a);
-			ft_printf("pb\n");
-			(*app)->instr_count++;
+			while((*app)->sort_sta_flag[3])
+			{
+				push(st_b, st_a);
+				ft_printf("pb\n");
+				(*app)->instr_count++;
+				(*app)->sort_sta_flag[3]--;
+			}
 		}
-		else if (!check_stack_r(*st_b))
+		else
 		{
 			push(st_a, st_b);
 			ft_printf("pa\n");
@@ -119,5 +128,5 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 	// print_stack(st_a);
 	// ft_printf("printing stack b\n");
 	// print_stack(st_b);
-	// ft_printf("------end session!---------\n");
+	ft_printf("------end session!---------\n");
 }

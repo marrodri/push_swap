@@ -86,14 +86,16 @@ int				check_instr(char *instr);
 void			free_words(char **instr);
 void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 
-int		ch_next_hi_elem(t_list *stack, t_app *app);
-int		ch_last_hi_elem(t_list *stack, t_app *app);
-int		ch_first_low_elem(t_list *stack, t_app *app);
-
-
 int				ch_next_low_elem(t_list *stack, t_app *app);
 int				ch_first_hi_elem(t_list *stack, t_app *app);
 int				ch_last_low_elem(t_list *stack, t_app *app);
+int				ch_special_case_a(t_list *stack, t_app *app);
+
+int		ch_next_hi_elem(t_list *stack, t_app *app);
+int		ch_first_low_elem(t_list *stack, t_app *app);
+int		ch_last_hi_elem(t_list *stack, t_app *app);
+int		ch_special_case_b(t_list *stack, t_app *app);
+
 
 void			set_ft(t_app **app, t_list *st_a, t_list *st_b);
 
