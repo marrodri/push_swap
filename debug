@@ -1,0 +1,171 @@
+-----sort-------
+ra
+printing stack a
+[13]->[1]->[3]->[2]->[8]->[7]->[4]->[6]->[9]->[5]->[0]->[12]->NULL
+printing stack b
+list is NULL
+========end==========
+-----sort-------
+ra
+printing stack a
+[1]->[3]->[2]->[8]->[7]->[4]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+list is NULL
+========end==========
+-----sort-------
+pb
+printing stack a
+[3]->[2]->[8]->[7]->[4]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[1]->NULL
+========end==========
+-----sort-------
+pb
+pb
+printing stack a
+[8]->[7]->[4]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[2]->[3]->[1]->NULL
+========end==========
+-----sort-------
+ss
+printing stack a
+[7]->[8]->[4]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+pb
+printing stack a
+[8]->[4]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[7]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+sa
+printing stack a
+[4]->[8]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[7]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+pb
+printing stack a
+[8]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[4]->[7]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+sb
+printing stack a
+[8]->[6]->[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+pb
+pb
+printing stack a
+[9]->[5]->[0]->[12]->[13]->NULL
+printing stack b
+[6]->[8]->[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+ss
+printing stack a
+[5]->[9]->[0]->[12]->[13]->NULL
+printing stack b
+[8]->[6]->[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+pb
+printing stack a
+[9]->[0]->[12]->[13]->NULL
+printing stack b
+[5]->[8]->[6]->[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+ss
+printing stack a, stack a is sorted, change ruleset!!!!!!!!!! 15 instr
+[0]->[9]->[12]->[13]->NULL 
+printing stack b
+[8]->[5]->[6]->[7]->[4]->[3]->[2]->[1]->NULL
+========end=========
+
+//branch, here we can pb or (ra, pa)
+
+-----sort-------
+pa
+printing stack a
+[8]->[0]->[9]->[12]->[13]->NULL
+printing stack b
+[5]->[6]->[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+ss
+printing stack a
+[0]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[6]->[5]->[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+pa
+printing stack a
+[6]->[0]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[5]->[7]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+ss
+pa
+printing stack a
+[7]->[0]->[6]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[5]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+sa
+printing stack a
+[0]->[7]->[6]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[5]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+pb
+printing stack a
+[7]->[6]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[0]->[5]->[4]->[3]->[2]->[1]->NULL
+========end==========
+-----sort-------
+sa
+rb
+pa
+printing stack a
+[5]->[6]->[7]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[4]->[3]->[2]->[1]->[0]->NULL
+========end==========
+-----sort-------
+pa
+pa
+printing stack a
+[3]->[4]->[5]->[6]->[7]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[2]->[1]->[0]->NULL
+========end==========
+-----sort-------
+pa
+pa
+printing stack a
+[1]->[2]->[3]->[4]->[5]->[6]->[7]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+[0]->NULL
+========end==========
+-----sort-------
+pa
+printing stack a
+[0]->[1]->[2]->[3]->[4]->[5]->[6]->[7]->[8]->[9]->[12]->[13]->NULL
+printing stack b
+list is NULL
+========end==========

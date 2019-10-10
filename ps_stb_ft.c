@@ -6,7 +6,7 @@ int		ch_next_hi_elem(t_list *stack, t_app *app)
 	t_list	*tmp;
 	int		prev_elem;
 
-	if (stack == NULL || stack->next == NULL)
+	if (stack == NULL || stack->next == NULL || app->len_stck <= 1)
 		return (0);
 	tmp = stack;
 	prev_elem = tmp->elem;

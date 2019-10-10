@@ -49,7 +49,7 @@ void	sta_flag(t_app **app, t_list *st_a)
 		i++;
 	}
 		// ft_printf("here checking\n");
-	if (ch_special_case_a(st_a, *app))
+	if (ch_double_pb_a(st_a, *app))
 	{
 		// ft_printf("we got double double pb\n");
 		(*app)->sort_sta_flag[0] = 0;

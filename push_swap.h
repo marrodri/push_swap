@@ -45,6 +45,7 @@ typedef struct	s_app
 	int		len_mid_b;
 	int		free_av;
 	int		instr_count;
+	int		flag_sorted_a;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
@@ -89,7 +90,7 @@ void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 int				ch_next_low_elem(t_list *stack, t_app *app);
 int				ch_first_hi_elem(t_list *stack, t_app *app);
 int				ch_last_low_elem(t_list *stack, t_app *app);
-int				ch_special_case_a(t_list *stack, t_app *app);
+int				ch_double_pb_a(t_list *stack, t_app *app);
 
 int		ch_next_hi_elem(t_list *stack, t_app *app);
 int		ch_first_low_elem(t_list *stack, t_app *app);
