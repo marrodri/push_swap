@@ -25,20 +25,23 @@ SRC = check_stack.c  \
 PS_SRC = ps_main.c ps_act_ft.c ps_set_sort.c ps_sta_ft.c \
 		ps_stb_ft.c sort_a_ft.c sort_b_ft.c sort_both.c 
 
-PS_OBJ += $(PS_SRC:.c=.o)
-PS_OBJ += $(SRC:.c=.o)
+SRC_OBJ = $(SRC:.c=.o)
 
-CH_OBJ += checker_main.o
-CH_OBJ += $(SRC:.c=.o)
+PS_OBJ = $(PS_SRC:.c=.o)
+
+CH_OBJ = checker_main.o
 
 LIBFT = ./libft/libft.a
 
 .PHONY = all clean fclean re
 
-all: $(NAME2)
+all: $(NAME2) $(NAME1)
 
-# $(CH_OBJ): %.o: %.c
-# 	@gcc -c $(CFLAGS) $< -o $@ -g
+$(SRC_OBJ): %.o: %.c 
+	@gcc -c $(CFLAGS) $< -o $@ -g
+
+$(CH_OBJ): %.o: %.c 
+	@gcc -c $(CFLAGS) $< -o $@ -g
 
 $(PS_OBJ):  %.o: %.c
 	@gcc -c $(CFLAGS) $< -o $@ -g
@@ -46,19 +49,19 @@ $(PS_OBJ):  %.o: %.c
 $(LIBFT):
 	@make -C libft
 
-# $(NAME1): $(LIBFT) $(CH_OBJ)
-# 	@gcc $(CH_OBJ) $(LIBFT) -o $(NAME1) -g
+$(NAME1): $(LIBFT) $(CH_OBJ) $(SRC_OBJ)
+	@gcc $(CH_OBJ) $(SRC_OBJ) $(LIBFT)  -o $(NAME1) -g
 
-$(NAME2): $(LIBFT) $(PS_OBJ)
-	gcc $(PS_OBJ) $(LIBFT) -o $(NAME2) -g
+$(NAME2): $(LIBFT) $(PS_OBJ) $(SRC_OBJ)
+	gcc $(PS_OBJ) $(SRC_OBJ) $(LIBFT) -o $(NAME2) -g
 
 clean:
 	@echo "cleaning .o files"
-	@rm -rf $(CH_OBJ) $(PS_OBJ)
+	@rm -rf $(CH_OBJ) $(PS_OBJ) $(SRC_OBJ)
 	@make -C libft clean
 
 fclean: clean
-	@rm -rf $(NAME1)
+	@rm -rf $(NAME1) $(NAME2)
 	@make -C libft fclean
 
 re: fclean all
