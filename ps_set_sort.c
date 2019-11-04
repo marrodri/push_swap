@@ -15,9 +15,11 @@
 void	stb_flag(t_app **app, t_list *st_b)
 {
 	t_stack_fl	*stb_ft[3];
+	t_stIns		*stack_inst;
 	int			i;
 
 	i = 0;
+	stack_inst = malloc(sizeof(t_stIns));
 	stb_ft[0] = ch_first_low_elem; //rb
 	stb_ft[1] = ch_last_hi_elem; //rrb
 	stb_ft[2] = ch_next_hi_elem; //sb
@@ -30,50 +32,48 @@ void	stb_flag(t_app **app, t_list *st_b)
 	// if (ft_arriszero((*app)->sort_stb_flag, 3) &&
 	// 	ft_arriszero((*app)->sort_sta_flag, 4))
 	// 	(*app)->sort_stb_flag[3] = 1;
+
+
+	free(stack_inst);
 }
 
 void	sta_flag(t_app **app, t_list *st_a)
 {
 	// ft_printf("======FLAG SESSION=======\n");
 	t_stack_fl	*sta_ft[3];
+	t_stIns		*stack_inst;
 	int			i;
 
 	i = 0;
-	sta_ft[0] = ch_first_hi_elem; //ra
+
+	// TODO, make a combination of ra and rra, checking which one of both 
+	// has the lowest operations, and then select the lowest 
+	// number of operations between ra or rra
+	stack_inst = malloc(sizeof(t_stIns));
+
+	sta_ft[0] = ch_first_hi_elem; //ra,
 	sta_ft[1] = ch_last_low_elem; //rra
 	sta_ft[2] = ch_next_low_elem; //sa
 	while (i < 3 && ft_arriszero((*app)->sort_sta_flag, 3))
 	{
-		// ft_printf("i is |%d|\n",i);
 		(*app)->sort_sta_flag[i] = sta_ft[i](st_a, *app);
 		i++;
 	}
-		// ft_printf("here checking\n");
-	if (ch_double_pb_a(st_a, *app))
-	{
-		// ft_printf("we got double double pb\n");
-		(*app)->sort_sta_flag[0] = 0;
-		(*app)->sort_sta_flag[1] = 0;
-		(*app)->sort_sta_flag[2] = 0;
-		(*app)->sort_sta_flag[3] = 2;
-	}
-	else if (ft_arriszero((*app)->sort_sta_flag, 3))
-	{
-			// ft_printf("none inputed\n");
-		(*app)->sort_sta_flag[3] = 1;
-	}
+	// else if (ft_arriszero((*app)->sort_sta_flag, 3))
+	// {
+	// 		// ft_printf("none inputed\n");
+	// 	(*app)->sort_sta_flag[3] = 1;
+	// }
 	//add special cases for pb
 	// if (ft_arriszero((*app)->sort_sta_flag, 3) 
 	// 	&& ft_arriszero((*app)->sort_stb_flag, 4) && check_stack(st_a))
 	// 	(*app)->sort_sta_flag[3] = 1;
+	free(stack_inst);
 }
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
-	// ft_printf("seting flags\n");
 	sta_flag(app, st_a);
-	// ft_printf("flag a SET\n");
 	stb_flag(app, st_b);
-	// ft_printf("flag b SET\n");
 	return ;
 }

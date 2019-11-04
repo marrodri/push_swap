@@ -110,5 +110,5 @@ char				*ft_ldtoa(long double ld_num, int prec);
 uint32_t			swap_endian(uint32_t num);
 int					ft_list_size(t_list *list);
 int					ft_check_wrd_dup(char **av);
-int					ft_arriszero(int *num, int size);
+int					ft_arriszero(int *num, int len);
 #endif

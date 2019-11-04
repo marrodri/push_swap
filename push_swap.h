@@ -30,6 +30,14 @@ typedef	struct	s_flag
 	int		flag[3];
 }				t_flag;
 
+typedef struct s_stIns
+{
+	int rot;
+	int r_rot;
+	int swap;
+	int psh;
+}				t_stIns;
+
 typedef struct	s_app
 {
 
@@ -90,7 +98,7 @@ void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 int				ch_next_low_elem(t_list *stack, t_app *app);
 int				ch_first_hi_elem(t_list *stack, t_app *app);
 int				ch_last_low_elem(t_list *stack, t_app *app);
-int				ch_double_pb_a(t_list *stack, t_app *app);
+// int				ch_double_pb_a(t_list *stack, t_app *app);
 
 int		ch_next_hi_elem(t_list *stack, t_app *app);
 int		ch_first_low_elem(t_list *stack, t_app *app);

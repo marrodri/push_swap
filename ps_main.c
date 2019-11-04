@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 		set_stack(&st_a, app);
 		while (!check_stacks(st_a, st_b))
 		{
-			ft_printf("-----sort-------\n");
+			// ft_printf("-----sort-------\n");
 			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
 			//TODO create a function that sets 1 to which instructions to use 
@@ -79,11 +79,11 @@ int main(int argc, char **argv)
 			//set_last_sort_flag_b();
 			// ft_printf("#1.- passing set sort_flag !!!\n");
 			st_act_ft(&app, &st_a, &st_b);
-			ft_printf("printing stack a\n");
-			print_stack(&st_a);
-			ft_printf("printing stack b\n");
-			print_stack(&st_b);
-			ft_printf("========end==========\n");
+			// ft_printf("printing stack a\n");
+			// print_stack(&st_a);
+			// ft_printf("printing stack b\n");
+			// print_stack(&st_b);
+			// ft_printf("========end==========\n");
 		}
 	}
 	// print_stack(&st_a);
@@ -91,13 +91,22 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-// sun 1:09
-// mon 7:53
-// -------
-// 9:02
-// tues 8:06
+// sun
+// mon
+// -------  
+// 
+// tues 
 // ---------
-// 17:08
-// wed 6:00
+// 
+// wed 
 // --------
-// 23:08
+// 
+// thurs 
+// -------  
+// 
+// fri 
+// --------  
+// 
+// sat 
+// ------
+// 

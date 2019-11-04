@@ -64,17 +64,3 @@ int		ch_last_low_elem(t_list *stack, t_app *app)
 		return (1);
 	return (0);
 }
-
-int		ch_double_pb_a(t_list *stack, t_app *app)
-{
-	t_list	*prev;
-
-	if(app->sort_sta_flag[0] || stack == NULL || stack->next == NULL)
-		return 0;
-	prev = stack;
-	stack = stack->next;
-	stack = stack->next;
-	if(ch_next_low_elem(stack, app) && ch_next_low_elem(prev, app))
-		return 1;
-	return 0;
-}

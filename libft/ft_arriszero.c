@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int		ft_arriszero(int *num, int size)
+int		ft_arriszero(int *num, int len)
 {
 	int i;
 
 	i = 0;
-	while(i < size)
+	while(i < len)
 	{
 		if(num[i])
 			return (0);
