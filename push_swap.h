@@ -46,6 +46,7 @@ typedef struct	s_app
 	char	**instr;
 	char	**av;
 	int		*arr_num;
+	int		hi_st_val;
 	int		len_inst;
 	int		len_stck;
 	int		len_mid_a;
@@ -95,10 +96,19 @@ int				check_instr(char *instr);
 void			free_words(char **instr);
 void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 
+
+/*
+** funtction to set stack A instructions
+*/
+
 int				ch_next_low_elem(t_list *stack, t_app *app);
 int				ch_first_hi_elem(t_list *stack, t_app *app);
 int				ch_last_low_elem(t_list *stack, t_app *app);
 // int				ch_double_pb_a(t_list *stack, t_app *app);
+
+/*
+** funtction to set stack B instructions
+*/
 
 int		ch_next_hi_elem(t_list *stack, t_app *app);
 int		ch_first_low_elem(t_list *stack, t_app *app);
