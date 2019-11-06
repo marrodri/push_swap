@@ -40,10 +40,20 @@ void	init_ps(t_app **app)
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
-	(*app)->len_mid_a = 0;
+	(*app)->stIsMerged = 0;
+
 	(*app)->len_stck = 0;
+	(*app)->stck_a_hi_val = 0;
+	(*app)->stck_a_hi_val_ind = 0;
+	(*app)->stck_a_low_val = 0;
+	(*app)->stck_a_low_val_ind = 0;
+
 	(*app)->len_stck_b = 0;
-	(*app)->len_mid_b = 0;
+	(*app)->stck_b_hi_val = 0;
+	(*app)->stck_b_hi_val_ind = 0;
+	(*app)->stck_b_low_val = 0;
+	(*app)->stck_b_low_val_ind = 0;
+
 	while (i < 4)
 	{
 		(*app)->sort_sta_flag[i] = 0;
@@ -71,12 +81,16 @@ int main(int argc, char **argv)
 			// ft_printf("-----sort-------\n");
 			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
+
+			if(!app->stIsMerged)
+			{
+				//TODO MERGE THE STACK
+			}
+
+
 			//TODO create a function that sets 1 to which instructions to use 
-			// set_sort_ft(&app, st_a, st_b);
 			set_sort_flag(&app, st_a, st_b);
 
-			//set_last_sort_flag_a();
-			//set_last_sort_flag_b();
 			// ft_printf("#1.- passing set sort_flag !!!\n");
 			st_act_ft(&app, &st_a, &st_b);
 			// ft_printf("printing stack a\n");
@@ -91,14 +105,14 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-// sun
-// mon
+// sun 2:03
+// mon 4:25
 // -------  
-// 
-// tues 
+// 6:28
+// tues 3:08
 // ---------
-// 
-// wed 
+// 9:36
+// wed 1:47
 // --------
 // 
 // thurs 

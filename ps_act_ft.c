@@ -83,24 +83,38 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 {
 
 	//here's the push method
+	// if (ft_arriszero((*app)->sort_sta_flag, 3) &&
+	// 	ft_arriszero((*app)->sort_stb_flag, 3))
+	// {
+	// 	if (!check_stack(*st_a))
+	// 	{
+	// 		while((*app)->sort_sta_flag[3])
+	// 		{
+	// 			push(st_b, st_a);
+	// 			ft_printf("pb\n");
+	// 			(*app)->instr_count++;
+	// 			(*app)->sort_sta_flag[3]--;
+	// 		}
+	// 	}
+	// 	else
+	// 	{
+	// 		push(st_a, st_b);
+	// 		ft_printf("pa\n");
+	// 		(*app)->instr_count++;
+	// 	}
+	// }
 	if (ft_arriszero((*app)->sort_sta_flag, 3) &&
 		ft_arriszero((*app)->sort_stb_flag, 3))
 	{
-		if (!check_stack(*st_a))
+		if((*app)->sort_sta_flag[3])
 		{
-			while((*app)->sort_sta_flag[3])
-			{
-				push(st_b, st_a);
-				ft_printf("pb\n");
-				(*app)->instr_count++;
-				(*app)->sort_sta_flag[3]--;
-			}
+			push(st_b, st_a);
+			ft_printf("pb\n");
 		}
-		else
+		else if((*app)->sort_stb_flag[3])
 		{
 			push(st_a, st_b);
 			ft_printf("pa\n");
-			(*app)->instr_count++;
 		}
 	}
 	else

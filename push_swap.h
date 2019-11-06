@@ -46,15 +46,33 @@ typedef struct	s_app
 	char	**instr;
 	char	**av;
 	int		*arr_num;
-	int		hi_st_val;
 	int		len_inst;
+	int		stIsMerged;
+	int		stck_ind;
+
+
+	int		hi_val_ind;
+	int		low_sta_val;
+
 	int		len_stck;
-	int		len_mid_a;
-	int		len_stck_b;
-	int		len_mid_b;
+	int		stck_a_hi_val;
+	int		stck_a_hi_val_ind;
+	int		stck_a_low_val;
+	int		stck_a_low_val_ind;
+
+
+	int		len_stck_b;//keep updating this one
+	int		stck_b_hi_val;
+	int		stck_b_hi_val_ind;
+	int		stck_b_low_val_ind;
+	int		stck_b_low_val;
+
+	int		hi_stb_val;
+	int		low_stb_val;
+
+
 	int		free_av;
 	int		instr_count;
-	int		flag_sorted_a;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);
@@ -122,4 +140,6 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);
 
 void	print_stack(t_list **list);
+
+void	mergeStack(t_app **app, t_list **st_a, t_list **st_b);
 #endif

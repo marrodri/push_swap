@@ -69,14 +69,12 @@ void	sta_flag(t_app **app, t_list *st_a)
 
 	sta_ft[0] = ch_first_hi_elem; //ra,
 	sta_ft[1] = ch_last_low_elem; //rra
-	sta_ft[2] = ch_next_low_elem; //sa
+	sta_ft[2] = ch_next_low_elem; //sa, use this after rotating, check the next one is lower than the current
 	while (i < 3 && ft_arriszero((*app)->sort_sta_flag, 3))
 	{
 		(*app)->sort_sta_flag[i] = sta_ft[i](st_a, *app);
 		i++;
 	}
-
-
 
 
 
