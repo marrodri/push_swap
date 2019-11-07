@@ -10,42 +10,70 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-void stck_hi_val(t_app **app, t_list *stck)
+// void	stck_low_val(t_app **app, t_list *stck)
+// {
+// 	//get the lowest value of the stack and the index of the highest value
+// 	(*app)->stck_ind = 0;
+// 	while(!stck)
+// 	{
+// 		stck = stck->next;
+// 		(*app)->stck_ind++;
+// 	}
+// }
+
+void	stck_hi_val(t_app **app, t_list *stck)
 {
 	//get the higest value of the stack and the index of the highest value
 	(*app)->stck_ind = 0;
-	while(!stck)
+	(*app)->stck_a_hi_val = stck->elem;
+	while (!stck)
 	{
+		if (stck->elem > (*app)->stck_a_hi_val)
+		{
+			(*app)->stck_a_hi_val = stck->elem;
+			(*app)->stck_a_hi_val_ind = (*app)->stck_ind;
+		}
 		stck = stck->next;
 		(*app)->stck_ind++;
 	}
 }
 
-void stck_low_val(t_app **app, t_list *stck)
-{
-	//get the lowest value of the stack and the index of the highest value
-	(*app)->stck_ind = 0;
-	while(!stck)
-	{
-		stck = stck->next;
-		(*app)->stck_ind++;
-	}
-	
-}
-
-void mergeStack(t_app **app, t_list **st_a, t_list **st_b)
+void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 {
 	//get the index
-
-	/* if the highest value is below the middle index, move it to the
-	the end or higher position than the index middle*/
-
-	/* if not then start pushing until theres only half of the stacks */
-
-
+	int indDif;
+	int instr;
+	int midIndex;
+	int ra_inst;
+	int rra_inst;
+	indDif = 0;
+	stck_hi_val(app, *st_a);
+	midIndex = ((*app)->len_stck /2);
+	if ((*app)->stck_a_hi_val_ind < midIndex)
+	{	
+		// if the hi value index is lower than the half of the index
+		// rotate the hi val to the last place, wether by ra or rra
+		// the push the half of the stack to stack b
+		ra_inst = (*app)->stck_a_hi_val_ind + 1;
+		rra_inst = midIndex - (*app)->stck_a_hi_val_ind;
+		if (ra_inst > rra_inst)
+		{
+			//use rra
+		}
+		else
+		{
+			//use ra
+		}
+	}
+	//start pushing the half of the stack A to stack B
+	while(midIndex)
+	{
+		push(st_b, st_a);
+		ft_printf("pb\n");
+		midIndex--;
+	}
 	(*app)->stIsMerged = 1;
 	/*try to use ss, rr, rra, as much as posible*/
 }
