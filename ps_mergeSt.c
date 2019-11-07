@@ -32,6 +32,7 @@ void	stck_hi_val(t_app **app, t_list *stck)
 	{
 		if (stck->elem > (*app)->stck_a_hi_val)
 		{
+			ft_printf("passed!!!\n");
 			(*app)->stck_a_hi_val = stck->elem;
 			(*app)->stck_a_hi_val_ind = (*app)->stck_ind;
 		}
@@ -51,13 +52,18 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 	indDif = 0;
 	stck_hi_val(app, *st_a);
 	midIndex = ((*app)->len_stck /2);
+
+	ft_printf("midIndex: %d\n", midIndex);
+	ft_printf("hival: %d\n", (*app)->stck_a_hi_val);
+	ft_printf("hival index: %d\n", (*app)->stck_a_hi_val_ind);
+	
 	if ((*app)->stck_a_hi_val_ind < midIndex)
 	{	
 		// if the hi value index is lower than the half of the index
 		// rotate the hi val to the last place, wether by ra or rra
 		// the push the half of the stack to stack b
 		ra_inst = (*app)->stck_a_hi_val_ind + 1;
-		rra_inst = midIndex - (*app)->stck_a_hi_val_ind;
+		rra_inst = midIndex - (*app)->stck_a_hi_val_ind + 1;
 		if (ra_inst > rra_inst)
 		{
 			//use rra
@@ -68,7 +74,7 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 				rra_inst--;
 			}
 		}
-		else
+		else if(ra_inst < rra_inst)
 		{
 			while(ra_inst)
 			{
