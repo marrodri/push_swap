@@ -12,30 +12,30 @@
 
 #include "push_swap.h"
 
-// void	stb_flag(t_app **app, t_list *st_b)
-// {
-// 	t_stack_fl	*stb_ft[3];
-// 	t_stIns		*stack_inst;
-// 	int			i;
+void	stb_flag(t_app **app, t_list *st_b)
+{
+	t_stack_fl	*stb_ft[3];
+	t_stIns		*stack_inst;
+	int			i;
 
-// 	i = 0;
-// 	stack_inst = malloc(sizeof(t_stIns));
-// 	stb_ft[0] = ch_first_low_elem; //rb
-// 	stb_ft[1] = ch_last_hi_elem; //rrb
-// 	stb_ft[2] = ch_next_hi_elem; //sb
-// 	while (i < 3 && ft_arriszero((*app)->sort_stb_flag, 3))
-// 	{
-// 		(*app)->sort_stb_flag[i] = stb_ft[i](st_b, *app);
-// 		i++;
-// 	}
-// 	//add special cases for pa
-// 	// if (ft_arriszero((*app)->sort_stb_flag, 3) &&
-// 	// 	ft_arriszero((*app)->sort_sta_flag, 4))
-// 	// 	(*app)->sort_stb_flag[3] = 1;
+	i = 0;
+	stack_inst = malloc(sizeof(t_stIns));
+	stb_ft[0] = ch_first_low_elem; //rb
+	stb_ft[1] = ch_last_hi_elem; //rrb
+	stb_ft[2] = ch_next_hi_elem; //sb
+	while (i < 3 && ft_arriszero((*app)->sort_stb_flag, 3))
+	{
+		(*app)->sort_stb_flag[i] = stb_ft[i](st_b, *app);
+		i++;
+	}
+	//add special cases for pa
+	// if (ft_arriszero((*app)->sort_stb_flag, 3) &&
+	// 	ft_arriszero((*app)->sort_sta_flag, 4))
+	// 	(*app)->sort_stb_flag[3] = 1;
 
 	
-// 	free(stack_inst);
-// }
+	free(stack_inst);
+}
 
 // REVAMP THIS
 void	sta_flag(t_app **app, t_list *st_a)

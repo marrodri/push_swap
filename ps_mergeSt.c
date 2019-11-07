@@ -44,10 +44,10 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 {
 	//get the index
 	int indDif;
-	int instr;
 	int midIndex;
 	int ra_inst;
 	int rra_inst;
+
 	indDif = 0;
 	stck_hi_val(app, *st_a);
 	midIndex = ((*app)->len_stck /2);
@@ -61,9 +61,21 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 		if (ra_inst > rra_inst)
 		{
 			//use rra
+			while(rra_inst)
+			{
+				rrot(st_a);
+				ft_printf("rra\n");
+				rra_inst--;
+			}
 		}
 		else
 		{
+			while(ra_inst)
+			{
+				rot(st_a);
+				ft_printf("ra\n");
+				ra_inst--;
+			}
 			//use ra
 		}
 	}
@@ -75,5 +87,4 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 		midIndex--;
 	}
 	(*app)->stIsMerged = 1;
-	/*try to use ss, rr, rra, as much as posible*/
 }

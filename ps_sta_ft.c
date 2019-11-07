@@ -71,10 +71,12 @@ int		ch_ra_sta()
 {
 //TODO check how many instr. needed to rotate the hi/low elem using only ra;
 // for checking the hi_elem with ra goes an additional step if the len of the stack is odd
+	return 0;
 }
 
 int		ch_rra_sta()
 {
 	//TODO check how many instr. needed to rotate the hi/low elem using only rra;
 	// for checking the hi_elem with ra goes an additional step
+	return 0;
 }

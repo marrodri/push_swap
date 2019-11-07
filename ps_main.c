@@ -76,7 +76,7 @@ int main(int argc, char **argv)
 	if (check_arg(argv, argc, &app))
 	{
 		set_stack(&st_a, app);
-		while (!check_stacks(st_a, st_b))
+		while (!check_stacks(st_a, st_b) && !app->stIsMerged)
 		{
 			// ft_printf("-----sort-------\n");
 			app->len_stck = ft_list_size(st_a);
@@ -84,15 +84,20 @@ int main(int argc, char **argv)
 
 			if(!app->stIsMerged)
 			{
-				//TODO MERGE THE STACK
-			}
 
+				//TODO MERGE THE STACK
+				mergeStack(&app, &st_a, &st_b);
+			}
+			ft_printf("printing stack a\n");
+			print_stack(&st_a);
+			ft_printf("printing stack b\n");
+			print_stack(&st_b);
 
 			//TODO create a function that sets 1 to which instructions to use 
-			set_sort_flag(&app, st_a, st_b);
+			// set_sort_flag(&app, st_a, st_b);
 
 			// ft_printf("#1.- passing set sort_flag !!!\n");
-			st_act_ft(&app, &st_a, &st_b);
+			// st_act_ft(&app, &st_a, &st_b);
 			// ft_printf("printing stack a\n");
 			// print_stack(&st_a);
 			// ft_printf("printing stack b\n");
