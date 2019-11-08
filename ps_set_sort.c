@@ -69,16 +69,26 @@ void	sta_flag(t_app **app, t_list *st_a)
 	}
 }
 
+int stAIsSorted()
+{
+	return 0;
+}
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
 	//first step 
-	//add a checker if everything above is 0 for pushing
-	//OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
-	// TRY TO push the val from STACK B TO STACK A 
-
-	//if not then
-	sta_flag(app, st_a);
-	stb_flag(app, st_b);
+	if(stAIsSorted())
+	{
+		//add a checker if everything above is 0 for pushing
+		//OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
+		// TRY TO push the val from STACK B TO STACK A 
+		// TODO algo to set instr. for sorted stacks;
+	}
+	else
+	{
+		//if not then, goes the sort both stacks algo
+		sta_flag(app, st_a);
+		stb_flag(app, st_b);
+	}
 
 	// TODO CHECK IF BOTH SAME INSTR ARE ACTIVE,
 	// if if both instructions are active, but different

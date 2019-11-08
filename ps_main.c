@@ -94,7 +94,7 @@ int main(int argc, char **argv)
 			print_stack(&st_b);
 
 			//TODO create a function that sets 1 to which instructions to use 
-			// set_sort_flag(&app, st_a, st_b);
+			set_sort_flag(&app, st_a, st_b);
 
 			// ft_printf("#1.- passing set sort_flag !!!\n");
 			// st_act_ft(&app, &st_a, &st_b);
@@ -112,20 +112,20 @@ int main(int argc, char **argv)
 
 // sun 2:03
 // mon 4:25
-// -------  
+// -------
 // 6:28
 // tues 3:08
 // ---------
 // 9:36
-// wed 1:47
+// wed 4:40
+// --------
+// 15:16
+// thurs 5:25
+// -------
+// 20:41
+// fri
 // --------
 // 
-// thurs 
-// -------  
-// 
-// fri 
-// --------  
-// 
-// sat 
-// ------
+// sat
+// --------
 // 
