@@ -76,6 +76,7 @@ int stARotSort(t_app *app, t_list *st_a)
 
 	index = 0;
 	head = st_a;
+	return 0;
 	while(1)
 	{
 		if(!st_a)
@@ -104,7 +105,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
 	//first step 
 	//TODO HIGH PRIORITY
-	if(stARotSort(app, st_a))
+	if(stARotSort(*app, st_a))
 	{
 		//add a checker if everything above is 0 for pushing
 		//OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED

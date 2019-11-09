@@ -128,8 +128,7 @@ int		ch_first_low_elem(t_list *stack, t_app *app);
 int		ch_last_hi_elem(t_list *stack, t_app *app);
 int		ch_special_case_b(t_list *stack, t_app *app);
 
-
-void			set_ft(t_app **app, t_list *st_a, t_list *st_b);
+void	set_ft(t_app **app, t_list *st_a, t_list *st_b);
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);
@@ -138,7 +137,9 @@ void	print_stack(t_list **list);
 
 void	mergeStack(t_app **app, t_list **st_a, t_list **st_b);
 
-void	stck_hi_valInd(t_app **app, t_list *stck);
-void	stck_low_valInd(t_app **app, t_list *stck);
+int		stck_hiValInd(t_list *stck);
+int		stck_lowValInd(t_list *stck);
+int		stck_hiVal(t_list *stck);
+int		stck_low_val(t_list *stck);
 
 #endif
