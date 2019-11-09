@@ -56,28 +56,28 @@ void	act_stb(t_app **app, t_list **st_b)
 	}
 }
 
-// void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
-// {
-// 	int				i;
-// 	int				j;
-// 	t_ps_both_ft	*sort_both[3];
+void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
+{
+	int				i;
+	int				j;
+	t_ps_both_ft	*sort_both[3];
 
-// 	i = 0;
-// 	sort_both[0] = rr;
-// 	sort_both[1] = rrr;
-// 	sort_both[2] = ss;
-// 	while (i < 3)
-// 	{
-// 		if ((*app)->sort_sta_flag[i] && (*app)->sort_stb_flag[i])
-// 		{
-// 			j = sort_both[i](st_a, st_b);
-// 			(*app)->sort_sta_flag[i] = 0;
-// 			(*app)->sort_stb_flag[i] = 0;
-// 			(*app)->instr_count++;
-// 		}
-// 		i++;
-// 	}
-// }
+	i = 0;
+	sort_both[0] = rr;
+	sort_both[1] = rrr;
+	sort_both[2] = ss;
+	while (i < 3)
+	{
+		if ((*app)->sort_sta_flag[i] && (*app)->sort_stb_flag[i])
+		{
+			j = sort_both[i](st_a, st_b);
+			(*app)->sort_sta_flag[i] = 0;
+			(*app)->sort_stb_flag[i] = 0;
+			(*app)->instr_count++;
+		}
+		i++;
+	}
+}
 
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 {
@@ -119,9 +119,9 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 	}
 	else
 	{
-		// act_st_both(app, st_a, st_b);
+		act_st_both(app, st_a, st_b);
 		act_sta(app, st_a);
-		// act_stb(app, st_b);
+		act_stb(app, st_b);
 	}
 
 	/*

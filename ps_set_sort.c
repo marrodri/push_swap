@@ -45,8 +45,6 @@ void	sta_flag(t_app **app, t_list *st_a)
 	int			i;
 
 	i = 0;
-
-
 	// revamp
 
 	// STACK IGNORE
@@ -69,14 +67,44 @@ void	sta_flag(t_app **app, t_list *st_a)
 	}
 }
 
-int stAIsSorted()
+int stARotSort(t_app *app, t_list *st_a)
 {
-	return 0;
+	//TODO 1
+	t_list *head;
+	int index;
+	int prev_val;
+
+	index = 0;
+	head = st_a;
+	while(1)
+	{
+		if(!st_a)
+		{
+			st_a = head;
+			index = 0;
+		}
+		if(index == app->stck_a_hi_val_ind)
+		{
+			break;
+		}
+		if(prev_val > st_a->elem)
+		{
+			return 0;
+		}
+		prev_val = st_a->elem;
+		index++;
+		st_a = st_a->next;
+	}
+	return 1;
 }
+
+
+
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
 	//first step 
-	if(stAIsSorted())
+	//TODO HIGH PRIORITY
+	if(stARotSort(app, st_a))
 	{
 		//add a checker if everything above is 0 for pushing
 		//OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
@@ -86,11 +114,13 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	else
 	{
 		//if not then, goes the sort both stacks algo
+		// todo2 - FIX THE STA_FLAGS
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 	}
 
-	// TODO CHECK IF BOTH SAME INSTR ARE ACTIVE,
+	// TODO 3 - AN INSTRUCTION CHECKER
+	//  CHECKS IF BOTH SAME INSTR ARE ACTIVE,
 	// if if both instructions are active, but different
 	// value, cut to the shortest value between the 2
 	// in case of passing what stated above, 

@@ -50,18 +50,13 @@ typedef struct	s_app
 	int		stIsMerged;
 	int		stck_ind;
 
-
-	int		hi_val_ind;
-	int		low_sta_val;
-
-	int		len_stck;
+	int		len_stck; //keep updating this one
 	int		stck_a_hi_val;
 	int		stck_a_hi_val_ind;
 	int		stck_a_low_val;
 	int		stck_a_low_val_ind;
 
-
-	int		len_stck_b;//keep updating this one
+	int		len_stck_b; //keep updating this one
 	int		stck_b_hi_val;
 	int		stck_b_hi_val_ind;
 	int		stck_b_low_val_ind;
@@ -142,4 +137,8 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);
 void	print_stack(t_list **list);
 
 void	mergeStack(t_app **app, t_list **st_a, t_list **st_b);
+
+void	stck_hi_valInd(t_app **app, t_list *stck);
+void	stck_low_valInd(t_app **app, t_list *stck);
+
 #endif

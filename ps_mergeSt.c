@@ -12,37 +12,8 @@
 
 #include "push_swap.h"
 
-// void	stck_low_val(t_app **app, t_list *stck)
-// {
-// 	//get the lowest value of the stack and the index of the highest value
-// 	(*app)->stck_ind = 0;
-// 	while(!stck)
-// 	{
-// 		stck = stck->next;
-// 		(*app)->stck_ind++;
-// 	}
-// }
-
-void	stck_hi_val(t_app **app, t_list *stck)
-{
-	//get the higest value of the stack and the index of the highest value
-	(*app)->stck_ind = 0;
-	(*app)->stck_a_hi_val = stck->elem;
-	while (stck)
-	{
-		if (stck->elem > (*app)->stck_a_hi_val)
-		{
-			(*app)->stck_a_hi_val = stck->elem;
-			(*app)->stck_a_hi_val_ind = (*app)->stck_ind;
-		}
-		stck = stck->next;
-		(*app)->stck_ind++;
-	}
-}
-
 void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 {
-	//get the index
 	int indDif;
 	int midIndex;
 	int ra_inst;
@@ -63,7 +34,7 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 		// the push the half of the stack to stack b
 		ra_inst = (*app)->stck_a_hi_val_ind + 1;
 		rra_inst = midIndex - (*app)->stck_a_hi_val_ind;
-		if (ra_inst > rra_inst)
+		if (ra_inst >= rra_inst)
 		{
 			while(rra_inst)
 			{
