@@ -137,10 +137,9 @@ void	print_stack(t_list **list);
 
 void	mergeStack(t_app **app, t_list **st_a, t_list **st_b);
 
-int		stck_hiValInd(t_list *stck);
-int		stck_lowValInd(t_list *stck);
 int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
+int		stck_valInd(t_list *stck, int elem);
 int		stck_hiValComp(t_list *stck, int limit);
 
 #endif

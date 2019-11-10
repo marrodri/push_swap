@@ -43,8 +43,12 @@ int stck_hiValComp(t_list *stck, int limit)
 	{
 		if(!stck)
 		{
-			i = 0;
+			// i = 0;
 			stck = head;
+		}
+		if(stck->elem == lowHiVal)
+		{
+			break;
 		}
 		if(stck->elem > limit && preVal < stck->elem)
 		{
@@ -53,7 +57,7 @@ int stck_hiValComp(t_list *stck, int limit)
 		
 		preVal = stck->elem;
 		stck = stck->next;
-		i++
+		// i++;
 	}
 	return (lowHiVal);
 }
@@ -72,46 +76,18 @@ int	stck_hiVal(t_list *stck)
 	return (hi_val);
 }
 
-int	stck_lowValInd(t_list *stck)
+int stck_valInd(t_list *stck, int elem)
 {
 	int i;
-	int low_index;
-	int low_val;
-
+	int index;
 	i = 0;
-	low_index = 0;
-	low_val = stck->elem;
-	while (!stck)
+	index = -1;
+	while(stck)
 	{
-		if (stck->elem < low_val)
-		{
-			low_val = stck->elem;
-			low_index = i;
-		}
-		i++;
-		stck = stck->next;
-	}
-	return (low_index);
-}
-
-int	stck_hiValInd(t_list *stck)
-{
-	int i;
-	int hi_index;
-	int hi_val;
-
-	i = 0;
-	hi_index = 0;
-	hi_val = stck->elem;
-	while (stck)
-	{
-		if (stck->elem > hi_val)
-		{
-			hi_val = stck->elem;
-			hi_index = i;
-		}
+		if(stck->elem == elem)
+			index = i;
 		stck = stck->next;
 		i++;
 	}
-	return (hi_index);
+	return (index);
 }
