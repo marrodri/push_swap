@@ -12,4 +12,15 @@
 
 #include "push_swap.h"
 
-//TODO ADD THE FUNCTIONS TO FINALLY PROPERLY SORT, a sorted stack a/ and/or stack b
+//TODO ADD THE FUNCTIONS TO FINALLY PROPERLY SORT, by rotating and pushing
+// elements from stack b to rotating stack a, and finally rotating when everything
+// is sorted
+
+
+void	setInst()
+{
+	//IMPORTANT NOTE
+	//if the first element from stack B cannot be inserted 
+	// where the first elem of stack A is, find a way to break
+	// 
+}
