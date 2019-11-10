@@ -88,16 +88,16 @@ int main(int argc, char **argv)
 				//  and (is not rotated sorted or there's more than one swap instruct. then merge);
 				mergeStack(&app, &st_a, &st_b);
 			}
-			// ft_printf("printing stack a\n");
-			// print_stack(&st_a);
-			// ft_printf("printing stack b\n");
-			// print_stack(&st_b);
+			ft_printf("printing stack a\n");
+			print_stack(&st_a);
+			ft_printf("printing stack b\n");
+			print_stack(&st_b);
 
-			//TODO create a function that sets 1 to which instructions to use 
-			// set_sort_flag(&app, st_a, st_b);
+			//TODO CHECKPOINT... CONTINUE HERE 
+			set_sort_flag(&app, st_a, st_b);
 
 			// ft_printf("#1.- passing set sort_flag !!!\n");
-			st_act_ft(&app, &st_a, &st_b);
+			// st_act_ft(&app, &st_a, &st_b);
 			// ft_printf("printing stack a\n");
 			// print_stack(&st_a);
 			// ft_printf("printing stack b\n");
@@ -123,9 +123,9 @@ int main(int argc, char **argv)
 // thurs 7:10
 // -------
 // 22:26
-// fri 6:00
+// fri 6:22
 // --------
-// 28:26
+// 28:48
 // sat
 // --------
 // 

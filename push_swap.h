@@ -140,6 +140,6 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b);
 int		stck_hiValInd(t_list *stck);
 int		stck_lowValInd(t_list *stck);
 int		stck_hiVal(t_list *stck);
-int		stck_low_val(t_list *stck);
+int		stck_lowVal(t_list *stck);
 
 #endif

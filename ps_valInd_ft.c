@@ -12,17 +12,15 @@
 
 #include "push_swap.h"
 
-int		stck_low_val(t_list *stck)
+int		stck_lowVal(t_list *stck)
 {
 	int low_val;
 
 	low_val = stck->elem;
-	while (!stck)
+	while (stck)
 	{
 		if (stck->elem < low_val)
-		{
 			low_val = stck->elem;
-		}
 		stck = stck->next;
 	}
 	return (low_val);

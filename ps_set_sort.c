@@ -71,29 +71,32 @@ int stARotSort(t_app *app, t_list *st_a)
 {
 	//TODO 1
 	t_list *head;
-	int index;
 	int prev_val;
+	int low_val;
 
-	index = 0;
+	low_val = stck_lowVal(st_a);
 	head = st_a;
-	return 0;
+	while(st_a->elem != app->stck_a_hi_val)
+		st_a = st_a->next;
+	ft_printf("st_a hi elem is: %d\n", st_a->elem);
+	ft_printf("stack a low val: %d\n", low_val);
+	prev_val = st_a->elem;
+	st_a = st_a->next;
 	while(1)
 	{
-		if(!st_a)
+		if (!st_a)
 		{
 			st_a = head;
-			index = 0;
 		}
-		if(index == app->stck_a_hi_val_ind)
+		if (st_a->elem == app->stck_a_hi_val)
 		{
 			break;
 		}
-		if(prev_val > st_a->elem)
+		if (prev_val > st_a->elem && (st_a->elem != low_val))
 		{
-			return 0;
+			return (0);
 		}
 		prev_val = st_a->elem;
-		index++;
 		st_a = st_a->next;
 	}
 	return 1;
@@ -107,18 +110,24 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	//TODO HIGH PRIORITY
 	if(stARotSort(*app, st_a))
 	{
+		ft_printf("stack A is rotated sorted\n");
 		//add a checker if everything above is 0 for pushing
 		//OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
 		// TRY TO push the val from STACK B TO STACK A 
 		// TODO algo to set instr. for sorted stacks;
 	}
-	else
+	else if(0)
 	{
 		//if not then, goes the sort both stacks algo
 		// todo2 - FIX THE STA_FLAGS
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 	}
+	else
+	{
+		ft_printf("stack A is NOT rotated sorted\n");
+	}
+	
 
 	// TODO 3 - AN INSTRUCTION CHECKER
 	//  CHECKS IF BOTH SAME INSTR ARE ACTIVE,
