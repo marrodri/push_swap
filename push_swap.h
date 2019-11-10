@@ -141,5 +141,6 @@ int		stck_hiValInd(t_list *stck);
 int		stck_lowValInd(t_list *stck);
 int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
+int		stck_hiValComp(t_list *stck, int limit);
 
 #endif

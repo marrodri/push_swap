@@ -23,7 +23,6 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 	(*app)->stck_a_hi_val_ind = stck_hiValInd(*st_a);
 	(*app)->stck_a_hi_val = stck_hiVal(*st_a);
 
-	// (*app)->stck_a_hi_val = stck_hi_val(*st_a);
 	midIndex = ((*app)->len_stck /2);
 
 	// ft_printf("midIndex: %d\n", midIndex);

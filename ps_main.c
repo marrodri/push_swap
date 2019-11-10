@@ -68,7 +68,6 @@ int main(int argc, char **argv)
 	t_list		*st_a;
 	t_list		*st_b;
 	t_app		*app;
-	//TODO create an algo that sorts the stack
 
 	st_a = NULL;
 	st_b = NULL;
@@ -126,6 +125,6 @@ int main(int argc, char **argv)
 // fri 6:22
 // --------
 // 28:48
-// sat
+// sat 5:34
 // --------
-// 
+// 34:22

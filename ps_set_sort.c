@@ -100,6 +100,9 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	if (stARotSort(*app, st_a))
 	{
 		ft_printf("stack A is rotated sorted\n");
+		//TODO CONTINUE HERE
+		int test = stck_hiValComp(st_a, 5);
+		ft_printf("test is %d\n", test);
 		// add a checker if everything above is 0 for pushing
 		// OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
 		// TRY TO push the val from STACK B TO STACK A

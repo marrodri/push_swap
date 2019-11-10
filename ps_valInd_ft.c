@@ -26,6 +26,38 @@ int		stck_lowVal(t_list *stck)
 	return (low_val);
 }
 
+//needed to find the value of stack a to push from stack b
+int stck_hiValComp(t_list *stck, int limit)
+{
+	int lowHiVal;
+	int preVal;
+	// int i;
+	// int valInd;
+	t_list *head;
+
+	head = stck;
+	// i = 0;
+	// valInd = 0;
+	lowHiVal = stck->elem;
+	while(1)
+	{
+		if(!stck)
+		{
+			i = 0;
+			stck = head;
+		}
+		if(stck->elem > limit && preVal < stck->elem)
+		{
+			lowHiVal = stck->elem;
+		}
+		
+		preVal = stck->elem;
+		stck = stck->next;
+		i++
+	}
+	return (lowHiVal);
+}
+
 int	stck_hiVal(t_list *stck)
 {
 	int hi_val;
