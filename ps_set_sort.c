@@ -99,23 +99,29 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
 	if (stARotSort(*app, st_a))
 	{
+		// algo to set instr. for sorted stacks;
 		ft_printf("stack A is rotated sorted\n");
+		setSortedInst(app, st_a, st_b);
 		
-		(*app)->stck_b_hi_val = stck_hiVal(st_b);
-		int test = stck_hiValComp(st_a, (*app)->stck_b_hi_val);
-		ft_printf("test is %d\n", test);
-		//TODO IMPORTANT SET THE INDEXES
+		// (*app)->stck_b_hi_val = stck_hiVal(st_b);
+		// int stAHiLow = stck_hiValComp(st_a, (*app)->stck_b_hi_val);
+		// ft_printf("stAHiLow is %d\n", stAHiLow);
+		// // TODO CONTINUE HERE IMPORTANT: SET THE INDEXES
+		// int stAIndex = stck_valInd(st_a, stAHiLow);
+		// int stHiValIndex = stck_valInd(st_b,(*app)->stck_b_hi_val);
+		// int sta_hi_val;
+
 
 
 		// add a checker if everything above is 0 for pushing
 		// OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
 		// TRY TO push the val from STACK B TO STACK A
-		// TODO algo to set instr. for sorted stacks;
+
 	}
 	else if(0)
 	{
 		// if not then, goes the sort both stacks algo
-		// todo2 - FIX THE STA_FLAGS
+		// todo later - FIX THE STA_FLAGS
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 	}
@@ -124,7 +130,8 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 		ft_printf("stack A is NOT rotated sorted\n");
 	}
 
-	// TODO 3 - AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
+	// TODO AFTER FINISHING THE SORTED PART:
+	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
 	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,
 	// if if both instructions are active, but different
 	// value, cut to the shortest value between the 2

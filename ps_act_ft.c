@@ -124,6 +124,14 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 		act_stb(app, st_b);
 	}
 
+	if((*app)->sort_sta_flag[3] > 0)
+	{
+
+	}
+	else if((*app)->sort_stb_flag[3] > 0)
+	{
+
+	}
 	/*
 	** IF BOTH STACKS ARE SORTED PROPERLY, PUSH ALL TO STA, KEEP IT HERE because
 	** it asks both parameters;

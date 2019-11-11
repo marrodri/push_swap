@@ -14,12 +14,10 @@
 
 void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 {
-	int indDif;
 	int midIndex;
 	int ra_inst;
 	int rra_inst;
 
-	indDif = 0;
 	(*app)->stck_a_hi_val = stck_hiVal(*st_a);
 	(*app)->stck_a_hi_val_ind = stck_valInd(*st_a, (*app)->stck_a_hi_val);
 

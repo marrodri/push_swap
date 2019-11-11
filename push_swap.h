@@ -130,6 +130,7 @@ int		ch_special_case_b(t_list *stack, t_app *app);
 
 void	set_ft(t_app **app, t_list *st_a, t_list *st_b);
 
+void	setSortedInst(t_app **app, t_list *st_a, t_list *st_b);
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);
 
@@ -141,5 +142,6 @@ int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
 int		stck_valInd(t_list *stck, int elem);
 int		stck_hiValComp(t_list *stck, int limit);
+
 
 #endif
