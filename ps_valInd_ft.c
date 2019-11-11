@@ -26,40 +26,35 @@ int		stck_lowVal(t_list *stck)
 	return (low_val);
 }
 
-//needed to find the value of stack a to push from stack b
-int stck_hiValComp(t_list *stck, int limit)
+//DONE, test more later
+int stck_hiValComp(t_list *stck, int val)
 {
-	int lowHiVal;
-	int preVal;
-	// int i;
-	// int valInd;
+	int newValLim;
+	int valLim;
 	t_list *head;
 
 	head = stck;
-	// i = 0;
-	// valInd = 0;
-	lowHiVal = stck->elem;
-	while(1)
-	{
+	valLim = stck_hiVal(stck);
+	newValLim = stck_hiVal(stck);
+	if (val < stck_lowVal(stck))
+		return stck_lowVal(stck);
+	while (1)
+	{	
 		if(!stck)
 		{
-			// i = 0;
 			stck = head;
+			if(newValLim < valLim)
+				valLim = newValLim;
+			else
+				break;
 		}
-		if(stck->elem == lowHiVal)
+		if (stck->elem > val && stck->elem < valLim)
 		{
-			break;
+			newValLim = stck->elem;
 		}
-		if(stck->elem > limit && preVal < stck->elem)
-		{
-			lowHiVal = stck->elem;
-		}
-		
-		preVal = stck->elem;
 		stck = stck->next;
-		// i++;
 	}
-	return (lowHiVal);
+	return (valLim);
 }
 
 int	stck_hiVal(t_list *stck)
@@ -82,9 +77,9 @@ int stck_valInd(t_list *stck, int elem)
 	int index;
 	i = 0;
 	index = -1;
-	while(stck)
+	while (stck)
 	{
-		if(stck->elem == elem)
+		if (stck->elem == elem)
 			index = i;
 		stck = stck->next;
 		i++;
