@@ -96,7 +96,7 @@ int main(int argc, char **argv)
 			set_sort_flag(&app, st_a, st_b);
 
 			// ft_printf("#1.- passing set sort_flag !!!\n");
-			st_act_ft(&app, &st_a, &st_b);
+			// st_act_ft(&app, &st_a, &st_b);
 			// ft_printf("printing stack a\n");
 			// print_stack(&st_a);
 			// ft_printf("printing stack b\n");
