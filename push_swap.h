@@ -95,6 +95,7 @@ int				*rot_r(t_list **stack_a, t_list **stack_b);
 int				*rrot(t_list **stack);
 int				*rrot_r(t_list **stack_a, t_list **stack_b);
 int				read_instr(int fd, t_app **app);
+
 int				check_arg(char **argv, int argc, t_app **app);
 int				set_int_arr(t_app **app, int i);
 int				check_stack(t_list *stack);

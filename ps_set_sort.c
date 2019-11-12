@@ -95,28 +95,60 @@ int stARotSort(t_app *app, t_list *st_a)
 	return (1);
 }
 
+void	rotInstrCheck(t_app **app)
+{
+	if((*app)->sort_sta_flag[0] > (*app)->sort_sta_flag[1])
+		(*app)->sort_sta_flag[0] = 0;
+	else if((*app)->sort_sta_flag[0] <= (*app)->sort_sta_flag[1])
+		(*app)->sort_sta_flag[1] = 0;
+	if((*app)->sort_stb_flag[0] > (*app)->sort_stb_flag[1])
+		(*app)->sort_stb_flag[0] = 0;
+	else if((*app)->sort_stb_flag[0] <= (*app)->sort_stb_flag[1])
+		(*app)->sort_stb_flag[1] = 0;
+
+	ft_printf("updating rot or rrot\n");
+	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+}
+
+void	bothInstrCheck(t_app **app)
+{
+	int i;
+
+	i = 0;
+	while(i < 4)
+	{
+		if((*app)->sort_sta_flag[i] > (*app)->sort_stb_flag[i]
+		 && (*app)->sort_stb_flag[i] > 0)
+		{
+			(*app)->sort_sta_flag[i] = (*app)->sort_stb_flag[i];
+		}
+		else if((*app)->sort_sta_flag[i] < (*app)->sort_stb_flag[i]
+		 && (*app)->sort_sta_flag[i] > 0)
+		{
+			(*app)->sort_stb_flag[i] = (*app)->sort_sta_flag[i];
+		}
+		i++;
+	}
+	
+	ft_printf("equaling doubles\n");
+	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
+	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+}
+
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
 	if (stARotSort(*app, st_a))
 	{
-		// algo to set instr. for sorted stacks;
+		// enter here if the stack a is sorted algo
 		ft_printf("stack A is rotated sorted\n");
 		setSortedInst(app, st_a, st_b);
-		
-		// (*app)->stck_b_hi_val = stck_hiVal(st_b);
-		// int stAHiLow = stck_hiValComp(st_a, (*app)->stck_b_hi_val);
-		// ft_printf("stAHiLow is %d\n", stAHiLow);
-		// // TODO CONTINUE HERE IMPORTANT: SET THE INDEXES
-		// int stAIndex = stck_valInd(st_a, stAHiLow);
-		// int stHiValIndex = stck_valInd(st_b,(*app)->stck_b_hi_val);
-		// int sta_hi_val;
-
-
-
-		// add a checker if everything above is 0 for pushing
-		// OR IF BOTH STACKS/ STACK A OR STACK B ARE SORTED
-		// TRY TO push the val from STACK B TO STACK A
-
 	}
 	else if(0)
 	{
@@ -130,6 +162,8 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 		ft_printf("stack A is NOT rotated sorted\n");
 	}
 
+	rotInstrCheck(app);
+	bothInstrCheck(app);
 	// TODO AFTER FINISHING THE SORTED PART:
 	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
 	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,

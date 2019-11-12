@@ -22,7 +22,7 @@ void	act_sta(t_app **app, t_list **st_a)
 	sort_a[0] = ra;
 	sort_a[1] = rra;
 	sort_a[2] = sa;
-	while (i < 4)
+	while (i < 3)
 	{
 		while ((*app)->sort_sta_flag[i])
 		{
@@ -44,7 +44,7 @@ void	act_stb(t_app **app, t_list **st_b)
 	sort_b[0] = rb;
 	sort_b[1] = rrb;
 	sort_b[2] = sb;
-	while (i < 4)
+	while (i < 3)
 	{
 		while ((*app)->sort_stb_flag[i])
 		{
@@ -66,6 +66,7 @@ void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
 	sort_both[0] = rr;
 	sort_both[1] = rrr;
 	sort_both[2] = ss;
+
 	while (i < 3)
 	{
 		if ((*app)->sort_sta_flag[i] && (*app)->sort_stb_flag[i])
@@ -103,44 +104,37 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 	// 		(*app)->instr_count++;
 	// 	}
 	// }
-	if (ft_arriszero((*app)->sort_sta_flag, 3) &&
-		ft_arriszero((*app)->sort_stb_flag, 3))
-	{
-		if((*app)->sort_sta_flag[3])
-		{
-			push(st_b, st_a);
-			ft_printf("pb\n");
-		}
-		else if((*app)->sort_stb_flag[3])
-		{
-			push(st_a, st_b);
-			ft_printf("pa\n");
-		}
-	}
-	else
-	{
+	// if (!ft_arriszero((*app)->sort_sta_flag, 3) &&
+	// 	ft_arriszero((*app)->sort_stb_flag, 3))
+	// {
+	// 	if((*app)->sort_sta_flag[3])
+	// 	{
+	// 		push(st_b, st_a);
+	// 		ft_printf("pb\n");
+	// 	}
+	// 	else if((*app)->sort_stb_flag[3])
+	// 	{
+	// 		push(st_a, st_b);
+	// 		ft_printf("pa\n");
+	// 	}
+	// }
+	// else
+	// {
 		act_st_both(app, st_a, st_b);
 		act_sta(app, st_a);
+			ft_printf("segfault here!\n");
 		act_stb(app, st_b);
-	}
-
+	// }
 	if((*app)->sort_sta_flag[3] > 0)
 	{
-
+		push(st_a, st_b);
+		ft_printf("pa\n");
+		(*app)->sort_sta_flag[3]--;
 	}
 	else if((*app)->sort_stb_flag[3] > 0)
 	{
-
+		push(st_b, st_a);
+		ft_printf("pb\n");
+		(*app)->sort_stb_flag[3]--;
 	}
-	/*
-	** IF BOTH STACKS ARE SORTED PROPERLY, PUSH ALL TO STA, KEEP IT HERE because
-	** it asks both parameters;
-	*/
-
-	// if (check_stack(*st_a) && check_stack_r(*st_b))
-	// {
-	// 	push(st_a, st_b);
-	// 	(*app)->instr_count++;
-	// 	ft_printf("pa\n");
-	// }
 }

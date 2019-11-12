@@ -16,25 +16,6 @@
 // elements from stack b to rotating stack a, and finally rotating when everything
 // is sorted
 
-// void		ft_flagBValTop(t_app **app)
-// {
-// 	// here checks and sets the rotations required in the flags for stack B
-
-// }
-
-// void		ft_flagAValTop(t_app **app, int stHiLow)
-// {
-// 	// int stHiLowInd;
-
-// 	// stHiLowInd = stck_valInd(st_a, stAHiLow);
-// 	// if(stHiLowInd > 0)
-// 	// {
-// 	// 	(*app)->sort_sta_flag[0] = 0;
-// 	// }
-// 	// here checks and sets the rotations required in the flags for stack A
-
-// }
-
 //TODO CHECKPOINT HERE THIS FUNCTION
 void		setSortedInst(t_app **app, t_list *st_a, t_list *st_b)
 {
