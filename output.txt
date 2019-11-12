@@ -1,0 +1,94 @@
+-----sort-------
+pb
+pb
+pb
+pb
+pb
+printing stack a
+[17]->[20]->[4]->[8]->[10]->[15]->NULL
+printing stack b
+[0]->[9]->[1]->[2]->[3]->NULL
+stack A is rotated sorted
+ra:4
+rra:2
+rb:1
+rrb:4
+rra
+rra
+rb
+pa
+printing stack a
+[9]->[10]->[15]->[17]->[20]->[4]->[8]->NULL
+printing stack b
+[1]->[2]->[3]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[9]->[10]->[15]->[17]->[20]->[4]->[8]->NULL
+printing stack b
+[1]->[2]->[3]->[0]->NULL
+stack A is rotated sorted
+ra:5
+rra:2
+rb:2
+rrb:2
+rra
+rra
+rb
+rb
+pa
+printing stack a
+[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+[0]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+[0]->[1]->[2]->NULL
+stack A is rotated sorted
+ra:0
+rra:0
+rb:2
+rrb:1
+rrb
+pa
+printing stack a
+[2]->[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+[0]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[2]->[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+[0]->[1]->NULL
+stack A is rotated sorted
+ra:0
+rra:0
+rb:1
+rrb:1
+rb
+pa
+printing stack a
+[1]->[2]->[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[1]->[2]->[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+[0]->NULL
+stack A is rotated sorted
+ra:0
+rra:0
+rb:0
+rrb:0
+pa
+printing stack a
+[0]->[1]->[2]->[3]->[4]->[8]->[9]->[10]->[15]->[17]->[20]->NULL
+printing stack b
+list is NULL
+========end==========

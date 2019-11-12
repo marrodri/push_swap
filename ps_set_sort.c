@@ -67,8 +67,6 @@ void	sta_flag(t_app **app, t_list *st_a)
 	}
 }
 
-
-//SEEMED FIXED, TEST MORE LATER
 int stARotSort(t_app *app, t_list *st_a)
 {
 	t_list *head;
@@ -84,10 +82,13 @@ int stARotSort(t_app *app, t_list *st_a)
 	while(1)
 	{
 		if (!st_a)
+		{
 			st_a = head;
+		}
 		if (st_a->elem == app->stck_a_hi_val)
 			break;
-		if (prev_val > st_a->elem && (st_a->elem != low_val))
+		if (prev_val > st_a->elem && prev_val != app->stck_a_hi_val 
+			&& (st_a->elem != low_val))
 			return (0);
 		prev_val = st_a->elem;
 		st_a = st_a->next;
@@ -106,11 +107,11 @@ void	rotInstrCheck(t_app **app)
 	else if((*app)->sort_stb_flag[0] <= (*app)->sort_stb_flag[1])
 		(*app)->sort_stb_flag[1] = 0;
 
-	ft_printf("updating rot or rrot\n");
-	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	// ft_printf("updating rot or rrot\n");
+	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
 }
 
 void	bothInstrCheck(t_app **app)
@@ -132,14 +133,14 @@ void	bothInstrCheck(t_app **app)
 		}
 		i++;
 	}
-	
-	ft_printf("equaling doubles\n");
-	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-	ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+
+	// ft_printf("equaling doubles\n");
+	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
+	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
 }
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)

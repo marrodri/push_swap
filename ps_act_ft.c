@@ -122,7 +122,7 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 	// {
 		act_st_both(app, st_a, st_b);
 		act_sta(app, st_a);
-			ft_printf("segfault here!\n");
+			// ft_printf("segfault here!\n");
 		act_stb(app, st_b);
 	// }
 	if((*app)->sort_sta_flag[3] > 0)
