@@ -24,8 +24,8 @@ void	stb_flag(t_app **app, t_list *st_b)
 
 	// stb_ft[0] = ch_first_low_elem; //rb
 	// stb_ft[1] = ch_last_hi_elem; //rrb
-	// (*app)->sort_stb_flag[0] = ch_rb_sta(app, st_b);
-	// (*app)->sort_stb_flag[1] = ch_rrb_sta(app, st_b);
+	(*app)->sort_stb_flag[0] = ch_rb_stb(st_b);
+	(*app)->sort_stb_flag[1] = ch_rrb_stb(st_b);
 	(*app)->sort_stb_flag[2] = ch_next_hi_elem(st_b, *app); //sb
 	// while (i < 3 && ft_arriszero((*app)->sort_stb_flag, 3))
 	// {
@@ -96,6 +96,7 @@ void	saInstrCheck(t_app **app)
 	}
 }
 
+//remodify this one
 void	rotInstrCheck(t_app **app)
 {
 	if((*app)->sort_sta_flag[0] >= (*app)->sort_sta_flag[1] && 
@@ -165,8 +166,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	{
 		// todo checkpoint - FIX THE ST_FLAGS
 		sta_flag(app, st_a);
-		ft_printf("segfault here?!\n");
-		// stb_flag(app, st_b);
+		stb_flag(app, st_b);
 	}
 
 	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);

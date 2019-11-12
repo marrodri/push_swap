@@ -117,10 +117,14 @@ int				ch_next_low_elem(t_list *stack);
 ** funtction to set stack B instructions
 */
 
-int		ch_next_hi_elem(t_list *stack, t_app *app);
-int		ch_first_low_elem(t_list *stack, t_app *app);
-int		ch_last_hi_elem(t_list *stack, t_app *app);
-int		ch_special_case_b(t_list *stack, t_app *app);
+int				ch_rb_stb(t_list *st_b);
+int				ch_rrb_stb(t_list *st_b);
+int				ch_next_hi_elem(t_list *stack, t_app *app);
+
+
+// int		ch_first_low_elem(t_list *stack, t_app *app);
+// int		ch_last_hi_elem(t_list *stack, t_app *app);
+// int		ch_special_case_b(t_list *stack, t_app *app);
 
 void	set_ft(t_app **app, t_list *st_a, t_list *st_b);
 
