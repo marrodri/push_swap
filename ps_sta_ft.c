@@ -74,15 +74,25 @@ int		ch_ra_sta(t_list *st_a)
 	int i;
 	int index;
 	int prev_val;
-
+	t_list *head;
+	// 1-2-3-5-4-6-7
 	i = 0;
+	head = st_a;
 	index = 0;
+	while(st_a->next)
+		st_a = st_a->next;
+
 	prev_val = st_a->elem;
+	st_a = head;
 	while(st_a)
 	{
 		if(prev_val > st_a->elem)
 		{
 			index = i;
+			if(index == 0)
+			{
+				index = 2;
+			}
 			break;
 		}
 		i++;
@@ -91,7 +101,7 @@ int		ch_ra_sta(t_list *st_a)
 	}
 	//TODO check how many instr. needed to rotate the hi/low elem using only ra;
 	// for checking the hi_elem with ra goes an additional step if the len of the stack is odd
-	return (index + 1);
+	return (index - 1);
 }
 
 int		ch_rra_sta(t_list *st_a)
@@ -101,10 +111,13 @@ int		ch_rra_sta(t_list *st_a)
 	int i;
 	int index;
 	int prev_val;
-
+	t_list *head;
+	// 1-2-3-5-4-6-7
 	i = 0;
+	head = st_a;
 	index = 0;
-	prev_val = st_a->elem;
+	while(st_a->next)
+		st_a = st_a->next;
 	while(st_a)
 	{
 		if(prev_val > st_a->elem)
@@ -115,5 +128,5 @@ int		ch_rra_sta(t_list *st_a)
 		prev_val = st_a->elem;
 		st_a = st_a->next;
 	}
-	return (index - 1);
+	return (index + 1);
 }

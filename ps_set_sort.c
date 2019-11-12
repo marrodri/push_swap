@@ -82,31 +82,41 @@ int stARotSort(t_app *app, t_list *st_a)
 	return (1);
 }
 
+void	saInstrCheck(t_app **app)
+{
+	if((*app)->sort_sta_flag[2])
+	{
+		(*app)->sort_sta_flag[0] = 0;
+		(*app)->sort_sta_flag[1] = 0;
+	}
+	if((*app)->sort_stb_flag[2])
+	{
+		(*app)->sort_stb_flag[0] = 0;
+		(*app)->sort_stb_flag[1] = 0;
+	}
+}
+
 void	rotInstrCheck(t_app **app)
 {
-	if((*app)->sort_sta_flag[0] > (*app)->sort_sta_flag[1] && 
+	if((*app)->sort_sta_flag[0] >= (*app)->sort_sta_flag[1] && 
 	(*app)->sort_sta_flag[1] > 0)
 	{
 		(*app)->sort_sta_flag[0] = 0;
-		(*app)->sort_sta_flag[2] = 0;
 	}
-	else if ((*app)->sort_sta_flag[0] <= (*app)->sort_sta_flag[1] &&
+	else if ((*app)->sort_sta_flag[0] < (*app)->sort_sta_flag[1] &&
 		(*app)->sort_sta_flag[0] > 0)
 	{
 		(*app)->sort_sta_flag[1] = 0;
-		(*app)->sort_sta_flag[2] = 0;
 	}
-	if((*app)->sort_stb_flag[0] > (*app)->sort_stb_flag[1] && 
+	if((*app)->sort_stb_flag[0] >= (*app)->sort_stb_flag[1] && 
 		(*app)->sort_stb_flag[1] > 0)
 	{
 		(*app)->sort_stb_flag[0] = 0;
-		(*app)->sort_stb_flag[2] = 0;
 	}
-	else if((*app)->sort_stb_flag[0] <= (*app)->sort_stb_flag[1] &&
+	else if((*app)->sort_stb_flag[0] < (*app)->sort_stb_flag[1] &&
 		(*app)->sort_stb_flag[0] > 0)
 	{
 		(*app)->sort_stb_flag[1] = 0;
-		(*app)->sort_stb_flag[2] = 0;
 	}
 
 	ft_printf("updating rot or rrot\n");
@@ -155,6 +165,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	{
 		// todo checkpoint - FIX THE ST_FLAGS
 		sta_flag(app, st_a);
+		ft_printf("segfault here?!\n");
 		// stb_flag(app, st_b);
 	}
 
@@ -166,6 +177,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
 
 	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
+	saInstrCheck(app);
 	rotInstrCheck(app);
 	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,
 	// if if both instructions are active, but different
