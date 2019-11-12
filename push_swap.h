@@ -30,14 +30,6 @@ typedef	struct	s_flag
 	int		flag[3];
 }				t_flag;
 
-typedef struct s_stIns
-{
-	int rot;
-	int r_rot;
-	int swap;
-	int psh;
-}				t_stIns;
-
 typedef struct	s_app
 {
 
@@ -72,7 +64,6 @@ typedef struct	s_app
 
 typedef int		*t_sort(t_list **stack);
 typedef int		*t_sort_both(t_list **stack_a, t_list **stack_b);
-typedef int		t_stack_fl(t_list *stack, t_app *app);
 typedef	int		t_ps_ft(t_list **stack);
 typedef	int		t_ps_both_ft(t_list **st_a, t_list **st_b);
 int				*swap(t_list **stack);
@@ -115,10 +106,12 @@ void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 ** funtction to set stack A instructions
 */
 
-int				ch_next_low_elem(t_list *stack, t_app *app);
 int				ch_first_hi_elem(t_list *stack, t_app *app);
 int				ch_last_low_elem(t_list *stack, t_app *app);
-// int				ch_double_pb_a(t_list *stack, t_app *app);
+
+int				ch_ra_sta(t_list *st_a);
+int				ch_rra_sta(t_list *st_a);
+int				ch_next_low_elem(t_list *stack);
 
 /*
 ** funtction to set stack B instructions
@@ -143,6 +136,9 @@ int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
 int		stck_valInd(t_list *stck, int elem);
 int		stck_hiValComp(t_list *stck, int limit);
+
+
+
 
 
 #endif

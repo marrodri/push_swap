@@ -12,12 +12,13 @@
 
 #include "push_swap.h"
 
-int		ch_next_low_elem(t_list *stack, t_app *app)
+//this one seems useful, yet.
+int		ch_next_low_elem(t_list *stack)
 {
 	t_list	*tmp;
 	int		prev_elem;
 
-	if (stack == NULL || stack->next == NULL  || app->len_stck <= 1)
+	if (stack == NULL || stack->next == NULL)
 		return (0);
 	tmp = stack;
 	prev_elem = tmp->elem;
@@ -27,56 +28,92 @@ int		ch_next_low_elem(t_list *stack, t_app *app)
 	return (0);
 }
 
-int		ch_first_hi_elem(t_list *stack, t_app *app)
-{
-	t_list	*tmp;
-	int		high_elem;
+//
+// int		ch_first_hi_elem(t_list *stack, t_app *app)
+// {
+// 	t_list	*tmp;
+// 	int		high_elem;
 
-	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
-		return (0);
-	tmp = stack;
-	high_elem = tmp->elem;
-	while (tmp->next)
-		tmp = tmp->next;
-	if (tmp->elem < high_elem)
-		return (1);
-	return (0);
-}
+// 	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
+// 		return (0);
+// 	tmp = stack;
+// 	high_elem = tmp->elem;
+// 	while (tmp->next)
+// 		tmp = tmp->next;
+// 	if (tmp->elem < high_elem)
+// 		return (1);
+// 	return (0);
+// }
 
 //double check this one
-int		ch_last_low_elem(t_list *stack, t_app *app)
-{
-	t_list	*tmp;
-	t_list	*head;
-	int		low_elem;
+// int		ch_last_low_elem(t_list *stack, t_app *app)
+// {
+// 	t_list	*tmp;
+// 	t_list	*head;
+// 	int		low_elem;
 
-	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
-		return (0);
-	tmp = stack;
-	head = stack;
-	while (tmp->next)
-		tmp = tmp->next;
-	low_elem = tmp->elem;
-	tmp = head;
-	while (tmp->next)
-		tmp = tmp->next;
-	if (tmp->elem > low_elem)
-		return (1);
-	return (0);
+// 	if (stack == NULL || stack->next == NULL || app->len_stck <= 2)
+// 		return (0);
+// 	tmp = stack;
+// 	head = stack;
+// 	while (tmp->next)
+// 		tmp = tmp->next;
+// 	low_elem = tmp->elem;
+// 	tmp = head;
+// 	while (tmp->next)
+// 		tmp = tmp->next;
+// 	if (tmp->elem > low_elem)
+// 		return (1);
+// 	return (0);
+// }
+
+
+
+int		ch_ra_sta(t_list *st_a)
+{
+	int i;
+	int index;
+	int prev_val;
+
+	i = 0;
+	index = 0;
+	prev_val = st_a->elem;
+	while(st_a)
+	{
+		if(prev_val > st_a->elem)
+		{
+			index = i;
+			break;
+		}
+		i++;
+		prev_val = st_a->elem;
+		st_a = st_a->next;
+	}
+	//TODO check how many instr. needed to rotate the hi/low elem using only ra;
+	// for checking the hi_elem with ra goes an additional step if the len of the stack is odd
+	return (index + 1);
 }
 
-
-
-int		ch_ra_sta()
+int		ch_rra_sta(t_list *st_a)
 {
-//TODO check how many instr. needed to rotate the hi/low elem using only ra;
-// for checking the hi_elem with ra goes an additional step if the len of the stack is odd
-	return 0;
-}
-
-int		ch_rra_sta()
-{
-	//TODO check how many instr. needed to rotate the hi/low elem using only rra;
+	//TODO check how many instr. needed to rotate using only rra;
 	// for checking the hi_elem with ra goes an additional step
-	return 0;
+	int i;
+	int index;
+	int prev_val;
+
+	i = 0;
+	index = 0;
+	prev_val = st_a->elem;
+	while(st_a)
+	{
+		if(prev_val > st_a->elem)
+		{
+			index = i;
+		}
+		i++;
+		prev_val = st_a->elem;
+		st_a = st_a->next;
+	}
+	return (index - 1);
 }
