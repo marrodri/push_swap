@@ -82,49 +82,9 @@ void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
 
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 {
-
-	//here's the push method
-	// if (ft_arriszero((*app)->sort_sta_flag, 3) &&
-	// 	ft_arriszero((*app)->sort_stb_flag, 3))
-	// {
-	// 	if (!check_stack(*st_a))
-	// 	{
-	// 		while((*app)->sort_sta_flag[3])
-	// 		{
-	// 			push(st_b, st_a);
-	// 			ft_printf("pb\n");
-	// 			(*app)->instr_count++;
-	// 			(*app)->sort_sta_flag[3]--;
-	// 		}
-	// 	}
-	// 	else
-	// 	{
-	// 		push(st_a, st_b);
-	// 		ft_printf("pa\n");
-	// 		(*app)->instr_count++;
-	// 	}
-	// }
-	// if (!ft_arriszero((*app)->sort_sta_flag, 3) &&
-	// 	ft_arriszero((*app)->sort_stb_flag, 3))
-	// {
-	// 	if((*app)->sort_sta_flag[3])
-	// 	{
-	// 		push(st_b, st_a);
-	// 		ft_printf("pb\n");
-	// 	}
-	// 	else if((*app)->sort_stb_flag[3])
-	// 	{
-	// 		push(st_a, st_b);
-	// 		ft_printf("pa\n");
-	// 	}
-	// }
-	// else
-	// {
-		act_st_both(app, st_a, st_b);
-		act_sta(app, st_a);
-			// ft_printf("segfault here!\n");
-		act_stb(app, st_b);
-	// }
+	act_st_both(app, st_a, st_b);
+	act_sta(app, st_a);
+	act_stb(app, st_b);
 	if((*app)->sort_sta_flag[3] > 0)
 	{
 		push(st_a, st_b);

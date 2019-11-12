@@ -33,7 +33,6 @@ void	stb_flag(t_app **app, t_list *st_b)
 	// 	ft_arriszero((*app)->sort_sta_flag, 4))
 	// 	(*app)->sort_stb_flag[3] = 1;
 
-	
 	free(stack_inst);
 }
 
@@ -67,6 +66,9 @@ void	sta_flag(t_app **app, t_list *st_a)
 	}
 }
 
+
+//SEEMED FIXED, TEST MORE LATER
+// TOFIX, WHEN LAST VAL IS MIN DOESNT ACCEPT AS ROTATED SORTED
 int stARotSort(t_app *app, t_list *st_a)
 {
 	t_list *head;
@@ -98,14 +100,30 @@ int stARotSort(t_app *app, t_list *st_a)
 
 void	rotInstrCheck(t_app **app)
 {
-	if((*app)->sort_sta_flag[0] > (*app)->sort_sta_flag[1])
+	if((*app)->sort_sta_flag[0] > (*app)->sort_sta_flag[1] && 
+	(*app)->sort_sta_flag[1] > 0)
+	{
 		(*app)->sort_sta_flag[0] = 0;
-	else if((*app)->sort_sta_flag[0] <= (*app)->sort_sta_flag[1])
+		(*app)->sort_sta_flag[2] = 0;
+	}
+	else if ((*app)->sort_sta_flag[0] <= (*app)->sort_sta_flag[1] &&
+		(*app)->sort_sta_flag[0] > 0)
+	{
 		(*app)->sort_sta_flag[1] = 0;
-	if((*app)->sort_stb_flag[0] > (*app)->sort_stb_flag[1])
+		(*app)->sort_sta_flag[2] = 0;
+	}
+	if((*app)->sort_stb_flag[0] > (*app)->sort_stb_flag[1] && 
+		(*app)->sort_stb_flag[1] > 0)
+	{
 		(*app)->sort_stb_flag[0] = 0;
-	else if((*app)->sort_stb_flag[0] <= (*app)->sort_stb_flag[1])
+		(*app)->sort_stb_flag[2] = 0;
+	}
+	else if((*app)->sort_stb_flag[0] <= (*app)->sort_stb_flag[1] &&
+		(*app)->sort_stb_flag[0] > 0)
+	{
 		(*app)->sort_stb_flag[1] = 0;
+		(*app)->sort_stb_flag[2] = 0;
+	}
 
 	// ft_printf("updating rot or rrot\n");
 	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
@@ -148,30 +166,22 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	if (stARotSort(*app, st_a))
 	{
 		// enter here if the stack a is sorted algo
-		ft_printf("stack A is rotated sorted\n");
+		// ft_printf("stack A is rotated sorted\n");
 		setSortedInst(app, st_a, st_b);
-	}
-	else if(0)
-	{
-		// if not then, goes the sort both stacks algo
-		// todo later - FIX THE STA_FLAGS
-		sta_flag(app, st_a);
-		stb_flag(app, st_b);
 	}
 	else
 	{
-		ft_printf("stack A is NOT rotated sorted\n");
+		// if not then, goes the sort both stacks algo
+		// todo checkpoint - FIX THE ST_FLAGS
+		sta_flag(app, st_a);
+		stb_flag(app, st_b);
 	}
 
-	rotInstrCheck(app);
-	bothInstrCheck(app);
-	// TODO AFTER FINISHING THE SORTED PART:
 	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
+	rotInstrCheck(app);
 	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,
 	// if if both instructions are active, but different
 	// value, cut to the shortest value between the 2
-	// in case of passing what stated above, 
-	// set the others instr. to 0 except the both active
-
+	bothInstrCheck(app);
 	return ;
 }

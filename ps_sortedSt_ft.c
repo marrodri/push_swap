@@ -50,9 +50,9 @@ void		setSortedInst(t_app **app, t_list *st_a, t_list *st_b)
 		(*app)->sort_stb_flag[1] = ((*app)->len_stck_b - (*app)->stck_b_hi_val_ind);
 	}
 	// 3.- lastly add the push flag to stack A
-	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
 	(*app)->sort_sta_flag[3] = 1;
 }
