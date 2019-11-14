@@ -37,7 +37,7 @@ void	stb_flag(t_app **app, t_list *st_b)
 
 // REVAMP THIS
 void	sta_flag(t_app **app, t_list *st_a)
-{	
+{
 	// search for any misplaced number
 	//if a misplace number is founded, put to the second position from the top,
 	//then swap the values
@@ -53,6 +53,7 @@ void	sta_flag(t_app **app, t_list *st_a)
 	(*app)->sort_sta_flag[2]  = ch_next_low_elem(st_a);
 }
 
+//still buggy, segfault probably here!
 int stARotSort(t_app *app, t_list *st_a)
 {
 	t_list *head;
@@ -62,15 +63,23 @@ int stARotSort(t_app *app, t_list *st_a)
 	low_val = stck_lowVal(st_a);
 	head = st_a;
 	while (st_a->elem != app->stck_a_hi_val)
+	{
 		st_a = st_a->next;
+	}
 	prev_val = st_a->elem;
 	st_a = st_a->next;
+	if(!st_a)
+	{
+		st_a = head;
+	}
+	if(st_a->elem != low_val)
+	{
+		return 0;
+	}
 	while(1)
 	{
 		if (!st_a)
-		{
 			st_a = head;
-		}
 		if (st_a->elem == app->stck_a_hi_val)
 			break;
 		if (prev_val > st_a->elem && prev_val != app->stck_a_hi_val 
@@ -158,13 +167,16 @@ void	bothInstrCheck(t_app **app)
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
+	//TOFIX IMPORTANT - stARotSort still buggy
 	if (stARotSort(*app, st_a))
 	{
+		ft_printf("+++stack A is sorted, special sort start+++\n");
 		setSortedInst(app, st_a, st_b);
 	}
 	else
 	{
-		// todo checkpoint - FIX THE ST_FLAGS
+		ft_printf("segfault here!\n");
+		// todo 2 checkpoint - FIX THE ST_FLAGS
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 	}

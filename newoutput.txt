@@ -1,0 +1,2652 @@
+-----sort-------
+pb
+pb
+pb
+pb
+pb
+printing stack a
+[523]->[213]->[43]->[5]->[8]->[123]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:1
+sa
+rrb
+printing stack a
+[213]->[523]->[43]->[5]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[523]->[43]->[5]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:0
+rra
+sb
+printing stack a
+[123]->[213]->[523]->[43]->[5]->[8]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[213]->[523]->[43]->[5]->[8]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:2
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[123]->[213]->[523]->[43]->[5]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[123]->[213]->[523]->[43]->[5]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:3
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:0
+rra
+sb
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[43]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[523]->[5]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[2]->[4]->[0]->[3]->[1]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[523]->[43]->[8]->[123]->[213]->NULL
+printing stack b
+[4]->[2]->[0]->[3]->[1]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[213]->[5]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[1]->[4]->[2]->[0]->[3]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[213]->[523]->[43]->[8]->[123]->NULL
+printing stack b
+[4]->[1]->[2]->[0]->[3]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[123]->[5]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[3]->[4]->[1]->[2]->[0]->NULL
+segfault here!
+ra:0
+rra:1
+sa:1
+rb:1
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[123]->[213]->[523]->[43]->[8]->NULL
+printing stack b
+[4]->[3]->[1]->[2]->[0]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[8]->[5]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[0]->[4]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:1
+rb:0
+rrb:1
+sb:1
+updating rot or rrot
+ra:0
+rra:0
+rb:0
+rrb:0
+ss
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+========end==========
+-----sort-------
+printing stack a
+[5]->[8]->[123]->[213]->[523]->[43]->NULL
+printing stack b
+[4]->[0]->[3]->[1]->[2]->NULL
+segfault here!
+ra:1
+rra:1
+sa:0
+rb:1
+rrb:1
+sb:0
+updating rot or rrot
+ra:0
+rra:1
+rb:0
+rrb:1
+rrr
+printing stack a
+[43]->[5]->[8]->[123]->[213]->[523]->NULL
+printing stack b
+[2]->[4]->[0
