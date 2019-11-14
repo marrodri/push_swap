@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 		set_stack(&st_a, app);
 		while (!check_stacks(st_a, st_b))
 		{
-			ft_printf("-----sort-------\n");
+			// ft_printf("-----sort-------\n");
 			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
 
@@ -87,10 +87,10 @@ int main(int argc, char **argv)
 				//  and (is not rotated sorted or there's more than one swap instruct. then merge);
 				mergeStack(&app, &st_a, &st_b);
 			}
-			ft_printf("printing stack a\n");
-			print_stack(&st_a);
-			ft_printf("printing stack b\n");
-			print_stack(&st_b);
+			// ft_printf("printing stack a\n");
+			// print_stack(&st_a);
+			// ft_printf("printing stack b\n");
+			// print_stack(&st_b);
 
 			//TODO CHECKPOINT... CONTINUE HERE 
 			set_sort_flag(&app, st_a, st_b);
@@ -98,28 +98,28 @@ int main(int argc, char **argv)
 			// ft_printf("#1.- passing set sort_flag !!!\n");
 			st_act_ft(&app, &st_a, &st_b);
 
-			ft_printf("printing stack a\n");
-			print_stack(&st_a);
-			ft_printf("printing stack b\n");
-			print_stack(&st_b);
-			ft_printf("========end==========\n");
+			// ft_printf("printing stack a\n");
+			// print_stack(&st_a);
+			// ft_printf("printing stack b\n");
+			// print_stack(&st_b);
+			// ft_printf("========end==========\n");
 		}
 	}
 	// print_stack(&st_a);
-	// ft_printf("intructions used |%d|\n", app->instr_count);
+	ft_printf("intructions used |%d|\n", app->instr_count);
 	return (0);
 }
 
-// sun 
-// mon 
+// sun 3:32
+// mon 8:12
 // -------
-// 
-// tues 
+// 11:44
+// tues 0:11
 // ---------
-// 
-// wed 
+// 11:55
+// wed 6:14
 // --------
-// 
+// 18:09
 // thurs 
 // -------
 // 

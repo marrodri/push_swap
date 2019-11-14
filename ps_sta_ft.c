@@ -104,6 +104,29 @@ int		ch_ra_sta(t_list *st_a)
 	return (index - 1);
 }
 
+//it still rotates when the head is the lowest and the last stack is the highest 
+
+int rra_exception(t_list *st_a)
+{
+	int low_val;
+	int hi_val;
+
+	hi_val = stck_hiVal(st_a);
+	low_val = stck_lowVal(st_a);
+	if(st_a->elem != low_val)
+	{
+		return 0;
+	}
+	while(st_a->next)
+	{
+		st_a = st_a->next;
+	}
+	if(st_a->elem == hi_val)
+	{
+		return 1;
+	}
+	return 0;
+}
 int		ch_rra_sta(t_list *st_a)
 {
 	//TODO check how many instr. needed to rotate using only rra;
@@ -127,6 +150,11 @@ int		ch_rra_sta(t_list *st_a)
 		i++;
 		prev_val = st_a->elem;
 		st_a = st_a->next;
+	}
+	st_a = head;
+	if(rra_exception(st_a) && index == 0)
+	{
+		return 0;
 	}
 	return (index + 1);
 }

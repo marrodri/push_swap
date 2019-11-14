@@ -89,12 +89,14 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 	{
 		push(st_a, st_b);
 		ft_printf("pa\n");
+		(*app)->instr_count++;
 		(*app)->sort_sta_flag[3]--;
 	}
 	else if((*app)->sort_stb_flag[3] > 0)
 	{
 		push(st_b, st_a);
 		ft_printf("pb\n");
+		(*app)->instr_count++;
 		(*app)->sort_stb_flag[3]--;
 	}
 }

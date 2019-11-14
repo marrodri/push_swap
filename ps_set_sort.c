@@ -14,25 +14,11 @@
 
 void	stb_flag(t_app **app, t_list *st_b)
 {
-	int			i;
 
-	i = 0;
-
-	// search for any misplaced number
-	//if a misplace number is founded, put to the second position from the top,
-	//then swap the values
-
-	// stb_ft[0] = ch_first_low_elem; //rb
-	// stb_ft[1] = ch_last_hi_elem; //rrb
-	(*app)->sort_stb_flag[0] = ch_rb_stb(st_b);
-	(*app)->sort_stb_flag[1] = ch_rrb_stb(st_b);
+	//set the stack_b checker, if the stack b is now sorted, don't do anything
+	(*app)->sort_stb_flag[0] = ch_rb_stb(st_b); //rb
+	(*app)->sort_stb_flag[1] = ch_rrb_stb(st_b); //rrb
 	(*app)->sort_stb_flag[2] = ch_next_hi_elem(st_b, *app); //sb
-	// while (i < 3 && ft_arriszero((*app)->sort_stb_flag, 3))
-	// {
-	// 	(*app)->sort_stb_flag[i] = stb_ft[i](st_b, *app);
-	// 	i++;
-	// }
-
 }
 
 // REVAMP THIS
@@ -44,9 +30,6 @@ void	sta_flag(t_app **app, t_list *st_a)
 	//same for stack b
 
 	//incase for both equal go to rra
-	// sta_ft[0] = ch_first_hi_elem; //ra,
-	// sta_ft[1] = ch_last_low_elem; //rra
-	// sta_ft[2] = ch_next_low_elem; 
 	//sa, use this after rotating, check the next one is lower than the current
 	(*app)->sort_sta_flag[0] = ch_ra_sta(st_a);
 	(*app)->sort_sta_flag[1] = ch_rra_sta(st_a);
@@ -129,11 +112,11 @@ void	rotInstrCheck(t_app **app)
 		(*app)->sort_stb_flag[1] = 0;
 	}
 
-	ft_printf("updating rot or rrot\n");
-	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	// ft_printf("updating rot or rrot\n");
+	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
 }
 
 void	bothInstrCheck(t_app **app)
@@ -170,30 +153,30 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	//TOFIX IMPORTANT - stARotSort still buggy
 	if (stARotSort(*app, st_a))
 	{
-		ft_printf("+++stack A is sorted, special sort start+++\n");
+		// ft_printf("+++stack A is sorted, special sort start+++\n");
 		setSortedInst(app, st_a, st_b);
 	}
 	else
 	{
-		ft_printf("segfault here!\n");
-		// todo 2 checkpoint - FIX THE ST_FLAGS
+		// ft_printf("segfault here!\n");
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 	}
 
-	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-	ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
+	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
 
 	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
 	saInstrCheck(app);
 	rotInstrCheck(app);
+	
 	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,
-	// if if both instructions are active, but different
-	// value, cut to the shortest value between the 2
+	// if if both instructions are active, but different value,
+	// cut to the shortest value between the 2 active instructions
 	bothInstrCheck(app);
 	return ;
 }

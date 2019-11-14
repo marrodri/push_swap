@@ -40,6 +40,7 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 			{
 				rrot(st_a);
 				ft_printf("rra\n");
+				(*app)->instr_count++;
 				rra_inst--;
 			}
 		}
@@ -49,6 +50,7 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 			{
 				rot(st_a);
 				ft_printf("ra\n");
+				(*app)->instr_count++;
 				ra_inst--;
 			}
 		}
@@ -58,6 +60,7 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 	{
 		push(st_b, st_a);
 		ft_printf("pb\n");
+		(*app)->instr_count++;
 		midIndex--;
 	}
 	(*app)->stIsMerged = 1;
