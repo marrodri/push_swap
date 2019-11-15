@@ -69,11 +69,12 @@ void	act_st_both(t_app **app, t_list **st_a, t_list **st_b)
 
 	while (i < 3)
 	{
-		if ((*app)->sort_sta_flag[i] && (*app)->sort_stb_flag[i])
+		while ((*app)->sort_sta_flag[i] == (*app)->sort_stb_flag[i] 
+			&& (*app)->sort_stb_flag[i] && (*app)->sort_sta_flag[i])
 		{
 			j = sort_both[i](st_a, st_b);
-			(*app)->sort_sta_flag[i] = 0;
-			(*app)->sort_stb_flag[i] = 0;
+			(*app)->sort_sta_flag[i]--;
+			(*app)->sort_stb_flag[i]--;
 			(*app)->instr_count++;
 		}
 		i++;

@@ -9,3 +9,5 @@ tests
 test_outputs
 deb_checkList.py
 debug_notes
+new_*
+*_output.txt
