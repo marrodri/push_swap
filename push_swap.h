@@ -106,9 +106,7 @@ void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 ** funtction to set stack A instructions
 */
 
-int				ch_first_hi_elem(t_list *stack, t_app *app);
-int				ch_last_low_elem(t_list *stack, t_app *app);
-
+int				sta_exception(t_list *st_a);
 int				ch_ra_sta(t_list *st_a);
 int				ch_rra_sta(t_list *st_a);
 int				ch_next_low_elem(t_list *stack);

@@ -153,7 +153,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	//TOFIX IMPORTANT - stARotSort still buggy
 	if (stARotSort(*app, st_a))
 	{
-		// ft_printf("+++stack A is sorted, special sort start+++\n");
+		ft_printf("+++stack A is sorted, special sort start+++\n");
 		setSortedInst(app, st_a, st_b);
 	}
 	else
