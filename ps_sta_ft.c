@@ -73,7 +73,7 @@ int		ch_ra_sta(t_list *st_a)
 	st_a = head;
 	while(st_a)
 	{
-		if(prev_val > st_a->elem && st_a->elem != low_val && prev_val != hi_val)
+		if(prev_val > st_a->elem && (st_a->elem != low_val || prev_val != hi_val))
 		{
 			index = i;
 			if(index == 0)
@@ -92,6 +92,9 @@ int		ch_ra_sta(t_list *st_a)
 	// if (//add exception if index is == 0)
 	// {return 0}
 	// else if (){index - 1}
-
+	if(index == 0)
+	{
+		return 0;
+	}
 	return (index - 1);
 }

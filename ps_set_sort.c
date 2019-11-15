@@ -16,9 +16,12 @@ void	stb_flag(t_app **app, t_list *st_b)
 {
 
 	//set the stack_b checker, if the stack b is now sorted, don't do anything
-	(*app)->sort_stb_flag[0] = ch_rb_stb(st_b); //rb
-	(*app)->sort_stb_flag[1] = ch_rrb_stb(st_b); //rrb
-	(*app)->sort_stb_flag[2] = ch_next_hi_elem(st_b, *app); //sb
+	if(st_b)
+	{
+		(*app)->sort_stb_flag[0] = ch_rb_stb(st_b); //rb
+		(*app)->sort_stb_flag[1] = ch_rrb_stb(st_b); //rrb
+		(*app)->sort_stb_flag[2] = ch_next_hi_elem(st_b, *app); //sb
+	}
 }
 
 // REVAMP THIS
@@ -164,7 +167,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 
 	if (stARotSort(*app, st_a))
 	{
-		ft_printf("+++stack A is sorted, special sort start+++\n");
+		// ft_printf("+++stack A is sorted, special sort start+++\n");
 		setSortedInst(app, st_a, st_b);
 		rotInstrCheck(app);
 		//add a custom instr checker for finally sorting properly the sorted stack
@@ -172,20 +175,28 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	}
 	else
 	{
-		// ft_printf("segfault here!\n");
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
+
+		// ft_printf("======PRE INSTRUCTIONS==========\n");
+		// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+		// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+		// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
+		// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+		// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+		// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+		
 		saInstrCheck(app);
 		rotInstrCheck(app);
 		bothInstrCheck(app);
 	}
-
-	ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-	ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-	ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+	// ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
+	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+	// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
+	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+	// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
 
 	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
 	

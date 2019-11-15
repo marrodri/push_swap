@@ -87,10 +87,10 @@ int main(int argc, char **argv)
 				//if app is not merged and the stack is higher than 5 elem.
 				//  and (is not rotated sorted or there's more than one swap instruct. then merge);
 				mergeStack(&app, &st_a, &st_b);
-			ft_printf("printing stack a\n");
-			print_stack(&st_a);
-			ft_printf("printing stack b\n");
-			print_stack(&st_b);
+				ft_printf("printing stack a\n");
+				print_stack(&st_a);
+				ft_printf("printing stack b\n");
+				print_stack(&st_b);
 			}
 
 			//TODO CHECKPOINT... CONTINUE HERE 
