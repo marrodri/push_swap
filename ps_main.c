@@ -82,7 +82,7 @@ int main(int argc, char **argv)
 			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
 
-			if(!app->stIsMerged && app->len_stck > 5)
+			if (!app->stIsMerged && app->len_stck > 5)
 			{
 				//if app is not merged and the stack is higher than 5 elem.
 				//  and (is not rotated sorted or there's more than one swap instruct. then merge);
