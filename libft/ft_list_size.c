@@ -18,6 +18,8 @@ int		ft_list_size(t_list *list)
 	int		i;
 
 	i = 0;
+	if(!list)
+		return 0;
 	tmp = list;
 	while (tmp)
 	{
