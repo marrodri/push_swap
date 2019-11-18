@@ -164,6 +164,7 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	(*app)->sort_stb_flag[3]= 0;
 
 
+	ft_printf("here!\n");
 
 	if (stARotSort(*app, st_a))
 	{
@@ -172,20 +173,19 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 		setSortedInst(app, st_a, st_b);
 		rotInstrCheck(app);
 		//add a custom instr checker for finally sorting properly the sorted stack
-
 	}
 	else
 	{
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 
-		// ft_printf("======PRE INSTRUCTIONS==========\n");
-		// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-		// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-		// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-		// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-		// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-		// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+		ft_printf("======PRE INSTRUCTIONS==========\n");
+		ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
+		ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
+		ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
+		ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
+		ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
+		ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
 		
 		saInstrCheck(app);
 		rotInstrCheck(app);

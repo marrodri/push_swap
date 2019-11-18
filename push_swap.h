@@ -32,7 +32,7 @@ typedef	struct	s_flag
 
 typedef struct	s_app
 {
-
+	int		deb_flag;
 	int		sort_sta_flag[4];
 	int		sort_stb_flag[4];
 	char	**instr;

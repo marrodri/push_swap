@@ -106,11 +106,18 @@ int		set_int_arr(t_app **app, int i)
 	return (0);
 }
 
+void	act_flag(t_app **app, char *str)
+{
+	if(str[0] == '-' && str[1] == 'v')
+		(*app)->deb_flag = 1;
+}
+
 int		check_arg(char **argv, int argc, t_app **app)
 {
 	int	i;
 
 	i = 0;
+
 	if (argc > 1)
 	{
 		if (argc == 2)
@@ -127,6 +134,8 @@ int		check_arg(char **argv, int argc, t_app **app)
 		}
 		if (set_int_arr(app, i))
 			return (1);
+		act_flag(app, argv[argc]);
 	}
+
 	return (0);
 }
