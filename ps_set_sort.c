@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+
 void	stb_flag(t_app **app, t_list *st_b)
 {
 
@@ -36,7 +37,7 @@ void	sta_flag(t_app **app, t_list *st_a)
 	//sa, use this after rotating, check the next one is lower than the current
 	(*app)->sort_sta_flag[0] = ch_ra_sta(st_a);
 	(*app)->sort_sta_flag[1] = ch_rra_sta(st_a);
-	(*app)->sort_sta_flag[2]  = ch_next_low_elem(st_a);
+	(*app)->sort_sta_flag[2] = ch_next_low_elem(st_a);
 }
 
 //still buggy, segfault probably here!
@@ -114,12 +115,6 @@ void	rotInstrCheck(t_app **app)
 	{
 		(*app)->sort_stb_flag[1] = 0;
 	}
-
-	// ft_printf("updating rot or rrot\n");
-	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
 }
 
 void	bothInstrCheck(t_app **app)
@@ -141,14 +136,6 @@ void	bothInstrCheck(t_app **app)
 		}
 		i++;
 	}
-
-	// ft_printf("equaling doubles\n");
-	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-	// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
 }
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
@@ -162,10 +149,6 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	(*app)->sort_stb_flag[1]= 0;
 	(*app)->sort_stb_flag[2]= 0;
 	(*app)->sort_stb_flag[3]= 0;
-
-
-	ft_printf("here!\n");
-
 	if (stARotSort(*app, st_a))
 	{
 		// ft_printf("+++stack A is sorted, special sort start+++\n");
@@ -179,28 +162,24 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
 
-		ft_printf("======PRE INSTRUCTIONS==========\n");
-		ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-		ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-		ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-		ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-		ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-		ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
-		
+		if((*app)->deb_flag)
+		{
+			ft_printf("======PRE INSTRUCTIONS==========\n");
+			print_inst(*app);
+		}
 		saInstrCheck(app);
 		rotInstrCheck(app);
 		bothInstrCheck(app);
 	}
-	// ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
-	// ft_printf("ra:%d\n", (*app)->sort_sta_flag[0]);
-	// ft_printf("rra:%d\n", (*app)->sort_sta_flag[1]);
-	// ft_printf("sa:%d\n", (*app)->sort_sta_flag[2]);
-	// ft_printf("rb:%d\n", (*app)->sort_stb_flag[0]);
-	// ft_printf("rrb:%d\n", (*app)->sort_stb_flag[1]);
-	// ft_printf("sb:%d\n", (*app)->sort_stb_flag[2]);
+
+		if((*app)->deb_flag)
+		{
+			ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
+			print_inst(*app);
+		}
 
 	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
-	
+
 	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,
 	// if if both instructions are active, but different value,
 	// cut to the shortest value between the 2 active instructions

@@ -12,35 +12,6 @@
 
 #include "push_swap.h"
 
-void	print_stack(t_list **list)
-{
-	t_list *tmp;
-
-	tmp = *list;
-	if (tmp == NULL)
-	{
-		ft_printf("list is NULL\n");
-		return ;
-	}
-	while (tmp)
-	{
-		ft_printf("[%d]->", tmp->elem);
-		tmp = tmp->next;
-		if (!tmp)
-			ft_printf("NULL\n");
-	}
-}
-
-void	print_stacks(t_list *st_a, t_list *st_b)
-{
-		ft_printf("===========\n");
-		ft_printf("stack A:\n");
-		print_stack(&st_a);
-		ft_printf("-------------\n");
-		ft_printf("stack B:\n");
-		print_stack(&st_b);
-		ft_printf("===end=====\n");
-}
 
 void	init_ps(t_app **app)
 {
@@ -99,7 +70,6 @@ int main(int argc, char **argv)
 			}
 			set_sort_flag(&app, st_a, st_b);
 			st_act_ft(&app, &st_a, &st_b);
-			ft_printf("here!\n");
 			if(app->deb_flag)
 				print_stacks(st_a, st_b);
 		}

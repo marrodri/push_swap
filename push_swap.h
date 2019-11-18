@@ -134,7 +134,9 @@ int		stck_lowVal(t_list *stck);
 int		stck_valInd(t_list *stck, int elem);
 int		stck_hiValComp(t_list *stck, int limit);
 
-
+void	print_stacks(t_list *st_a, t_list *st_b);
+void	print_stack(t_list **list);
+void	print_inst(t_app *app);
 
 
 
