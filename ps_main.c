@@ -65,13 +65,13 @@ int main(int argc, char **argv)
 		setChunkLen(&app, st_a);
 		setChunkRange(&app, st_a);
 		// while (0)
-		while (!check_stacks(st_a, st_b))
+		while (!check_stacks(st_a, st_b) && !app->stIsSplt)
 		{
 			if(app->deb_flag)
 				ft_printf("-----sort-------\n");
 			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
-
+			chunk_instr(&app, st_a);
 			//change to split_chunk
 			if (!app->stIsSplt && app->len_stck > 5)
 			{

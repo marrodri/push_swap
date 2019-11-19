@@ -138,6 +138,7 @@ int		stck_hiValComp(t_list *stck, int limit);
 
 void	setChunkRange(t_app **app, t_list *st_a);
 void setChunkLen(t_app **app, t_list  *st_a);
+void chunk_instr(t_app **app, t_list *st_a);
 
 void	print_stacks(t_list *st_a, t_list *st_b);
 void	print_stack(t_list **list);

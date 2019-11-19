@@ -8,10 +8,38 @@
 void chunk_instr(t_app **app, t_list *st_a)
 {
 	//TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
-	// while()
-	// {
+	t_list *head;
+	int i;
+	int index_frst;
+	int index_lst;
+	int flag;
+	
 
-	// }
+	i = 0;
+	index_frst = 0;
+	index_lst = 0;
+	flag = 0;
+	head = st_a;
+	while (st_a)
+	{
+		if((*app)->chunk_hi_val >= st_a->elem 
+		&& (*app)->chunk_low_val <= st_a->elem && !flag)
+		{
+			//breaks and gets the value for changing
+			index_frst = i;
+			flag = 1;
+		}
+		if((*app)->chunk_hi_val >= st_a->elem 
+		&& (*app)->chunk_low_val <= st_a->elem)
+		{
+			index_lst = i;
+		}
+		i++;
+		st_a = st_a->next;
+	}
+	st_a = head;
+	ft_printf("first index %d\n", index_frst);
+	ft_printf("last index %d\n", index_lst);
 }
 
 
@@ -33,8 +61,8 @@ void setChunkRange(t_app **app, t_list *st_a)
 		pre_val = (*app)->chunk_hi_val;
 		i++;
 	}
-	// ft_printf("lowest chunk val is |%d|\n",(*app)->chunk_low_val);
-	// ft_printf("highest chunk val is |%d|\n",(*app)->chunk_hi_val);
+	ft_printf("lowest chunk val is |%d|\n",(*app)->chunk_low_val);
+	ft_printf("highest chunk val is |%d|\n",(*app)->chunk_hi_val);
 }
 
 
