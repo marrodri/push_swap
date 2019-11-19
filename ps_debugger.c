@@ -36,7 +36,9 @@ void	print_inst(t_app *app)
 	ft_printf("ra:%d\n", app->sort_sta_flag[0]);
 	ft_printf("rra:%d\n", app->sort_sta_flag[1]);
 	ft_printf("sa:%d\n", app->sort_sta_flag[2]);
+	ft_printf("pa:%d\n", app->sort_sta_flag[3]);
 	ft_printf("rb:%d\n", app->sort_stb_flag[0]);
 	ft_printf("rrb:%d\n", app->sort_stb_flag[1]);
-	ft_printf("sb:%d\n", app->sort_stb_flag[2]);	
+	ft_printf("sb:%d\n", app->sort_stb_flag[2]);
+	ft_printf("pb:%d\n", app->sort_stb_flag[3]);	
 }

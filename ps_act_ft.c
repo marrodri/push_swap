@@ -99,4 +99,5 @@ void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b)
 		(*app)->instr_count++;
 		(*app)->sort_stb_flag[3]--;
 	}
+	
 }

@@ -25,41 +25,38 @@
 # include "./libft/libft.h"
 # include "./libft/ft_printf.h"
 
-typedef	struct	s_flag
-{
-	int		flag[3];
-}				t_flag;
-
 typedef struct	s_app
 {
-	int		deb_flag;
 	int		sort_sta_flag[4];
 	int		sort_stb_flag[4];
 	char	**instr;
 	char	**av;
 	int		*arr_num;
 	int		len_inst;
-	int		stIsMerged;
+	int		stIsSplt;
 	int		stck_ind;
+	int		free_av;
+	int		deb_flag;
+	int		instr_count;
 
+
+
+	int		stck_ind_limit;
 	int		len_stck; //keep updating this one
-	int		stck_a_hi_val;
-	int		stck_a_hi_val_ind;
 	int		stck_a_low_val;
 	int		stck_a_low_val_ind;
+	int		stck_a_mid_val;
+	int		stck_a_mid_val_ind;
+	int		stck_a_hi_val;
+	int		stck_a_hi_val_ind;
 
 	int		len_stck_b; //keep updating this one
-	int		stck_b_hi_val;
-	int		stck_b_hi_val_ind;
 	int		stck_b_low_val_ind;
 	int		stck_b_low_val;
-
-	int		hi_stb_val;
-	int		low_stb_val;
-
-
-	int		free_av;
-	int		instr_count;
+	int		stck_b_mid_val;
+	int		stck_b_mid_val_ind;
+	int		stck_b_hi_val;
+	int		stck_b_hi_val_ind;
 }				t_app;
 
 typedef int		*t_sort(t_list **stack);

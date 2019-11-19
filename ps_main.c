@@ -22,17 +22,21 @@ void	init_ps(t_app **app)
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
-	(*app)->stIsMerged = 0;
+	(*app)->stIsSplt = 0;
 
 	(*app)->len_stck = 0;
 	(*app)->stck_a_hi_val = 0;
 	(*app)->stck_a_hi_val_ind = 0;
+	(*app)->stck_a_mid_val = 0;
+	(*app)->stck_a_mid_val_ind = 0;
 	(*app)->stck_a_low_val = 0;
 	(*app)->stck_a_low_val_ind = 0;
 
 	(*app)->len_stck_b = 0;
 	(*app)->stck_b_hi_val = 0;
 	(*app)->stck_b_hi_val_ind = 0;
+	(*app)->stck_b_mid_val = 0;
+	(*app)->stck_b_mid_val_ind = 0;
 	(*app)->stck_b_low_val = 0;
 	(*app)->stck_b_low_val_ind = 0;
 
@@ -64,12 +68,20 @@ int main(int argc, char **argv)
 				ft_printf("-----sort-------\n");
 			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
-			if (!app->stIsMerged && app->len_stck > 5)
+
+			//change to split_chunk
+			if (!app->stIsSplt && app->len_stck > 5)
 			{
 				mergeStack(&app, &st_a, &st_b);
 			}
+
+			// change logic
+			//  instead of going through to put the lowest num
+			// sort by finding the closest num to the top, that 
+			//  is inside the area of the chunk
 			set_sort_flag(&app, st_a, st_b);
 			st_act_ft(&app, &st_a, &st_b);
+
 			if(app->deb_flag)
 				print_stacks(st_a, st_b);
 		}

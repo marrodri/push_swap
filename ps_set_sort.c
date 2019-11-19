@@ -140,28 +140,16 @@ void	bothInstrCheck(t_app **app)
 
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 {
-	//TOFIX IMPORTANT - stARotSort still buggy
-	(*app)->sort_sta_flag[0]= 0;
-	(*app)->sort_sta_flag[1]= 0;
-	(*app)->sort_sta_flag[2]= 0;
-	(*app)->sort_sta_flag[3]= 0;
-	(*app)->sort_stb_flag[0]= 0;
-	(*app)->sort_stb_flag[1]= 0;
-	(*app)->sort_stb_flag[2]= 0;
-	(*app)->sort_stb_flag[3]= 0;
+	//if stack a has only 10 chunks, then sort the stack a properly
 	if (stARotSort(*app, st_a))
 	{
-		// ft_printf("+++stack A is sorted, special sort start+++\n");
-		// ft_printf("instr so far %d\n", (*app)->instr_count);
 		setSortedInst(app, st_a, st_b);
 		rotInstrCheck(app);
-		//add a custom instr checker for finally sorting properly the sorted stack
 	}
 	else
 	{
 		sta_flag(app, st_a);
 		stb_flag(app, st_b);
-
 		if((*app)->deb_flag)
 		{
 			ft_printf("======PRE INSTRUCTIONS==========\n");
@@ -169,19 +157,16 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 		}
 		saInstrCheck(app);
 		rotInstrCheck(app);
-		bothInstrCheck(app);
+		// bothInstrCheck(app);
+		
 	}
 
-		if((*app)->deb_flag)
-		{
-			ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
-			print_inst(*app);
-		}
 
-	// AN INSTRUCTION CHECKER, to limit as lowest instructions as possible
+	if((*app)->deb_flag)
+	{
+		ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
+		print_inst(*app);
+	}
 
-	// CHECKS IF BOTH SAME INSTR ARE ACTIVE,
-	// if if both instructions are active, but different value,
-	// cut to the shortest value between the 2 active instructions
 	return ;
 }

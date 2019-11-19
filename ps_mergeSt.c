@@ -34,6 +34,9 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 		// the push the half of the stack to stack b
 		ra_inst = (*app)->stck_a_hi_val_ind + 1;
 		rra_inst = midIndex - (*app)->stck_a_hi_val_ind;
+		(*app)->sort_sta_flag[0] = ra_inst;
+		(*app)->sort_sta_flag[1] = rra_inst;
+		(*app)->sort_sta_flag[3] = midIndex;
 		if (ra_inst >= rra_inst)
 		{
 			while(rra_inst)
@@ -43,6 +46,8 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 				(*app)->instr_count++;
 				rra_inst--;
 			}
+			// (*app)->sort_sta_flag[1] = rra_inst;
+
 		}
 		else if(ra_inst < rra_inst)
 		{
@@ -54,7 +59,9 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 				ra_inst--;
 			}
 		}
+		// (*app)->sort_sta_flag[0] = ra_inst;
 	}
+	
 	//start pushing the half of the stack A to stack B
 	while(midIndex)
 	{
@@ -63,5 +70,5 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 		(*app)->instr_count++;
 		midIndex--;
 	}
-	(*app)->stIsMerged = 1;
+	(*app)->stIsSplt = 1;
 }
