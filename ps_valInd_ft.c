@@ -71,12 +71,12 @@ int	stck_hiVal(t_list *stck)
 	return (hi_val);
 }
 
-int stck_midVal(t_list *stck)
-{
-	int mid_val;
-	int low_val;
-	int mid_len;
-}
+// int stck_midVal(t_list *stck)
+// {
+// 	int mid_val;
+// 	int low_val;
+// 	int mid_len;
+// }
 
 int stck_valInd(t_list *stck, int elem)
 {

@@ -40,8 +40,11 @@ typedef struct	s_app
 	int		instr_count;
 
 
-
+	int		chunk_low_val;
+	int		chunk_hi_val;
+	int		chunk_len;
 	int		stck_ind_limit;
+
 	int		len_stck; //keep updating this one
 	int		stck_a_low_val;
 	int		stck_a_low_val_ind;
@@ -103,10 +106,13 @@ void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 ** funtction to set stack A instructions
 */
 
+
 int				sta_exception(t_list *st_a);
+
 int				ch_ra_sta(t_list *st_a);
 int				ch_rra_sta(t_list *st_a);
 int				ch_next_low_elem(t_list *stack);
+int				stARotSort(t_app *app, t_list *st_a);
 
 /*
 ** funtction to set stack B instructions
@@ -117,7 +123,6 @@ int				ch_rrb_stb(t_list *st_b);
 int				ch_next_hi_elem(t_list *stack, t_app *app);
 
 void	set_ft(t_app **app, t_list *st_a, t_list *st_b);
-
 void	setSortedInst(t_app **app, t_list *st_a, t_list *st_b);
 void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b);
 void	st_act_ft(t_app **app, t_list **st_a, t_list **st_b);
@@ -130,6 +135,9 @@ int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
 int		stck_valInd(t_list *stck, int elem);
 int		stck_hiValComp(t_list *stck, int limit);
+
+void	setChunkRange(t_app **app, t_list *st_a);
+void setChunkLen(t_app **app, t_list  *st_a);
 
 void	print_stacks(t_list *st_a, t_list *st_b);
 void	print_stack(t_list **list);

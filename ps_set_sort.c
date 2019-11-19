@@ -40,44 +40,6 @@ void	sta_flag(t_app **app, t_list *st_a)
 	(*app)->sort_sta_flag[2] = ch_next_low_elem(st_a);
 }
 
-//still buggy, segfault probably here!
-int stARotSort(t_app *app, t_list *st_a)
-{
-	t_list *head;
-	int prev_val;
-	int low_val;
-
-	low_val = stck_lowVal(st_a);
-	head = st_a;
-	while (st_a->elem != app->stck_a_hi_val)
-	{
-		st_a = st_a->next;
-	}
-	prev_val = st_a->elem;
-	st_a = st_a->next;
-	if(!st_a)
-	{
-		st_a = head;
-	}
-	if(st_a->elem != low_val)
-	{
-		return 0;
-	}
-	while(1)
-	{
-		if (!st_a)
-			st_a = head;
-		if (st_a->elem == app->stck_a_hi_val)
-			break;
-		if (prev_val > st_a->elem && prev_val != app->stck_a_hi_val 
-			&& (st_a->elem != low_val))
-			return (0);
-		prev_val = st_a->elem;
-		st_a = st_a->next;
-	}
-	return (1);
-}
-
 void	saInstrCheck(t_app **app)
 {
 	if((*app)->sort_sta_flag[2])
