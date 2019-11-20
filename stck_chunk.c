@@ -61,6 +61,7 @@ void setChunkRange(t_app **app, t_list *st_a)
 		pre_val = (*app)->chunk_hi_val;
 		i++;
 	}
+	(*app)->chunkSet = 0;
 	ft_printf("lowest chunk val is |%d|\n",(*app)->chunk_low_val);
 	ft_printf("highest chunk val is |%d|\n",(*app)->chunk_hi_val);
 }

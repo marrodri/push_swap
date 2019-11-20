@@ -70,13 +70,17 @@ int main(int argc, char **argv)
 		{
 			if(app->deb_flag)
 				ft_printf("-----sort-------\n");
-			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
 			chunk_instr(&app, st_a);
 			//change to split_chunk
-			if (!app->stIsSplt && app->len_stck > 5)
+			if (app->chunkSet)
 			{
+				setChunkRange(&app, st_a);
 				mergeStack(&app, &st_a, &st_b);
+			}
+			else
+			{
+				chunk_instr(&app, st_a);
 			}
 
 			// change logic

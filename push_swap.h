@@ -33,11 +33,12 @@ typedef struct	s_app
 	char	**av;
 	int		*arr_num;
 	int		len_inst;
-	int		stIsSplt;
 	int		stck_ind;
 	int		free_av;
 	int		deb_flag;
 	int		instr_count;
+	int		stIsSplt;
+	int		chunkSet;
 
 
 	int		chunk_low_val;
