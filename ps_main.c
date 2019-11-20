@@ -63,6 +63,7 @@ int main(int argc, char **argv)
 	{
 		set_stack(&st_a, app);
 		setChunkLen(&app, st_a);
+		// CHECKPOINT
 		setChunkRange(&app, st_a);
 		// while (0)
 		while (!check_stacks(st_a, st_b) && !app->stIsSplt)

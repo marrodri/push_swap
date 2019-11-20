@@ -5,6 +5,7 @@
 //TODO finds which value, inside the range of the chunk,
 //  to move to the top based from the bottom or top of the stack
 
+// CHECKPOINT
 void chunk_instr(t_app **app, t_list *st_a)
 {
 	//TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
@@ -13,7 +14,6 @@ void chunk_instr(t_app **app, t_list *st_a)
 	int index_frst;
 	int index_lst;
 	int flag;
-	
 
 	i = 0;
 	index_frst = 0;
