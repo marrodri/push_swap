@@ -70,5 +70,5 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b)
 		(*app)->instr_count++;
 		midIndex--;
 	}
-	(*app)->stIsSplt = 1;
+	// (*app)->stIsSplt = 1;
 }

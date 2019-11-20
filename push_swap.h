@@ -37,7 +37,6 @@ typedef struct	s_app
 	int		free_av;
 	int		deb_flag;
 	int		instr_count;
-	int		stIsSplt;
 	int		chunkSet;
 
 
