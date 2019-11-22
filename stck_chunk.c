@@ -7,6 +7,57 @@
 
 // CHECKPOINT
 
+void rraComp(t_app **app, int frstIndRraInst, int lastIndRraInst)
+{
+	if(frstIndRraInst >= lastIndRraInst)
+	{
+		(*app)->sort_sta_flag[1] = lastIndRraInst;
+	}
+	else if(frstIndRraInst < lastIndRraInst)
+	{
+		(*app)->sort_sta_flag[1] = frstIndRraInst;
+	}
+
+}
+
+void raComp(t_app **app, int frstIndRaInst, int lastIndRaInst)
+{
+	if(frstIndRaInst >= lastIndRaInst)
+	{
+		(*app)->sort_sta_flag[0] = lastIndRaInst;
+	}
+	else if(frstIndRaInst < lastIndRaInst)
+	{
+		(*app)->sort_sta_flag[0] = frstIndRaInst;
+	}
+
+}
+
+void indexComp(t_app **app, int frstIndex, int lastIndex)
+{
+	int frstIndRaInst;
+	int frstIndRraInst;
+	int lastIndRaInst;
+	int lastIndRraInst;
+	int midIndex;
+
+	// TODO compare the number of rots to reach the top and set the
+	// lowest number possible to rotate from stack_a
+	midIndex = ((*app)->len_stck / 2);
+	frstIndRaInst = frstIndex;
+	frstIndRraInst = midIndex - frstIndex;
+	lastIndRaInst = lastIndex;
+	lastIndRraInst = midIndex - lastIndex;
+
+	ft_printf("frstIndRaInst|%d|\n", frstIndRaInst);
+	ft_printf("frstIndRraInst|%d|\n", frstIndRraInst);
+	ft_printf("lastIndRaInst|%d|\n", lastIndRaInst);
+	ft_printf("lastIndRraInst|%d|\n", lastIndRraInst);
+	raComp(app, frstIndRaInst, lastIndRaInst);
+	rraComp(app, frstIndRraInst, lastIndRraInst);
+	rotInstrCheck(app);
+}
+
 void sortChunk(t_app **app, t_list *st_a)
 {
 	t_list *head;
@@ -39,7 +90,7 @@ void sortChunk(t_app **app, t_list *st_a)
 	st_a = head;
 	ft_printf("first index %d\n", index_frst);
 	ft_printf("last index %d\n", index_lst);
-
+	indexComp(app, index_frst, index_lst);
 }
 
 void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
@@ -52,7 +103,7 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 	}
 	else
 	{
-		set_sort_flag(&app, st_a, st_b);
+		set_sort_flag(app, st_a, st_b);
 	}
 }
 

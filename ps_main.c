@@ -63,29 +63,27 @@ int main(int argc, char **argv)
 		set_stack(&st_a, app);
 		setChunkLen(&app, st_a);
 		setChunkRange(&app, st_a);
+		// chunk_instr(&app, st_a, st_b);
 		// while (0)
 		while (!check_stacks(st_a, st_b) && !app->chunkSet)
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
 			app->len_stck_b = ft_list_size(st_b);
-			chunk_instr(&app, st_a);
 			if (app->chunkSet)
 			{
 				setChunkRange(&app, st_a);
 				// mergeStack(&app, &st_a, &st_b);
 			}
 			// CHECKPOINT
-			
 			// change logic
 			//  instead of going through to put the lowest num
 			// sort by finding the closest num to the top, that 
 			//  is inside the area of the chunk
-			chunk_instr(&app, st_a);
+			chunk_instr(&app, st_a, st_b);
+			break;
 
-
-			
-			st_act_ft(&app, &st_a, &st_b);
+			// st_act_ft(&app, &st_a, &st_b);
 
 			if(app->deb_flag)
 				print_stacks(st_a, st_b);

@@ -87,8 +87,10 @@ int				*rrot(t_list **stack);
 int				*rrot_r(t_list **stack_a, t_list **stack_b);
 int				read_instr(int fd, t_app **app);
 
-int				check_arg(char **argv, int argc, t_app **app);
 int				set_int_arr(t_app **app, int i);
+
+int				check_arg(char **argv, int argc, t_app **app);
+void			rotInstrCheck(t_app **app);
 int				check_stack(t_list *stack);
 int				check_stack_r(t_list *stack);
 int				check_stacks(t_list *stack_a, t_list *stack_b);
@@ -138,7 +140,7 @@ int		stck_hiValComp(t_list *stck, int limit);
 
 void	setChunkRange(t_app **app, t_list *st_a);
 void setChunkLen(t_app **app, t_list  *st_a);
-void chunk_instr(t_app **app, t_list *st_a);
+void chunk_instr(t_app **app, t_list *st_a, t_list *st_b);
 
 void	print_stacks(t_list *st_a, t_list *st_b);
 void	print_stack(t_list **list);
