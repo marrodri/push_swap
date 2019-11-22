@@ -83,8 +83,9 @@ int main(int argc, char **argv)
 			chunk_instr(&app, st_a, st_b);
 			break;
 
-			// st_act_ft(&app, &st_a, &st_b);
-
+			st_act_ft(&app, &st_a, &st_b);
+			// TODO add a chunk_checker that sets the chunkset to true
+			// if the first chunk range is setted on stack a
 			if(app->deb_flag)
 				print_stacks(st_a, st_b);
 		}

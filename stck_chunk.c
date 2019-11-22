@@ -5,8 +5,26 @@
 //TODO finds which value, inside the range of the chunk,
 //  to move to the top based from the bottom or top of the stack
 
+
 // CHECKPOINT
-void sortChunk(t_app **app, t_list *st_a)
+
+/*
+** it sets the number of instructions
+** for pushing the top from stack a to 
+** stack b at proper place
+*/
+
+void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
+{
+	
+}
+
+/*
+** it finds the lowest number of instructions for
+** moving the closest range value to the top
+*/
+
+void setChnkValTop(t_app **app, t_list *st_a)
 {
 	t_list *head;
 	int frstIntFlag;
@@ -47,23 +65,26 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 
 	if ((*app)->len_stck > (*app)->chunk_len)
 	{
-		sortChunk(app, st_a);
+		setChnkValTop(app, st_a);
 		//TODO IMPORTANT
 		//add 
+		if(ft_arriszero((*app)->sort_sta_flag, 4))
+		{
+			// start the stack B flags sorting, by
+			// checking the top of stack a to push properly
+			// to stack B
+		}
 	}
-	else if()
+	else
 	{
 		//change the algo for set_sort_flag
 		set_sort_flag(app, st_a, st_b);
-
 	}
 }
 
-
-
-//TODO sets the lowest chunk val and the highest chunk val,
-// base from chunk lenght;
 //DONE
+// sets the lowest chunk val and the highest chunk val,
+// base from chunk lenght
 void setChunkRange(t_app **app, t_list *st_a)
 {
 	int i;
