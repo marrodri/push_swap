@@ -44,6 +44,7 @@ typedef struct	s_app
 	int		chunk_hi_val;
 	int		chunk_len;
 	int		stck_ind_limit;
+	int		chunk_top_val;
 
 	int		len_stck; //keep updating this one
 	int		stck_a_low_val;
@@ -142,6 +143,7 @@ void	mergeStack(t_app **app, t_list **st_a, t_list **st_b);
 int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
 int		stck_valInd(t_list *stck, int elem);
+int		stck_indVal(t_list *stck, int index);
 int		stck_hiValComp(t_list *stck, int limit);
 
 void	setChunkRange(t_app **app, t_list *st_a);

@@ -75,15 +75,15 @@ int main(int argc, char **argv)
 				setChunkRange(&app, st_a);
 				// mergeStack(&app, &st_a, &st_b);
 			}
-			// CHECKPOINT
 			// change logic
 			//  instead of going through to put the lowest num
 			// sort by finding the closest num to the top, that 
 			//  is inside the area of the chunk
+			// CHECKPOINT HERE
 			chunk_instr(&app, st_a, st_b);
-			break;
 
 			st_act_ft(&app, &st_a, &st_b);
+			break;
 			// TODO add a chunk_checker that sets the chunkset to true
 			// if the first chunk range is setted on stack a
 			if(app->deb_flag)

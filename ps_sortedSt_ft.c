@@ -19,7 +19,6 @@
 //TODO CHECKPOINT HERE THIS FUNCTION
 void		setSortedInst(t_app **app, t_list *st_a, t_list *st_b)
 {
-	// TODO CONTINUE HERE IMPORTANT: SET THE INDEXES
 	int stHiLowInd;
 	int stAHiLow;
 

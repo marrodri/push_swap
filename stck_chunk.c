@@ -2,21 +2,52 @@
 
 #include "push_swap.h"
 
+void setTopVal(t_app **app, t_list *st_a)
+{
+	int index;
+
+	index = 0;
+	if((*app)->sort_sta_flag[0] > 0)
+	{
+		index = (*app)->sort_sta_flag[0];
+	}
+	else if ((*app)->sort_sta_flag[1] > 0)
+	{
+		index = (*app)->len_stck - (*app)->sort_sta_flag[1];
+	}
+
+	(*app)->chunk_top_val = stck_indVal(st_a, index);
+	ft_printf("top val is |%d|\n",(*app)->chunk_top_val);
+
+}
+
 //TODO finds which value, inside the range of the chunk,
 //  to move to the top based from the bottom or top of the stack
-
-
-// CHECKPOINT
 
 /*
 ** it sets the number of instructions
 ** for pushing the top from stack a to 
 ** stack b at proper place
 */
-
+//CHECKPOINT TODO HERE IMPORTANT
 void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 {
-	
+	int stHiLowInd;
+	int stHiLowVal;
+
+	(*app)->len_stck_b = ft_list_size(st_b);
+	if(st_a && st_b)
+	{
+		stHiLowVal = stck_hiValComp(st_b, (*app)->chunk_top_val);
+		stHiLowInd = stck_valInd(st_b, stHiLowVal);
+		if (stHiLowInd > 0)
+		{
+			(*app)->sort_stb_flag[0] = stHiLowInd; //rb
+			(*app)->sort_stb_flag[1] = (*app)->len_stck_b - stHiLowInd; //rrb
+		}
+		(*app)->sort_stb_flag[3] = 1;
+	}
+	rotInstrCheck(app);
 }
 
 /*
@@ -24,7 +55,7 @@ void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 ** moving the closest range value to the top
 */
 
-void setChnkValTop(t_app **app, t_list *st_a)
+void setChnkValTopInst(t_app **app, t_list *st_a)
 {
 	t_list *head;
 	int frstIntFlag;
@@ -56,24 +87,32 @@ void setChnkValTop(t_app **app, t_list *st_a)
 	st_a = head;
 	ft_printf("first index %d\n", index_frst);
 	ft_printf("last index %d\n", index_lst);
+
 	indexComp(app, index_frst, index_lst);
+	setTopVal(app, st_a);
+	
 }
 
 void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 {
-	//TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
+	// TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
 
 	if ((*app)->len_stck > (*app)->chunk_len)
 	{
-		setChnkValTop(app, st_a);
-		//TODO IMPORTANT
-		//add 
-		if(ft_arriszero((*app)->sort_sta_flag, 4))
-		{
-			// start the stack B flags sorting, by
-			// checking the top of stack a to push properly
-			// to stack B
-		}
+			//NOTE, how to sort both at the same time?
+		setChnkValTopInst(app, st_a);
+		//CHECKPOINT TODO
+		// start the stack B flags sorting, by
+		// checking the top of stack a to push properly
+		// to stack B
+		// if(/*if the stack b is not sorted properly */)
+		// {
+		// 	//	the sort the stack b 
+		// }
+		// else
+		// {
+			sortChunkInst(app, st_a, st_b);
+		// }
 	}
 	else
 	{

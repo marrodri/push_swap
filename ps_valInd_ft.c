@@ -37,7 +37,7 @@ int stck_hiValComp(t_list *stck, int val)
 	valLim = stck_hiVal(stck);
 	newValLim = stck_hiVal(stck);
 	if (val < stck_lowVal(stck))
-		return stck_lowVal(stck);
+		return (stck_lowVal(stck));
 	while (1)
 	{	
 		if(!stck)
@@ -71,12 +71,20 @@ int	stck_hiVal(t_list *stck)
 	return (hi_val);
 }
 
-// int stck_midVal(t_list *stck)
-// {
-// 	int mid_val;
-// 	int low_val;
-// 	int mid_len;
-// }
+int stck_indVal(t_list *stck, int index)
+{
+	int i;
+
+	i = 0;
+	while(i < index)
+	{
+		stck = stck->next;
+		i++;
+	}
+	if(!stck)
+		return 0;
+	return stck->elem;
+}
 
 int stck_valInd(t_list *stck, int elem)
 {
