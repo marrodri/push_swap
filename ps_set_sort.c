@@ -12,6 +12,8 @@
 
 #include "push_swap.h"
 
+// NOTE use this page to finish chunk_instr as a guide
+// If everything works fine without this page, remove it.
 
 void	stb_flag(t_app **app, t_list *st_b)
 {
@@ -29,12 +31,12 @@ void	stb_flag(t_app **app, t_list *st_b)
 void	sta_flag(t_app **app, t_list *st_a)
 {
 	// search for any misplaced number
-	//if a misplace number is founded, put to the second position from the top,
-	//then swap the values
-	//same for stack b
+	// if a misplace number is founded, put to the second position from the top,
+	// then swap the values
+	// same for stack b
 
-	//incase for both equal go to rra
-	//sa, use this after rotating, check the next one is lower than the current
+	// incase for both equal go to rra
+	// sa, use this after rotating, check the next one is lower than the current
 	(*app)->sort_sta_flag[0] = ch_ra_sta(st_a);
 	(*app)->sort_sta_flag[1] = ch_rra_sta(st_a);
 	(*app)->sort_sta_flag[2] = ch_next_low_elem(st_a);
@@ -42,12 +44,12 @@ void	sta_flag(t_app **app, t_list *st_a)
 
 void	saInstrCheck(t_app **app)
 {
-	if((*app)->sort_sta_flag[2])
+	if ((*app)->sort_sta_flag[2])
 	{
 		(*app)->sort_sta_flag[0] = 0;
 		(*app)->sort_sta_flag[1] = 0;
 	}
-	if((*app)->sort_stb_flag[2])
+	if ((*app)->sort_stb_flag[2])
 	{
 		(*app)->sort_stb_flag[0] = 0;
 		(*app)->sort_stb_flag[1] = 0;
@@ -129,6 +131,5 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 		ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
 		print_inst(*app);
 	}
-
 	return ;
 }

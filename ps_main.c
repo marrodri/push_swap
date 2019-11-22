@@ -62,7 +62,6 @@ int main(int argc, char **argv)
 	{
 		set_stack(&st_a, app);
 		setChunkLen(&app, st_a);
-		// CHECKPOINT
 		setChunkRange(&app, st_a);
 		// while (0)
 		while (!check_stacks(st_a, st_b) && !app->chunkSet)
@@ -76,15 +75,15 @@ int main(int argc, char **argv)
 				setChunkRange(&app, st_a);
 				// mergeStack(&app, &st_a, &st_b);
 			}
-			chunk_instr(&app, st_a);
-
-
+			// CHECKPOINT
+			
 			// change logic
 			//  instead of going through to put the lowest num
 			// sort by finding the closest num to the top, that 
 			//  is inside the area of the chunk
+			chunk_instr(&app, st_a);
 
-			set_sort_flag(&app, st_a, st_b);
+
 			
 			st_act_ft(&app, &st_a, &st_b);
 
@@ -96,3 +95,25 @@ int main(int argc, char **argv)
 		ft_printf("intructions used |%d|\n", app->instr_count);
 	return (0);
 }
+
+// sun 0:00
+// mon 8:45
+// ------- 
+// 8:45 
+// tues 3:52 
+// --------- 
+// 12:37 
+// wed 1:55 
+// -------- 
+// 14:15 
+// thurs 
+// ------- 
+// 
+// fri 
+// -------- 
+// 
+// sat 
+// -------- 
+// 
+
+// thurs and fri, 8 hours each

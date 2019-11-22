@@ -6,30 +6,29 @@
 //  to move to the top based from the bottom or top of the stack
 
 // CHECKPOINT
-void chunk_instr(t_app **app, t_list *st_a)
+
+void sortChunk(t_app **app, t_list *st_a)
 {
-	//TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
 	t_list *head;
+	int frstIntFlag;
 	int i;
 	int index_frst;
 	int index_lst;
-	int flag;
 
+	frstIntFlag = 0;
+	head = st_a;
 	i = 0;
 	index_frst = 0;
 	index_lst = 0;
-	flag = 0;
-	head = st_a;
 	while (st_a)
 	{
-		if((*app)->chunk_hi_val >= st_a->elem 
-		&& (*app)->chunk_low_val <= st_a->elem && !flag)
+		if ((*app)->chunk_hi_val >= st_a->elem 
+		&& (*app)->chunk_low_val <= st_a->elem && !frstIntFlag)
 		{
-			//breaks and gets the value for changing
 			index_frst = i;
-			flag = 1;
+			frstIntFlag = 1;
 		}
-		if((*app)->chunk_hi_val >= st_a->elem 
+		if ((*app)->chunk_hi_val >= st_a->elem 
 		&& (*app)->chunk_low_val <= st_a->elem)
 		{
 			index_lst = i;
@@ -40,7 +39,23 @@ void chunk_instr(t_app **app, t_list *st_a)
 	st_a = head;
 	ft_printf("first index %d\n", index_frst);
 	ft_printf("last index %d\n", index_lst);
+
 }
+
+void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
+{
+	//TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
+
+	if((*app)->len_stck > (*app)->chunk_len)
+	{
+		sortChunk(app, st_a);
+	}
+	else
+	{
+		set_sort_flag(&app, st_a, st_b);
+	}
+}
+
 
 
 //TODO sets the lowest chunk val and the highest chunk val,
