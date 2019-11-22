@@ -89,17 +89,23 @@ int				read_instr(int fd, t_app **app);
 
 int				set_int_arr(t_app **app, int i);
 
+
+
 int				check_arg(char **argv, int argc, t_app **app);
-void			rotInstrCheck(t_app **app);
 int				check_stack(t_list *stack);
 int				check_stack_r(t_list *stack);
 int				check_stacks(t_list *stack_a, t_list *stack_b);
+int				check_instr(char *instr);
+void			rotInstrCheck(t_app **app);
+void			indexComp(t_app **app, int frstIndex, int lastIndex);
+void			raComp(t_app **app, int frstIndRaInst, int lastIndRaInst);
+void			rraComp(t_app **app, int frstIndRraInst, int lastIndRraInst);
+
 void			sort_stacks(t_list **stack_a, t_list **stack_b, char *instr);
 void			set_stack(t_list **stack, t_app *app);
 t_list			*ft_set_node(int num, void *cont, size_t size);
 void			add_new_elem(t_list **alist, int num);
 int				set_instr(int fd, t_app **app);
-int				check_instr(char *instr);
 void			free_words(char **instr);
 void			free_checker(t_app **app, t_list **st_a, t_list **st_b);
 

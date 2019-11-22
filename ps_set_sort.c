@@ -56,31 +56,6 @@ void	saInstrCheck(t_app **app)
 	}
 }
 
-//remodify this one
-void	rotInstrCheck(t_app **app)
-{
-	if((*app)->sort_sta_flag[0] >= (*app)->sort_sta_flag[1] && 
-	(*app)->sort_sta_flag[1] > 0)
-	{
-		(*app)->sort_sta_flag[0] = 0;
-	}
-	else if ((*app)->sort_sta_flag[0] < (*app)->sort_sta_flag[1] &&
-		(*app)->sort_sta_flag[0] > 0)
-	{
-		(*app)->sort_sta_flag[1] = 0;
-	}
-	if((*app)->sort_stb_flag[0] >= (*app)->sort_stb_flag[1] && 
-		(*app)->sort_stb_flag[1] > 0)
-	{
-		(*app)->sort_stb_flag[0] = 0;
-	}
-	else if((*app)->sort_stb_flag[0] < (*app)->sort_stb_flag[1] &&
-		(*app)->sort_stb_flag[0] > 0)
-	{
-		(*app)->sort_stb_flag[1] = 0;
-	}
-}
-
 void	bothInstrCheck(t_app **app)
 {
 	int i;

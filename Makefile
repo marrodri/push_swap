@@ -25,7 +25,7 @@ SRC = check_stack.c psch_input.c psch_listft.c\
 PS_SRC = ps_main.c ps_act_ft.c ps_set_sort.c ps_sta_ft.c \
 		ps_stb_ft.c sort_a_ft.c sort_b_ft.c sort_both.c ps_mergeSt.c\
 		ps_valInd_ft.c ps_sortedSt_ft.c ps_rraAct.c ps_debugger.c\
-		ps_stckRotSort.c stck_chunk.c
+		ps_stckRotSort.c stck_chunk.c ps_instComp.c
 
 SRC_OBJ = $(SRC:.c=.o)
 
