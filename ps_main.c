@@ -69,20 +69,22 @@ int main(int argc, char **argv)
 		setChunkRange(&app, st_a);
 		// chunk_instr(&app, st_a, st_b);
 		// while (0)
-		while (!check_stacks(st_a, st_b) && app->chunk_ind < 5)
+		if(app->deb_flag)
+		{
+			ft_printf("stack set:\n");
+			print_stacks(st_a, st_b);
+		}
+		while (!check_stacks(st_a, st_b))
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
+			app->len_stck = ft_list_size(st_a);
 			app->len_stck_b = ft_list_size(st_b);
 			if (app->chunkSet)
 			{
 				setChunkRange(&app, st_a);
 				// mergeStack(&app, &st_a, &st_b);
 			}
-			// change logic
-			//  instead of going through to put the lowest num
-			// sort by finding the closest num to the top, that 
-			//  is inside the area of the chunk
 			// CHECKPOINT HERE
 			chunk_instr(&app, st_a, st_b);
 			//CHECKPOINT TO SEE IF THE INSTR_SET WORKS, WIP
@@ -101,8 +103,8 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-// sun 0:00
-// mon 8:45
+// sun 0:00 
+// mon 8:45 
 // ------- 
 // 8:45 
 // tues 3:52 
@@ -111,12 +113,12 @@ int main(int argc, char **argv)
 // wed 1:55 
 // -------- 
 // 14:15 
-// thurs 5:43
+// thurs 5:43 
 // ------- 
 // 19:58
-// fri 6:21
+// fri 6:41 
 // -------- 
-// 26:19
+// 26:39 
 // sat 
 // -------- 
 // 

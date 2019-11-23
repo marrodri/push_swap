@@ -7,11 +7,11 @@ void setTopVal(t_app **app, t_list *st_a)
 	int index;
 
 	index = 0;
-	if((*app)->sort_sta_flag[0] > 0)
+	if((*app)->sort_sta_flag[0] >= 0)
 	{
 		index = (*app)->sort_sta_flag[0];
 	}
-	else if ((*app)->sort_sta_flag[1] > 0)
+	else if ((*app)->sort_sta_flag[1] >= 0)
 	{
 		index = (*app)->len_stck - (*app)->sort_sta_flag[1];
 	}
@@ -88,8 +88,8 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 	st_a = head;
 	ft_printf("first index %d\n", index_frst);
 	ft_printf("last index %d\n", index_lst);
-
-	indexComp(app, index_frst, index_lst);
+	if(index_frst > 0)
+		indexComp(app, index_frst, index_lst);
 	setTopVal(app, st_a);
 	
 }
@@ -97,10 +97,9 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 {
 	// TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
-
 	if ((*app)->len_stck > (*app)->chunk_len)
 	{
-			//NOTE, how to sort both at the same time?
+		//NOTE, how to sort both at the same time?
 		//CHECKPOINT TODO
 		// start the stack B flags sorting, by
 		// checking the top of stack a to push properly
@@ -120,7 +119,9 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 		{
 			ft_printf("stack b IS properly sorted, setting new push\n");
 			setChnkValTopInst(app, st_a);
+			print_inst(*app);
 			sortChunkInst(app, st_a, st_b);
+			(*app)->sort_stb_flag[3] = 1;
 		}
 	}
 	else
@@ -129,10 +130,9 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 		// ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
 		set_sort_flag(app, st_a, st_b);
 	}
-	// print_inst(*app);
 }
 
-//DONE
+//DONE, FIXED
 // sets the lowest chunk val and the highest chunk val,
 // base from chunk lenght
 void setChunkRange(t_app **app, t_list *st_a)
@@ -142,8 +142,8 @@ void setChunkRange(t_app **app, t_list *st_a)
 
 	i = 0;
 	pre_val = 0;
-	(*app)->chunk_hi_val = 0;
 	(*app)->chunk_low_val = stck_lowVal(st_a);
+	(*app)->chunk_hi_val = 0;
 	while(i < (*app)->chunk_len)
 	{
 		(*app)->chunk_hi_val = stck_hiValComp(st_a, pre_val);
@@ -174,8 +174,8 @@ void checkChunk(t_app **app, t_list *st_b)
 	
 	(*app)->len_stck_b = ft_list_size(st_b);
 	i = (*app)->chunk_ind;
-	// ft_printf("i is %d\n", i);
-	// ft_printf("i * chunk len is %d\n", (i * (*app)->chunk_len));
+	ft_printf("i is %d\n", i);
+	ft_printf("i * chunk len is %d\n", (i * (*app)->chunk_len));
 	ft_printf("len is %d\n", (*app)->len_stck_b);
 	if ((i * (*app)->chunk_len) == (*app)->len_stck_b)
 	{

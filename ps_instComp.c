@@ -16,9 +16,12 @@ void rraComp(t_app **app, int frstIndRraInst, int lastIndRraInst)
 
 void raComp(t_app **app, int frstIndRaInst, int lastIndRaInst)
 {
-	if(frstIndRaInst < 0)
+	if(frstIndRaInst <= 0)
+	{
 		frstIndRaInst = 0;
-	if(lastIndRaInst < 0)
+		lastIndRaInst = 0;
+	}
+	if(lastIndRaInst <= 0)
 		lastIndRaInst = 0;
 	if(frstIndRaInst >= lastIndRaInst)
 		(*app)->sort_sta_flag[0] = lastIndRaInst;
@@ -39,11 +42,11 @@ void indexComp(t_app **app, int frstIndex, int lastIndex)
 	int lastIndRaInst;
 	int lastIndRraInst;
 
+	
 	frstIndRaInst = frstIndex;
 	frstIndRraInst = (*app)->len_stck - frstIndex;
 	lastIndRaInst = lastIndex;
 	lastIndRraInst = (*app)->len_stck - lastIndex;
-
 	ft_printf("frstIndRaInst|%d|\n", frstIndRaInst);
 	ft_printf("frstIndRraInst|%d|\n", frstIndRraInst);
 	ft_printf("lastIndRaInst|%d|\n", lastIndRaInst);
