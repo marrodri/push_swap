@@ -23,7 +23,7 @@ void	stb_flag(t_app **app, t_list *st_b)
 	{
 		(*app)->sort_stb_flag[0] = ch_rb_stb(st_b); //rb
 		(*app)->sort_stb_flag[1] = ch_rrb_stb(st_b); //rrb
-		(*app)->sort_stb_flag[2] = ch_next_hi_elem(st_b, *app); //sb
+		(*app)->sort_stb_flag[2] = ch_next_hi_elem(st_b); //sb
 	}
 }
 

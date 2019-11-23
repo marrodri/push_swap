@@ -45,8 +45,9 @@ void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 			(*app)->sort_stb_flag[0] = stHiLowInd; //rb
 			(*app)->sort_stb_flag[1] = (*app)->len_stck_b - stHiLowInd; //rrb
 		}
-		(*app)->sort_stb_flag[3] = 1;
 	}
+	if(!ft_arriszero((*app)->sort_sta_flag, 4))
+		(*app)->sort_stb_flag[3] = 1;
 	rotInstrCheck(app);
 }
 
@@ -100,25 +101,35 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 	if ((*app)->len_stck > (*app)->chunk_len)
 	{
 			//NOTE, how to sort both at the same time?
-		setChnkValTopInst(app, st_a);
 		//CHECKPOINT TODO
 		// start the stack B flags sorting, by
 		// checking the top of stack a to push properly
 		// to stack B
-		// if(/*if the stack b is not sorted properly */)
-		// {
-		// 	//	the sort the stack b 
-		// }
-		// else
-		// {
+		if(!stBRotSort(st_b))
+		{
+			//CHECKPOINT HERE
+			// the sort the stack b 
+			//and deactivate the push to stack b;
+			ft_printf("stack b is not properly sorted, sorting b\n");
+			stb_flag(app, st_b);
+			print_inst(*app);
+			saInstrCheck(app);
+			rotInstrCheck(app);
+		}
+		else
+		{
+			ft_printf("stack b IS properly sorted, setting new push\n");
+			setChnkValTopInst(app, st_a);
 			sortChunkInst(app, st_a, st_b);
-		// }
+		}
 	}
 	else
 	{
 		//change the algo for set_sort_flag
+		// ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
 		set_sort_flag(app, st_a, st_b);
 	}
+	// print_inst(*app);
 }
 
 //DONE
@@ -154,5 +165,23 @@ void setChunkLen(t_app **app, t_list  *st_a)
 	if((*app)->len_stck > 10)
 	{
 		(*app)->chunk_len = (*app)->len_stck / 5;
+	}
+}
+
+void checkChunk(t_app **app, t_list *st_b)
+{
+	int i;
+	
+	(*app)->len_stck_b = ft_list_size(st_b);
+	i = (*app)->chunk_ind;
+	// ft_printf("i is %d\n", i);
+	// ft_printf("i * chunk len is %d\n", (i * (*app)->chunk_len));
+	ft_printf("len is %d\n", (*app)->len_stck_b);
+	if ((i * (*app)->chunk_len) == (*app)->len_stck_b)
+	{
+		(*app)->chunkSet = 1;
+		(*app)->chunk_ind++;
+
+
 	}
 }

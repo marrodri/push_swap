@@ -51,7 +51,7 @@ void indexComp(t_app **app, int frstIndex, int lastIndex)
 	raComp(app, frstIndRaInst, lastIndRaInst);
 	rraComp(app, frstIndRraInst, lastIndRraInst);
 	rotInstrCheck(app);
-	print_inst(*app);
+	// print_inst(*app);
 }
 
 //remodify this one

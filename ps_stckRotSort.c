@@ -2,39 +2,42 @@
 #include "push_swap.h"
 
 // unfinished TODO
-int stBRotSort(t_app *app, t_list *st_b)
+int stBRotSort(t_list *st_b)
 {
 	t_list *head;
 	int prev_val;
 	int low_val;
-
+	int	hi_val;
+	
+	if(!st_b)
+		return (1);
 	low_val = stck_lowVal(st_b);
+	hi_val = stck_hiVal(st_b);
 	head = st_b;
-	while (st_b->elem != app->stck_b_hi_val)
+	while (st_b->elem != low_val)
 		st_b = st_b->next;
 	prev_val = st_b->elem;
 	st_b = st_b->next;
 	if(!st_b)
 		st_b = head;
-	if(st_b->elem != low_val)
+	if(st_b->elem != hi_val)
 		return 0;
 	while(1)
 	{
 		if (!st_b)
 			st_b = head;
-		if (st_b->elem == app->stck_b_hi_val)
+		if (st_b->elem == low_val)
 			break;
-		if (prev_val < st_b->elem && prev_val != app->stck_b_hi_val 
-			&& (st_b->elem != low_val))
+		if (prev_val < st_b->elem && prev_val != low_val 
+			&& (st_b->elem != hi_val))
 			return (0);
 		prev_val = st_b->elem;
 		st_b = st_b->next;
 	}
 	return (1);
-
 }
 
-//still buggy, segfault probably here!
+// still buggy, segfault probably here!
 int stARotSort(t_app *app, t_list *st_a)
 {
 	t_list *head;

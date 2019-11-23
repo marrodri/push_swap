@@ -22,7 +22,7 @@ void	init_ps(t_app **app)
 	(*app)->arr_num = NULL;
 	(*app)->instr = NULL;
 	(*app)->len_inst = 0;
-
+	(*app)->chunk_ind = 1;
 	(*app)->len_stck = 0;
 	(*app)->stck_a_hi_val = 0;
 	(*app)->stck_a_hi_val_ind = 0;
@@ -55,6 +55,10 @@ int main(int argc, char **argv)
 	t_list		*st_b;
 	t_app		*app;
 
+	int i;
+
+	i = 0;
+
 	st_a = NULL;
 	st_b = NULL;
 	init_ps(&app);
@@ -65,7 +69,7 @@ int main(int argc, char **argv)
 		setChunkRange(&app, st_a);
 		// chunk_instr(&app, st_a, st_b);
 		// while (0)
-		while (!check_stacks(st_a, st_b) && !app->chunkSet)
+		while (!check_stacks(st_a, st_b) && app->chunk_ind < 5)
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
@@ -81,13 +85,15 @@ int main(int argc, char **argv)
 			//  is inside the area of the chunk
 			// CHECKPOINT HERE
 			chunk_instr(&app, st_a, st_b);
-
+			//CHECKPOINT TO SEE IF THE INSTR_SET WORKS, WIP
+			// break;
 			st_act_ft(&app, &st_a, &st_b);
-			break;
 			// TODO add a chunk_checker that sets the chunkset to true
+			checkChunk(&app, st_b);
 			// if the first chunk range is setted on stack a
 			if(app->deb_flag)
 				print_stacks(st_a, st_b);
+			i++;
 		}
 	}
 	if(app->deb_flag)
@@ -105,12 +111,12 @@ int main(int argc, char **argv)
 // wed 1:55 
 // -------- 
 // 14:15 
-// thurs 
+// thurs 5:43
 // ------- 
-// 
-// fri 
+// 19:58
+// fri 2:43
 // -------- 
-// 
+// 22:41
 // sat 
 // -------- 
 // 
