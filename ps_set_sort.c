@@ -82,18 +82,21 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	//if stack a has only 10 chunks, then sort the stack a properly
 	if (stARotSort(*app, st_a))
 	{
+		ft_printf("stack A is sorted pushing\n");
 		setSortedInst(app, st_a, st_b);
 		rotInstrCheck(app);
 	}
 	else
 	{
+		ft_printf("both stacks are not rotated sorted\n");
 		sta_flag(app, st_a);
-		stb_flag(app, st_b);
-		if((*app)->deb_flag)
-		{
-			ft_printf("======PRE INSTRUCTIONS==========\n");
-			print_inst(*app);
-		}
+		if(!stBRotSort(st_b))
+			stb_flag(app, st_b);
+		// if((*app)->deb_flag)
+		// {
+		// 	ft_printf("======PRE INSTRUCTIONS==========\n");
+		// 	print_inst(*app);
+		// }
 		saInstrCheck(app);
 		rotInstrCheck(app);
 		// bothInstrCheck(app);
@@ -101,10 +104,10 @@ void	set_sort_flag(t_app **app, t_list *st_a, t_list *st_b)
 	}
 
 
-	if((*app)->deb_flag)
-	{
-		ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
-		print_inst(*app);
-	}
+	// if((*app)->deb_flag)
+	// {
+	// 	ft_printf("++++++++FINAL INSTRUCTIONS+++++\n");
+	// 	print_inst(*app);
+	// }
 	return ;
 }

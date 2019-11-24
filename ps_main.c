@@ -45,6 +45,8 @@ void	init_ps(t_app **app)
 	(*app)->len_inst = 0;
 	(*app)->chunk_ind = 1;
 	(*app)->len_stck = 0;
+	(*app)->lastSet =0;
+
 	(*app)->stck_a_hi_val = 0;
 	(*app)->stck_a_hi_val_ind = 0;
 	(*app)->stck_a_mid_val = 0; //delete this one at the end
@@ -95,7 +97,7 @@ int main(int argc, char **argv)
 			ft_printf("stack set:\n");
 			print_stacks(st_a, st_b);
 		}
-		while (!check_stacks(st_a, st_b) && app->chunk_ind < 6)
+		while (!check_stacks(st_a, st_b))
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
@@ -141,8 +143,8 @@ int main(int argc, char **argv)
 // fri 6:41 
 // -------- 
 // 26:39 
-// sat 4:11
+// sat 7:35
 // -------- 
-// 30:50 
+// 33:14 
 
 // 4:10

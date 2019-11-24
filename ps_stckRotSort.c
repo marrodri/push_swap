@@ -43,10 +43,12 @@ int stARotSort(t_app *app, t_list *st_a)
 	t_list *head;
 	int prev_val;
 	int low_val;
-
+	int hi_val;
+	app->stck_a_hi_val = 0;
 	low_val = stck_lowVal(st_a);
+	hi_val = stck_hiVal(st_a);
 	head = st_a;
-	while (st_a->elem != app->stck_a_hi_val)
+	while (st_a->elem != hi_val)
 		st_a = st_a->next;
 	prev_val = st_a->elem;
 	st_a = st_a->next;
@@ -58,9 +60,9 @@ int stARotSort(t_app *app, t_list *st_a)
 	{
 		if (!st_a)
 			st_a = head;
-		if (st_a->elem == app->stck_a_hi_val)
+		if (st_a->elem == hi_val)
 			break;
-		if (prev_val > st_a->elem && prev_val != app->stck_a_hi_val 
+		if (prev_val > st_a->elem && prev_val != hi_val
 			&& (st_a->elem != low_val))
 			return (0);
 		prev_val = st_a->elem;

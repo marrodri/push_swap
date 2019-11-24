@@ -97,7 +97,17 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 {
 	// TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
-	if ((*app)->len_stck > (*app)->chunk_len)
+	if (stARotSort(*app, st_a))
+	{
+		//change the algo for set_sort_flag
+		ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
+		(*app)->lastSet = 1;
+		// last pushes are buggy, try to fix this
+		// set_sort_flag(app, st_a, st_b);
+		setSortedInst(app, st_a, st_b);
+		rotInstrCheck(app);
+	}
+	else if (!(*app)->lastSet)
 	{
 		//NOTE, how to sort both at the same time?
 		//CHECKPOINT TODO
@@ -123,13 +133,6 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 			sortChunkInst(app, st_a, st_b);
 			(*app)->sort_stb_flag[3] = 1;
 		}
-	}
-	else
-	{
-		//change the algo for set_sort_flag
-		ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
-		(*app)->chunk_ind++;
-		// set_sort_flag(app, st_a, st_b);
 	}
 }
 

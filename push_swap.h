@@ -38,6 +38,7 @@ typedef struct	s_app
 	int		deb_flag;
 	int		instr_count;
 	int		chunkSet;
+	int		lastSet;
 
 
 	int		chunk_low_val;

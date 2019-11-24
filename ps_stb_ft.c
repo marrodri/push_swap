@@ -11,6 +11,7 @@ int		ch_next_hi_elem(t_list *stack)
 	hi_elem = stck_hiVal(stack);
 	low_elem = stck_lowVal(stack);
 
+	
 	if (stack == NULL || stack->next == NULL)
 		return (0);
 	tmp = stack;
