@@ -12,6 +12,27 @@
 
 #include "push_swap.h"
 
+void	updateStData(t_app **app, t_list *st_a, t_list *st_b)
+{
+	// ft_printf("here???\n");
+	if(st_a)
+	{
+		(*app)->len_stck = ft_list_size(st_a);
+		// (*app)->stck_a_hi_val = stck_hiVal(st_a);
+		// (*app)->stck_a_hi_val_ind = stck_indVal(st_a, (*app)->stck_a_hi_val);
+		// (*app)->stck_a_low_val = stck_lowVal(st_a);
+		// (*app)->stck_a_low_val_ind = stck_indVal(st_a, (*app)->stck_a_low_val);
+	}
+	if(st_b)
+	{
+		(*app)->len_stck_b = ft_list_size(st_b);
+		// (*app)->stck_b_hi_val = stck_hiVal(st_b);
+		// (*app)->stck_b_hi_val_ind = stck_indVal(st_b, (*app)->stck_b_hi_val);
+		// (*app)->stck_b_low_val = stck_lowVal(st_b);
+		// (*app)->stck_b_low_val_ind = stck_indVal(st_b, (*app)->stck_b_low_val);
+	}
+}
+
 
 void	init_ps(t_app **app)
 {
@@ -74,12 +95,13 @@ int main(int argc, char **argv)
 			ft_printf("stack set:\n");
 			print_stacks(st_a, st_b);
 		}
-		while (!check_stacks(st_a, st_b) && app->chunk_ind < 5)
+		while (!check_stacks(st_a, st_b) && app->chunk_ind < 6)
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
-			app->len_stck = ft_list_size(st_a);
-			app->len_stck_b = ft_list_size(st_b);
+			// app->len_stck = ft_list_size(st_a);
+			// app->len_stck_b = ft_list_size(st_b);
+			updateStData(&app, st_a, st_b);
 			if (app->chunkSet)
 			{
 				setChunkRange(&app, st_a);
@@ -119,8 +141,8 @@ int main(int argc, char **argv)
 // fri 6:41 
 // -------- 
 // 26:39 
-// sat 4:00 
+// sat 4:11
 // -------- 
-// 30:39 
+// 30:50 
 
-// 4:21
+// 4:10

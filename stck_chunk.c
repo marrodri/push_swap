@@ -127,8 +127,9 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 	else
 	{
 		//change the algo for set_sort_flag
-		// ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
-		set_sort_flag(app, st_a, st_b);
+		ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
+		(*app)->chunk_ind++;
+		// set_sort_flag(app, st_a, st_b);
 	}
 }
 

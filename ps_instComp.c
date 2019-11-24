@@ -60,22 +60,22 @@ void indexComp(t_app **app, int frstIndex, int lastIndex)
 //remodify this one
 void	rotInstrCheck(t_app **app)
 {
-	if((*app)->sort_sta_flag[0] >= (*app)->sort_sta_flag[1] && 
+	if((*app)->sort_sta_flag[0] > (*app)->sort_sta_flag[1] && 
 	(*app)->sort_sta_flag[1] > 0)
 	{
 		(*app)->sort_sta_flag[0] = 0;
 	}
-	else if ((*app)->sort_sta_flag[0] < (*app)->sort_sta_flag[1] &&
+	else if ((*app)->sort_sta_flag[0] <= (*app)->sort_sta_flag[1] &&
 		(*app)->sort_sta_flag[0] > 0)
 	{
 		(*app)->sort_sta_flag[1] = 0;
 	}
-	if((*app)->sort_stb_flag[0] >= (*app)->sort_stb_flag[1] && 
+	if((*app)->sort_stb_flag[0] > (*app)->sort_stb_flag[1] && 
 		(*app)->sort_stb_flag[1] > 0)
 	{
 		(*app)->sort_stb_flag[0] = 0;
 	}
-	else if((*app)->sort_stb_flag[0] < (*app)->sort_stb_flag[1] &&
+	else if((*app)->sort_stb_flag[0] <= (*app)->sort_stb_flag[1] &&
 		(*app)->sort_stb_flag[0] > 0)
 	{
 		(*app)->sort_stb_flag[1] = 0;
