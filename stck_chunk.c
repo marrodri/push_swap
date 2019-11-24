@@ -46,8 +46,8 @@ void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 			(*app)->sort_stb_flag[1] = (*app)->len_stck_b - stHiLowInd; //rrb
 		}
 	}
-	if(!ft_arriszero((*app)->sort_sta_flag, 4))
-		(*app)->sort_stb_flag[3] = 1;
+	// if(!ft_arriszero((*app)->sort_sta_flag, 4))
+	// 	(*app)->sort_stb_flag[3] = 1;
 	rotInstrCheck(app);
 }
 
@@ -104,6 +104,7 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 		// start the stack B flags sorting, by
 		// checking the top of stack a to push properly
 		// to stack B
+		setChnkValTopInst(app, st_a);
 		if(!stBRotSort(st_b))
 		{
 			//CHECKPOINT HERE
@@ -118,7 +119,6 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 		else
 		{
 			ft_printf("stack b IS properly sorted, setting new push\n");
-			setChnkValTopInst(app, st_a);
 			print_inst(*app);
 			sortChunkInst(app, st_a, st_b);
 			(*app)->sort_stb_flag[3] = 1;
