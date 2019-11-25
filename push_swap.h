@@ -51,16 +51,12 @@ typedef struct	s_app
 	int		len_stck; //keep updating this one
 	int		stck_a_low_val;
 	int		stck_a_low_val_ind;
-	int		stck_a_mid_val;
-	int		stck_a_mid_val_ind;
 	int		stck_a_hi_val;
 	int		stck_a_hi_val_ind;
 
 	int		len_stck_b; //keep updating this one
 	int		stck_b_low_val_ind;
 	int		stck_b_low_val;
-	int		stck_b_mid_val;
-	int		stck_b_mid_val_ind;
 	int		stck_b_hi_val;
 	int		stck_b_hi_val_ind;
 }				t_app;

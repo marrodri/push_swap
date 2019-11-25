@@ -49,16 +49,12 @@ void	init_ps(t_app **app)
 
 	(*app)->stck_a_hi_val = 0;
 	(*app)->stck_a_hi_val_ind = 0;
-	(*app)->stck_a_mid_val = 0; //delete this one at the end
-	(*app)->stck_a_mid_val_ind = 0; //delete this one at the end
 	(*app)->stck_a_low_val = 0;
 	(*app)->stck_a_low_val_ind = 0;
 
 	(*app)->len_stck_b = 0;
 	(*app)->stck_b_hi_val = 0;
 	(*app)->stck_b_hi_val_ind = 0; 
-	(*app)->stck_b_mid_val = 0; //delete this one at the end
-	(*app)->stck_b_mid_val_ind = 0; //delete this one at the end
 	(*app)->stck_b_low_val = 0;
 	(*app)->stck_b_low_val_ind = 0;
 
@@ -90,8 +86,6 @@ int main(int argc, char **argv)
 		set_stack(&st_a, app);
 		setChunkLen(&app, st_a);
 		setChunkRange(&app, st_a);
-		// chunk_instr(&app, st_a, st_b);
-		// while (0)
 		if(app->deb_flag)
 		{
 			ft_printf("stack set:\n");
@@ -101,8 +95,6 @@ int main(int argc, char **argv)
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
-			// app->len_stck = ft_list_size(st_a);
-			// app->len_stck_b = ft_list_size(st_b);
 			updateStData(&app, st_a, st_b);
 			if (app->chunkSet)
 			{
@@ -111,12 +103,8 @@ int main(int argc, char **argv)
 			}
 			// CHECKPOINT HERE
 			chunk_instr(&app, st_a, st_b);
-			//CHECKPOINT TO SEE IF THE INSTR_SET WORKS, WIP
-			// break;
 			st_act_ft(&app, &st_a, &st_b);
-			// TODO add a chunk_checker that sets the chunkset to true
 			checkChunk(&app, st_b);
-			// if the first chunk range is setted on stack a
 			if(app->deb_flag)
 				print_stacks(st_a, st_b);
 			i++;
@@ -127,24 +115,23 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-// sun 0:00 
-// mon 8:45 
+// sun 0:33
+// mon 
 // ------- 
-// 8:45 
-// tues 3:52 
+// 
+// tues 
 // --------- 
-// 12:37 
-// wed 1:55 
+// 
+// wed 
 // -------- 
-// 14:15 
-// thurs 5:43 
+// 
+// thurs 
 // ------- 
-// 19:58 
-// fri 6:41 
+//  
+// fri 
 // -------- 
-// 26:39 
-// sat 7:35
+// 
+// sat 
 // -------- 
-// 33:14 
+//  
 
-// 4:10
