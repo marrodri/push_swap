@@ -35,16 +35,14 @@ typedef struct	s_app
 	int		len_inst;
 	int		stck_ind;
 	int		free_av;
-	int		deb_flag;
 	int		instr_count;
 	int		chunkSet;
 	int		lastSet;
-
+	int		deb_flag;
 
 	int		chunk_low_val;
 	int		chunk_hi_val;
 	int		chunk_len;
-	// int		stck_ind_limit;
 	int		chunk_top_val;
 	int		chunk_ind;
 

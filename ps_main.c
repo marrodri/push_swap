@@ -73,11 +73,9 @@ int main(int argc, char **argv)
 	t_list		*st_a;
 	t_list		*st_b;
 	t_app		*app;
-
-	int i;
+	int			i;
 
 	i = 0;
-
 	st_a = NULL;
 	st_b = NULL;
 	init_ps(&app);
@@ -91,7 +89,7 @@ int main(int argc, char **argv)
 			ft_printf("stack set:\n");
 			print_stacks(st_a, st_b);
 		}
-		while (!check_stacks(st_a, st_b))
+		while (!check_stacks(st_a, st_b) && app->chunk_ind < 11)
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
@@ -105,7 +103,7 @@ int main(int argc, char **argv)
 			chunk_instr(&app, st_a, st_b);
 			st_act_ft(&app, &st_a, &st_b);
 			checkChunk(&app, st_b);
-			if(app->deb_flag)
+			if (app->deb_flag)
 				print_stacks(st_a, st_b);
 			i++;
 		}
@@ -115,12 +113,12 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-// sun 0:33
+// sun 4:40 
 // mon 
 // ------- 
 // 
 // tues 
-// --------- 
+// ---------  
 // 
 // wed 
 // -------- 
@@ -134,4 +132,3 @@ int main(int argc, char **argv)
 // sat 
 // -------- 
 //  
-

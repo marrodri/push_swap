@@ -11,10 +11,6 @@ list is NULL
 -----sort-------
 first index 1
 last index 17
-frstIndRaInst|1|
-frstIndRraInst|19|
-lastIndRaInst|17|
-lastIndRraInst|3|
 top val is |1|
 stack b IS properly sorted, setting new push
 ra:1
@@ -54,6 +50,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 1
+hi low index is 0
 ra
 ra
 ra
@@ -85,6 +83,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 3
+hi low index is 0
 ra
 ra
 ra
@@ -117,6 +117,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 3
+hi low index is 1
 rr
 ra
 ra
@@ -139,10 +141,6 @@ lowest chunk val is |5|
 highest chunk val is |8|
 first index 1
 last index 15
-frstIndRaInst|1|
-frstIndRraInst|15|
-lastIndRaInst|15|
-lastIndRraInst|1|
 top val is |5|
 stack b is not properly sorted, sorting b
 ra:1
@@ -178,6 +176,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 4
+hi low index is 3
 rrb
 pb
 i is 2
@@ -207,6 +207,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 5
+hi low index is 0
 ra
 ra
 pb
@@ -237,6 +239,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 6
+hi low index is 0
 rra
 rra
 rra
@@ -269,6 +273,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 8
+hi low index is 0
 rra
 rra
 rra
@@ -323,6 +329,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 8
+hi low index is 0
 pb
 i is 3
 i * chunk len is 12
@@ -347,6 +355,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 9
+hi low index is 0
 pb
 i is 3
 i * chunk len is 12
@@ -371,6 +381,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 12
+hi low index is 0
 pb
 i is 3
 i * chunk len is 12
@@ -419,6 +431,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 12
+hi low index is 0
 pb
 i is 3
 i * chunk len is 12
@@ -469,6 +483,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 12
+hi low index is 0
 pb
 i is 4
 i * chunk len is 16
@@ -497,6 +513,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 14
+hi low index is 0
 rra
 pb
 i is 4
@@ -526,6 +544,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 15
+hi low index is 0
 rra
 pb
 i is 4
@@ -555,6 +575,8 @@ rb:0
 rrb:0
 sb:0
 pb:0
+hi low is 14
+hi low index is 2
 rr
 rr
 pb
@@ -571,71 +593,73 @@ stack B:
 -----sort-------
 lowest chunk val is |17|
 highest chunk val is |20|
-EVERYTHING IS READY LAST INSTRUCTIONS
-both stacks are not rotated sorted
-ra
+first index 0
+last index 3
+top val is |17|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:1
+pb:0
 sb
 i is 5
 i * chunk len is 20
 len is 16
 ===========
 stack A:
-[20]->[18]->[19]->[17]->NULL
+[17]->[20]->[18]->[19]->NULL
 -------------
 stack B:
 [14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[16]->[15]->NULL
 ===end=====
 -----sort-------
-EVERYTHING IS READY LAST INSTRUCTIONS
-both stacks are not rotated sorted
-sa
+first index 0
+last index 3
+top val is |17|
+stack b IS properly sorted, setting new push
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+hi low is 16
+hi low index is 14
 rrb
+rrb
+pb
 i is 5
 i * chunk len is 20
-len is 16
+len is 17
 ===========
 stack A:
-[18]->[20]->[19]->[17]->NULL
+[20]->[18]->[19]->NULL
 -------------
 stack B:
-[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[16]->NULL
+[17]->[16]->[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-both stacks are not rotated sorted
 ra
-rrb
+pa
 i is 5
 i * chunk len is 20
 len is 16
 ===========
 stack A:
-[20]->[19]->[17]->[18]->NULL
+[17]->[18]->[19]->[20]->NULL
 -------------
 stack B:
 [16]->[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-both stacks are not rotated sorted
-sa
-rb
-i is 5
-i * chunk len is 20
-len is 16
-===========
-stack A:
-[19]->[20]->[17]->[18]->NULL
--------------
-stack B:
-[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[16]->NULL
-===end=====
------sort-------
-EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
-ra
-ra
-rrb
 pa
 i is 5
 i * chunk len is 20
@@ -649,7 +673,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -663,7 +686,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -677,7 +699,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -691,7 +712,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -705,7 +725,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -719,7 +738,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -733,7 +751,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -747,7 +764,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -761,7 +777,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -775,7 +790,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -789,7 +803,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -803,7 +816,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -817,7 +829,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -831,7 +842,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -845,7 +855,6 @@ stack B:
 ===end=====
 -----sort-------
 EVERYTHING IS READY LAST INSTRUCTIONS
-stack A is sorted pushing
 pa
 i is 5
 i * chunk len is 20
@@ -857,4 +866,4 @@ stack A:
 stack B:
 list is NULL
 ===end=====
-intructions used |77|
+intructions used |72|
