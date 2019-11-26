@@ -145,7 +145,10 @@ int		stck_hiVal(t_list *stck);
 int		stck_lowVal(t_list *stck);
 int		stck_valInd(t_list *stck, int elem);
 int		stck_indVal(t_list *stck, int index);
-int		stck_hiValComp(t_list *stck, int limit);
+int		stcka_midValComp(t_list *stck, int limit);
+int		stckb_midValComp(t_list *stck, int val);
+int 	lowerThan(int a, int b);
+int 	higherThan(int a, int b);
 
 void	setChunkRange(t_app **app, t_list *st_a);
 void	setChunkLen(t_app **app, t_list  *st_a);

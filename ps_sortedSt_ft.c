@@ -27,7 +27,7 @@ void		setSortedInst(t_app **app, t_list *st_a, t_list *st_b)
 		(*app)->stck_b_hi_val = stck_hiVal(st_b);
 		(*app)->len_stck = ft_list_size(st_a);
 		(*app)->len_stck_b = ft_list_size(st_b);
-		stAHiLow = stck_hiValComp(st_a, (*app)->stck_b_hi_val);
+		stAHiLow = stcka_midValComp(st_a, (*app)->stck_b_hi_val);
 		// ft_printf("stAHiLow is %d\n", stAHiLow);
 		(*app)->stck_b_hi_val_ind = stck_valInd(st_b,(*app)->stck_b_hi_val);
 		// 1.- step find the highest val in stack b and the lower value from stack A but still higher than the hi_val of stack B 

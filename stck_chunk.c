@@ -73,53 +73,94 @@ void setTopVal(t_app **app, t_list *st_a)
 ** stack b at proper place
 */
 //CHECKPOINT TODO HERE IMPORTANT
+// void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
+// {
+// 	int ind;
+// 	int stHiLowVal;
+// 	int hiVal;
+// 	int lowVal;
+// 	// int stb_len;
+
+// 	if(st_a && st_b)
+// 	{
+// 		(*app)->len_stck_b = ft_list_size(st_b);
+// 		stHiLowVal = stck_hiValComp(st_b, (*app)->chunk_top_val);
+// 		hiVal = stck_hiVal(st_b);
+// 		lowVal = stck_lowVal(st_b);
+// 		ft_printf("chunk top val is %d\n", (*app)->chunk_top_val);
+// 		ft_printf("hi low is %d\n", stHiLowVal);
+// 		if((*app)->chunk_top_val > hiVal)
+// 		{
+// 			//set to the highest position of the stack b
+// 			ind = stck_valInd(st_b, hiVal);
+// 			(*app)->sort_stb_flag[0] = ind; //rb
+// 			(*app)->sort_stb_flag[1] = (*app)->len_stck_b - ind; //rrb
+// 		}
+// 		//else if the top_val is lower than the lowest val
+// 		else if((*app)->chunk_top_val < lowVal)
+// 		{
+// 			//set to the lowest position of the stack b
+// 			ind = stck_valInd(st_b, lowVal);
+// 			(*app)->sort_stb_flag[0] = ind; //rb
+// 			(*app)->sort_stb_flag[1] = (*app)->len_stck_b - ind; //rrb
+// 		}
+// 		else
+// 		{
+// 			//else do the normal rotation
+// 			ind = stck_valInd(st_b, stHiLowVal);
+// 			ft_printf("hi low index is %d\n", ind);
+// 			if (ind > 0)
+// 			{
+// 				// (*app)->sort_stb_flag[0] = ind + 1; //rb
+// 				// (*app)->sort_stb_flag[1] = ((*app)->len_stck_b - ind) - 1; //rrb
+// 				(*app)->sort_stb_flag[0] = ind; //rb
+// 				(*app)->sort_stb_flag[1] = (*app)->len_stck_b - ind; //rrb
+// 			}
+// 		}
+// 		ft_printf("stb_flag[0] %d\n",(*app)->sort_stb_flag[0]);
+// 		ft_printf("stb_flag[1] %d\n",(*app)->sort_stb_flag[1]);	
+// 	}
+// 	rotInstrCheck(app);
+// }
+
+
 void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 {
-	int ind;
+	int stHiLowInd;
 	int stHiLowVal;
-	int hiVal;
-	int lowVal;
-	// int stb_len;
-
+	int stb_len;
 	if(st_a && st_b)
 	{
-		(*app)->len_stck_b = ft_list_size(st_b);
-		stHiLowVal = stck_hiValComp(st_b, (*app)->chunk_top_val);
-		
-		hiVal = stck_hiVal(st_b);
-		lowVal = stck_lowVal(st_b);
+		stb_len = ft_list_size(st_b);
+		stHiLowVal = stckb_midValComp(st_b, (*app)->chunk_top_val);
+		stHiLowInd = stck_valInd(st_b, stHiLowVal);
 		ft_printf("chunk top val is %d\n", (*app)->chunk_top_val);
 		ft_printf("hi low is %d\n", stHiLowVal);
-		
-		if((*app)->chunk_top_val > hiVal)
+		ft_printf("hi low index is %d\n", stHiLowInd);
+		if (stHiLowInd > 0)
 		{
-			//set to the highest position of the stack b
-			ind = stck_valInd(st_b, hiVal);
+			(*app)->sort_stb_flag[0] = stHiLowInd; //rb
+			(*app)->sort_stb_flag[1] = ((*app)->len_stck_b - stHiLowInd); //rrb
 		}
-		//else if the top_val is lower than the lowest val
-		else if((*app)->chunk_top_val < lowVal)
-		{
-			//set to the lowest position of the stack b
-			ind = stck_valInd(st_b, lowVal);
-		}
-		else
-		{
-			//else do the normal rotation
-			ind = stck_valInd(st_b, stHiLowVal);
-			ft_printf("hi low index is %d\n", ind);
-			if (ind > 0)
-			{
-				// (*app)->sort_stb_flag[0] = ind + 1; //rb
-				// (*app)->sort_stb_flag[1] = ((*app)->len_stck_b - ind) - 1; //rrb
-				(*app)->sort_stb_flag[0] = ind; //rb
-				(*app)->sort_stb_flag[1] = (*app)->len_stck_b - ind; //rrb
-			}
-		}
+		// if (stHiLowInd == 0 && stb_len > 1)
+		// {
+		// 	(*app)->sort_stb_flag[0] = stHiLowInd + 1;
+		// }
 		ft_printf("stb_flag[0] %d\n",(*app)->sort_stb_flag[0]);
-		ft_printf("stb_flag[1] %d\n",(*app)->sort_stb_flag[1]);	
+		ft_printf("stb_flag[1] %d\n",(*app)->sort_stb_flag[1]);
+			
+			
 	}
 	rotInstrCheck(app);
 }
+
+
+
+
+
+
+
+
 
 /*
 ** it finds the lowest number of instructions for
@@ -226,7 +267,7 @@ void setChunkRange(t_app **app, t_list *st_a)
 	(*app)->chunk_hi_val = 0;
 	while(i < (*app)->chunk_len)
 	{
-		(*app)->chunk_hi_val = stck_hiValComp(st_a, pre_val);
+		(*app)->chunk_hi_val = stcka_midValComp(st_a, pre_val);
 		pre_val = (*app)->chunk_hi_val;
 		i++;
 	}

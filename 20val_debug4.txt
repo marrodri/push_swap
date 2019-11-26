@@ -1,0 +1,2448 @@
+lowest chunk val is |1|
+highest chunk val is |4|
+stack set:
+===========
+stack A:
+[14]->[1]->[18]->[6]->[19]->[3]->[13]->[17]->[20]->[16]->[4]->[15]->[7]->[9]->[12]->[10]->[8]->[2]->[11]->[5]->NULL
+-------------
+stack B:
+list is NULL
+===end=====
+-----sort-------
+first index 1
+last index 17
+top val is |1|
+stack b IS properly sorted, setting new push
+ra:1
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+ra
+pb
+i is 1
+i * chunk len is 4
+len is 1
+===========
+stack A:
+[18]->[6]->[19]->[3]->[13]->[17]->[20]->[16]->[4]->[15]->[7]->[9]->[12]->[10]->[8]->[2]->[11]->[5]->[14]->NULL
+-------------
+stack B:
+[1]->NULL
+===end=====
+-----sort-------
+first index 3
+last index 15
+frstIndRaInst|3|
+frstIndRraInst|16|
+lastIndRaInst|15|
+lastIndRraInst|4|
+top val is |3|
+stack b IS properly sorted, setting new push
+ra:3
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 3
+hi low is 1
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+ra
+ra
+ra
+pb
+i is 1
+i * chunk len is 4
+len is 2
+===========
+stack A:
+[13]->[17]->[20]->[16]->[4]->[15]->[7]->[9]->[12]->[10]->[8]->[2]->[11]->[5]->[14]->[18]->[6]->[19]->NULL
+-------------
+stack B:
+[3]->[1]->NULL
+===end=====
+-----sort-------
+first index 4
+last index 11
+frstIndRaInst|4|
+frstIndRraInst|14|
+lastIndRaInst|11|
+lastIndRraInst|7|
+top val is |4|
+stack b IS properly sorted, setting new push
+ra:4
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 4
+hi low is 3
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+ra
+ra
+ra
+ra
+pb
+i is 1
+i * chunk len is 4
+len is 3
+===========
+stack A:
+[15]->[7]->[9]->[12]->[10]->[8]->[2]->[11]->[5]->[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->NULL
+-------------
+stack B:
+[4]->[3]->[1]->NULL
+===end=====
+-----sort-------
+first index 6
+last index 6
+frstIndRaInst|6|
+frstIndRraInst|11|
+lastIndRaInst|6|
+lastIndRraInst|11|
+top val is |2|
+stack b IS properly sorted, setting new push
+ra:6
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 2
+hi low is 1
+hi low index is 2
+stb_flag[0] 2
+stb_flag[1] 1
+ra
+ra
+ra
+ra
+ra
+ra
+rrb
+pb
+i is 1
+i * chunk len is 4
+len is 4
+===========
+stack A:
+[11]->[5]->[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->NULL
+-------------
+stack B:
+[2]->[1]->[4]->[3]->NULL
+===end=====
+-----sort-------
+lowest chunk val is |5|
+highest chunk val is |8|
+first index 1
+last index 15
+top val is |5|
+stack b IS properly sorted, setting new push
+ra:1
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 5
+hi low is 4
+hi low index is 2
+stb_flag[0] 2
+stb_flag[1] 2
+rr
+rb
+pb
+i is 2
+i * chunk len is 8
+len is 5
+===========
+stack A:
+[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->[11]->NULL
+-------------
+stack B:
+[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 2
+last index 13
+frstIndRaInst|2|
+frstIndRraInst|13|
+lastIndRaInst|13|
+lastIndRraInst|2|
+top val is |6|
+stack b IS properly sorted, setting new push
+ra:2
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 6
+hi low is 5
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+ra
+ra
+pb
+i is 2
+i * chunk len is 8
+len is 6
+===========
+stack A:
+[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->[11]->[14]->[18]->NULL
+-------------
+stack B:
+[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 6
+last index 10
+frstIndRaInst|6|
+frstIndRraInst|8|
+lastIndRaInst|10|
+lastIndRraInst|4|
+top val is |19|
+stack b IS properly sorted, setting new push
+ra:0
+rra:4
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 19
+hi low is 6
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+rra
+rra
+rra
+rra
+pb
+i is 2
+i * chunk len is 8
+len is 7
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->NULL
+-------------
+stack B:
+[8]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 9
+last index 9
+frstIndRaInst|9|
+frstIndRraInst|4|
+lastIndRaInst|9|
+lastIndRraInst|4|
+top val is |11|
+stack b IS properly sorted, setting new push
+ra:0
+rra:4
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 11
+hi low is 8
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+rra
+rra
+rra
+rra
+pb
+i is 2
+i * chunk len is 8
+len is 8
+===========
+stack A:
+[9]->[12]->[10]->[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[7]->[8]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+lowest chunk val is |9|
+highest chunk val is |12|
+first index 0
+last index 3
+top val is |9|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:1
+pb:0
+sb
+i is 3
+i * chunk len is 12
+len is 8
+===========
+stack A:
+[9]->[12]->[10]->[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 3
+top val is |9|
+stack b IS properly sorted, setting new push
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 9
+hi low is 8
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+pb
+i is 3
+i * chunk len is 12
+len is 9
+===========
+stack A:
+[12]->[10]->[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 2
+top val is |12|
+stack b IS properly sorted, setting new push
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 12
+hi low is 9
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+pb
+i is 3
+i * chunk len is 12
+len is 10
+===========
+stack A:
+[10]->[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 1
+top val is |10|
+stack b IS properly sorted, setting new push
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 10
+hi low is 1
+hi low index is 9
+stb_flag[0] 9
+stb_flag[1] 1
+rrb
+pb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:1
+sb:0
+pb:0
+rrb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[10]->[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val is |11|
+stack b is not properly sorted, sorting b
+ra:0
+rra:0
+sa:0
+pa:0
+rb:1
+rrb:1
+sb:0
+pb:0
+rb
+i is 3
+i * chunk len is 12
+len is 11
+===========
+stack A:
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
+-------------
+stack B:
+[1]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[10]->NULL
+===end=====
+-----sort-------
+first index 0
+last index 0
+top val i
