@@ -50,11 +50,11 @@ void setTopVal(t_app **app, t_list *st_a)
 	int index;
 
 	index = 0;
-	if((*app)->sort_sta_flag[0] >= 0)
+	if((*app)->sort_sta_flag[0] > 0 && (*app)->sort_sta_flag[1] == 0)
 	{
 		index = (*app)->sort_sta_flag[0];
 	}
-	else if ((*app)->sort_sta_flag[1] >= 0)
+	else if ((*app)->sort_sta_flag[1] > 0 && (*app)->sort_sta_flag[0] == 0)
 	{
 		index = (*app)->len_stck - (*app)->sort_sta_flag[1];
 	}
@@ -123,29 +123,33 @@ void setTopVal(t_app **app, t_list *st_a)
 // 	rotInstrCheck(app);
 // }
 
-
+//CHECKPOINT HERE IMPORTANT
 void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 {
-	int stHiLowInd;
+	int ind;
 	int stHiLowVal;
 	int stb_len;
 	if(st_a && st_b)
 	{
 		stb_len = ft_list_size(st_b);
 		stHiLowVal = stckb_midValComp(st_b, (*app)->chunk_top_val);
-		stHiLowInd = stck_valInd(st_b, stHiLowVal);
+		ind = stck_valInd(st_b, stHiLowVal);
 		ft_printf("chunk top val is %d\n", (*app)->chunk_top_val);
 		ft_printf("hi low is %d\n", stHiLowVal);
-		ft_printf("hi low index is %d\n", stHiLowInd);
-		if (stHiLowInd > 0)
-		{
-			(*app)->sort_stb_flag[0] = stHiLowInd; //rb
-			(*app)->sort_stb_flag[1] = ((*app)->len_stck_b - stHiLowInd); //rrb
-		}
-		// if (stHiLowInd == 0 && stb_len > 1)
+		ft_printf("hi low index is %d\n", ind);
+		// if (ind == 0 && st_b->elem > (*app)->chunk_top_val
+		// && st_b->next->elem < (*app)->chunk_top_val)
 		// {
-		// 	(*app)->sort_stb_flag[0] = stHiLowInd + 1;
+		// 	(*app)->sort_stb_flag[0] = 1;
 		// }
+		// else
+		// {
+			(*app)->sort_stb_flag[0] = ind; //rb
+			(*app)->sort_stb_flag[1] = ((*app)->len_stck_b - ind); //rrb
+		// }
+		if((*app)->sort_stb_flag[1] == stb_len)
+			(*app)->sort_stb_flag[1] = 0;
+		
 		ft_printf("stb_flag[0] %d\n",(*app)->sort_stb_flag[0]);
 		ft_printf("stb_flag[1] %d\n",(*app)->sort_stb_flag[1]);
 			
@@ -153,14 +157,6 @@ void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 	}
 	rotInstrCheck(app);
 }
-
-
-
-
-
-
-
-
 
 /*
 ** it finds the lowest number of instructions for
@@ -201,8 +197,6 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 	ft_printf("last index %d\n", index_lst);
 	if(index_frst == 1)
 	{
-		//ADD exception for sa if the index equals to one;
-		//TODO
 		swapComp(app, st_a);
 	}
 	else if(index_frst > 0)
@@ -213,10 +207,8 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 
 void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 {
-	// TODO ADD THE FLAGS FOR ROTATING THE STACK, THEN PUSH THE STACK
 	if (stARotSort(*app, st_a))
 	{
-		//change the algo for set_sort_flag
 		ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
 		(*app)->lastSet = 1;
 		// last pushes are buggy, try to fix this
@@ -226,17 +218,10 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 	}
 	else if (!(*app)->lastSet)
 	{
-		//NOTE, how to sort both at the same time?
-		//CHECKPOINT TODO
-		// start the stack B flags sorting, by
-		// checking the top of stack a to push properly
-		// to stack B
 		setChnkValTopInst(app, st_a);
 		if(!stBRotSort(st_b))
 		{
-			//CHECKPOINT HERE
-			// the sort the stack b 
-			// and deactivate the push to stack b;
+			// sort the stack b if it's not sorted
 			ft_printf("stack b is not properly sorted, sorting b\n");
 			stb_flag(app, st_b);
 			print_inst(*app);
@@ -247,13 +232,14 @@ void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 		{
 			ft_printf("stack b IS properly sorted, setting new push\n");
 			print_inst(*app);
+			//CHECKPOINT HERE
 			sortChunkInst(app, st_a, st_b);
 			(*app)->sort_stb_flag[3] = 1;
 		}
 	}
 }
 
-//DONE, FIXED
+// DONE, FIXED
 // sets the lowest chunk val and the highest chunk val,
 // base from chunk lenght
 void setChunkRange(t_app **app, t_list *st_a)
@@ -302,7 +288,5 @@ void checkChunk(t_app **app, t_list *st_b)
 	{
 		(*app)->chunkSet = 1;
 		(*app)->chunk_ind++;
-
-
 	}
 }

@@ -57,7 +57,7 @@ int stckb_midValComp(t_list *stck, int val)
 		return (stck_hiVal(stck));
 	while (stck)
 	{	
-		if(val > stck->elem)
+		if(val > stck->elem && stck->elem > valLim)
 		{
 			valLim = stck->elem;
 		}

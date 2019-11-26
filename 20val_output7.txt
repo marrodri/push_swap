@@ -9,14 +9,10 @@ stack B:
 list is NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 1
 last index 17
-frstIndRaInst|1|
-frstIndRraInst|19|
-lastIndRaInst|17|
-lastIndRraInst|3|
 top val is |1|
+stack b IS properly sorted, setting new push
 ra:1
 rra:0
 sa:0
@@ -38,14 +34,9 @@ stack B:
 [1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 3
 last index 15
-frstIndRaInst|3|
-frstIndRraInst|16|
-lastIndRaInst|15|
-lastIndRraInst|4|
-top val is |3|
+INDEX COMP INSTR ARE!!!
 ra:3
 rra:0
 sa:0
@@ -54,6 +45,21 @@ rb:0
 rrb:0
 sb:0
 pb:0
+top val is |3|
+stack b IS properly sorted, setting new push
+ra:3
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 3
+hi low is 1
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 ra
 ra
 ra
@@ -69,14 +75,9 @@ stack B:
 [3]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 4
 last index 11
-frstIndRaInst|4|
-frstIndRraInst|14|
-lastIndRaInst|11|
-lastIndRraInst|7|
-top val is |4|
+INDEX COMP INSTR ARE!!!
 ra:4
 rra:0
 sa:0
@@ -85,6 +86,21 @@ rb:0
 rrb:0
 sb:0
 pb:0
+top val is |4|
+stack b IS properly sorted, setting new push
+ra:4
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 4
+hi low is 3
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 ra
 ra
 ra
@@ -101,14 +117,9 @@ stack B:
 [4]->[3]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 6
 last index 6
-frstIndRaInst|6|
-frstIndRraInst|11|
-lastIndRaInst|6|
-lastIndRraInst|11|
-top val is |2|
+INDEX COMP INSTR ARE!!!
 ra:6
 rra:0
 sa:0
@@ -117,12 +128,28 @@ rb:0
 rrb:0
 sb:0
 pb:0
-rr
+top val is |2|
+stack b IS properly sorted, setting new push
+ra:6
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 2
+hi low is 1
+hi low index is 2
+stb_flag[0] 2
+stb_flag[1] 1
 ra
 ra
 ra
 ra
 ra
+ra
+rrb
 pb
 i is 1
 i * chunk len is 4
@@ -132,69 +159,15 @@ stack A:
 [11]->[5]->[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->NULL
 -------------
 stack B:
-[2]->[3]->[1]->[4]->NULL
+[2]->[1]->[4]->[3]->NULL
 ===end=====
 -----sort-------
 lowest chunk val is |5|
 highest chunk val is |8|
-stack b is not properly sorted, sorting b
-ra:0
-rra:0
-sa:0
-pa:0
-rb:0
-rrb:1
-sb:1
-pb:0
-sb
-i is 2
-i * chunk len is 8
-len is 4
-===========
-stack A:
-[11]->[5]->[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->NULL
--------------
-stack B:
-[3]->[2]->[1]->[4]->NULL
-===end=====
------sort-------
-stack b IS properly sorted, setting new push
 first index 1
 last index 15
-frstIndRaInst|1|
-frstIndRraInst|15|
-lastIndRaInst|15|
-lastIndRraInst|1|
-top val is |11|
-ra:0
-rra:1
-sa:0
-pa:0
-rb:0
-rrb:0
-sb:0
-pb:0
-rrr
-pb
-i is 2
-i * chunk len is 8
-len is 5
-===========
-stack A:
-[11]->[5]->[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->NULL
--------------
-stack B:
-[8]->[4]->[3]->[2]->[1]->NULL
-===end=====
------sort-------
-stack b IS properly sorted, setting new push
-first index 1
-last index 11
-frstIndRaInst|1|
-frstIndRraInst|14|
-lastIndRaInst|11|
-lastIndRraInst|4|
 top val is |5|
+stack b IS properly sorted, setting new push
 ra:1
 rra:0
 sa:0
@@ -203,48 +176,28 @@ rb:0
 rrb:0
 sb:0
 pb:0
-ra
+chunk top val is 5
+hi low is 4
+hi low index is 2
+stb_flag[0] 2
+stb_flag[1] 2
+rr
+rb
 pb
 i is 2
 i * chunk len is 8
-len is 6
+len is 5
 ===========
 stack A:
-[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[11]->NULL
+[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->[11]->NULL
 -------------
 stack B:
-[5]->[8]->[4]->[3]->[2]->[1]->NULL
+[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b is not properly sorted, sorting b
-ra:0
-rra:0
-sa:0
-pa:0
-rb:1
-rrb:1
-sb:1
-pb:0
-sb
-i is 2
-i * chunk len is 8
-len is 6
-===========
-stack A:
-[14]->[18]->[6]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[11]->NULL
--------------
-stack B:
-[8]->[5]->[4]->[3]->[2]->[1]->NULL
-===end=====
------sort-------
-stack b IS properly sorted, setting new push
 first index 2
-last index 9
-frstIndRaInst|2|
-frstIndRraInst|12|
-lastIndRaInst|9|
-lastIndRraInst|5|
-top val is |6|
+last index 13
+INDEX COMP INSTR ARE!!!
 ra:2
 rra:0
 sa:0
@@ -253,63 +206,108 @@ rb:0
 rrb:0
 sb:0
 pb:0
+top val is |6|
+stack b IS properly sorted, setting new push
+ra:2
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 6
+hi low is 5
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 ra
 ra
+pb
+i is 2
+i * chunk len is 8
+len is 6
+===========
+stack A:
+[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[8]->[11]->[14]->[18]->NULL
+-------------
+stack B:
+[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+first index 6
+last index 10
+INDEX COMP INSTR ARE!!!
+ra:0
+rra:4
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+top val is |8|
+stack b IS properly sorted, setting new push
+ra:0
+rra:4
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 8
+hi low is 6
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
+rra
+rra
+rra
+rra
 pb
 i is 2
 i * chunk len is 8
 len is 7
 ===========
 stack A:
-[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[11]->[14]->[18]->NULL
--------------
-stack B:
-[6]->[8]->[5]->[4]->[3]->[2]->[1]->NULL
-===end=====
------sort-------
-stack b is not properly sorted, sorting b
-ra:0
-rra:0
-sa:0
-pa:0
-rb:1
-rrb:1
-sb:1
-pb:0
-sb
-i is 2
-i * chunk len is 8
-len is 7
-===========
-stack A:
-[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->[11]->[14]->[18]->NULL
+[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->[7]->[9]->[12]->[10]->NULL
 -------------
 stack B:
 [8]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
-first index 6
-last index 6
-frstIndRaInst|6|
-frstIndRraInst|7|
-lastIndRaInst|6|
-lastIndRraInst|7|
-top val is |7|
-ra:6
-rra:0
+first index 9
+last index 9
+INDEX COMP INSTR ARE!!!
+ra:0
+rra:4
 sa:0
 pa:0
 rb:0
 rrb:0
 sb:0
 pb:0
-ra
-ra
-ra
-ra
-ra
-ra
+top val is |7|
+stack b IS properly sorted, setting new push
+ra:0
+rra:4
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 7
+hi low is 6
+hi low index is 1
+stb_flag[0] 1
+stb_flag[1] 6
+rra
+rra
+rra
+rra
+rb
 pb
 i is 2
 i * chunk len is 8
@@ -319,36 +317,15 @@ stack A:
 [9]->[12]->[10]->[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
 -------------
 stack B:
-[7]->[8]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+[7]->[6]->[5]->[4]->[3]->[2]->[1]->[8]->NULL
 ===end=====
 -----sort-------
 lowest chunk val is |9|
 highest chunk val is |12|
-stack b is not properly sorted, sorting b
-ra:0
-rra:0
-sa:0
-pa:0
-rb:1
-rrb:1
-sb:1
-pb:0
-sb
-i is 3
-i * chunk len is 12
-len is 8
-===========
-stack A:
-[9]->[12]->[10]->[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
--------------
-stack B:
-[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
-===end=====
------sort-------
-stack b IS properly sorted, setting new push
 first index 0
 last index 3
 top val is |9|
+stack b IS properly sorted, setting new push
 ra:0
 rra:0
 sa:0
@@ -357,6 +334,12 @@ rb:0
 rrb:0
 sb:0
 pb:0
+chunk top val is 9
+hi low is 8
+hi low index is 7
+stb_flag[0] 7
+stb_flag[1] 1
+rrb
 pb
 i is 3
 i * chunk len is 12
@@ -369,10 +352,10 @@ stack B:
 [9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 0
 last index 2
 top val is |12|
+stack b IS properly sorted, setting new push
 ra:0
 rra:0
 sa:0
@@ -381,6 +364,11 @@ rb:0
 rrb:0
 sb:0
 pb:0
+chunk top val is 12
+hi low is 9
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 pb
 i is 3
 i * chunk len is 12
@@ -393,10 +381,10 @@ stack B:
 [12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 0
 last index 1
 top val is |10|
+stack b IS properly sorted, setting new push
 ra:0
 rra:0
 sa:0
@@ -405,6 +393,12 @@ rb:0
 rrb:0
 sb:0
 pb:0
+chunk top val is 10
+hi low is 9
+hi low index is 1
+stb_flag[0] 1
+stb_flag[1] 9
+rb
 pb
 i is 3
 i * chunk len is 12
@@ -414,34 +408,13 @@ stack A:
 [11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
 -------------
 stack B:
-[10]->[12]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[12]->NULL
 ===end=====
 -----sort-------
-stack b is not properly sorted, sorting b
-ra:0
-rra:0
-sa:0
-pa:0
-rb:1
-rrb:1
-sb:1
-pb:0
-sb
-i is 3
-i * chunk len is 12
-len is 11
-===========
-stack A:
-[11]->[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
--------------
-stack B:
-[12]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
-===end=====
------sort-------
-stack b IS properly sorted, setting new push
 first index 0
 last index 0
 top val is |11|
+stack b IS properly sorted, setting new push
 ra:0
 rra:0
 sa:0
@@ -450,6 +423,11 @@ rb:0
 rrb:0
 sb:0
 pb:0
+chunk top val is 11
+hi low is 10
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 pb
 i is 3
 i * chunk len is 12
@@ -459,36 +437,15 @@ stack A:
 [14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
 -------------
 stack B:
-[11]->[12]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[12]->NULL
 ===end=====
 -----sort-------
 lowest chunk val is |13|
 highest chunk val is |16|
-stack b is not properly sorted, sorting b
-ra:0
-rra:0
-sa:0
-pa:0
-rb:1
-rrb:1
-sb:1
-pb:0
-sb
-i is 4
-i * chunk len is 16
-len is 12
-===========
-stack A:
-[14]->[18]->[19]->[13]->[17]->[20]->[16]->[15]->NULL
--------------
-stack B:
-[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
-===end=====
------sort-------
-stack b IS properly sorted, setting new push
 first index 0
 last index 7
 top val is |14|
+stack b IS properly sorted, setting new push
 ra:0
 rra:0
 sa:0
@@ -497,6 +454,12 @@ rb:0
 rrb:0
 sb:0
 pb:0
+chunk top val is 14
+hi low is 12
+hi low index is 11
+stb_flag[0] 11
+stb_flag[1] 1
+rrb
 pb
 i is 4
 i * chunk len is 16
@@ -509,14 +472,9 @@ stack B:
 [14]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 2
 last index 6
-frstIndRaInst|2|
-frstIndRraInst|5|
-lastIndRaInst|6|
-lastIndRraInst|1|
-top val is |18|
+INDEX COMP INSTR ARE!!!
 ra:0
 rra:1
 sa:0
@@ -525,6 +483,21 @@ rb:0
 rrb:0
 sb:0
 pb:0
+top val is |15|
+stack b IS properly sorted, setting new push
+ra:0
+rra:1
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 15
+hi low is 14
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 rra
 pb
 i is 4
@@ -538,14 +511,9 @@ stack B:
 [15]->[14]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 2
 last index 5
-frstIndRaInst|2|
-frstIndRraInst|4|
-lastIndRaInst|5|
-lastIndRraInst|1|
-top val is |18|
+INDEX COMP INSTR ARE!!!
 ra:0
 rra:1
 sa:0
@@ -554,6 +522,21 @@ rb:0
 rrb:0
 sb:0
 pb:0
+top val is |16|
+stack b IS properly sorted, setting new push
+ra:0
+rra:1
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 16
+hi low is 15
+hi low index is 0
+stb_flag[0] 0
+stb_flag[1] 0
 rra
 pb
 i is 4
@@ -567,14 +550,9 @@ stack B:
 [16]->[15]->[14]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
 ===end=====
 -----sort-------
-stack b IS properly sorted, setting new push
 first index 2
 last index 2
-frstIndRaInst|2|
-frstIndRraInst|3|
-lastIndRaInst|2|
-lastIndRraInst|3|
-top val is |13|
+INDEX COMP INSTR ARE!!!
 ra:2
 rra:0
 sa:0
@@ -583,8 +561,24 @@ rb:0
 rrb:0
 sb:0
 pb:0
+top val is |13|
+stack b IS properly sorted, setting new push
+ra:2
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 13
+hi low is 12
+hi low index is 3
+stb_flag[0] 3
+stb_flag[1] 12
 rr
 rr
+rb
 pb
 i is 4
 i * chunk len is 16
@@ -594,6 +588,262 @@ stack A:
 [17]->[20]->[18]->[19]->NULL
 -------------
 stack B:
-[13]->[14]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[16]->[15]->NULL
+[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->[16]->[15]->[14]->NULL
 ===end=====
-intructions used |50|
+-----sort-------
+lowest chunk val is |17|
+highest chunk val is |20|
+first index 0
+last index 3
+top val is |17|
+stack b IS properly sorted, setting new push
+ra:0
+rra:0
+sa:0
+pa:0
+rb:0
+rrb:0
+sb:0
+pb:0
+chunk top val is 17
+hi low is 16
+hi low index is 13
+stb_flag[0] 13
+stb_flag[1] 3
+rrb
+rrb
+rrb
+pb
+i is 5
+i * chunk len is 20
+len is 17
+===========
+stack A:
+[20]->[18]->[19]->NULL
+-------------
+stack B:
+[17]->[16]->[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+ra
+pa
+i is 5
+i * chunk len is 20
+len is 16
+===========
+stack A:
+[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[16]->[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 15
+===========
+stack A:
+[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[15]->[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 14
+===========
+stack A:
+[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[14]->[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 13
+===========
+stack A:
+[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[13]->[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 12
+===========
+stack A:
+[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[12]->[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 11
+===========
+stack A:
+[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[11]->[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 10
+===========
+stack A:
+[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[10]->[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 9
+===========
+stack A:
+[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[9]->[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 8
+===========
+stack A:
+[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[8]->[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 7
+===========
+stack A:
+[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[7]->[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 6
+===========
+stack A:
+[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[6]->[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 5
+===========
+stack A:
+[6]->[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[5]->[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 4
+===========
+stack A:
+[5]->[6]->[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[4]->[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 3
+===========
+stack A:
+[4]->[5]->[6]->[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[3]->[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 2
+===========
+stack A:
+[3]->[4]->[5]->[6]->[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[2]->[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 1
+===========
+stack A:
+[2]->[3]->[4]->[5]->[6]->[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+[1]->NULL
+===end=====
+-----sort-------
+EVERYTHING IS READY LAST INSTRUCTIONS
+pa
+i is 5
+i * chunk len is 20
+len is 0
+===========
+stack A:
+[1]->[2]->[3]->[4]->[5]->[6]->[7]->[8]->[9]->[10]->[11]->[12]->[13]->[14]->[15]->[16]->[17]->[18]->[19]->[20]->NULL
+-------------
+stack B:
+list is NULL
+===end=====
+intructions used |74|
