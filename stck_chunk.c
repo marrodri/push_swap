@@ -30,11 +30,11 @@ void swapComp(t_app **app, t_list *st_a)
 	}
 	if(ra_inst <= rra_inst)
 	{
-		(*app)->sort_sta_flag[1] = 1; //ra
+		(*app)->sort_sta_flag[0] = 1; //ra
 	}
 	else if(ra_inst >= rra_inst)
 	{
-			(*app)->sort_sta_flag[0] = 1; //sa
+		(*app)->sort_sta_flag[2] = 1; //sa
 	}
 	//if at the beggining of the stack there
 	//is another value of the range much closer
@@ -271,7 +271,7 @@ void setChunkLen(t_app **app, t_list  *st_a)
 	(*app)->len_stck = ft_list_size(st_a);
 	if((*app)->len_stck > 10)
 	{
-		(*app)->chunk_len = (*app)->len_stck / 5;
+		(*app)->chunk_len = (*app)->len_stck / 10;
 	}
 }
 

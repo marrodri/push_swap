@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 	st_a = NULL;
 	st_b = NULL;
 	init_ps(&app);
-	if (check_arg(argv, argc, &app))
+	if (check_arg(argv, argc, &app) )
 	{
 		set_stack(&st_a, app);
 		setChunkLen(&app, st_a);
@@ -89,7 +89,7 @@ int main(int argc, char **argv)
 			ft_printf("stack set:\n");
 			print_stacks(st_a, st_b);
 		}
-		while (!check_stacks(st_a, st_b))
+		while (!check_stacks(st_a, st_b) && app->chunk_ind < 10)
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
