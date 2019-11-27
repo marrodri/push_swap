@@ -60,7 +60,7 @@ void setTopVal(t_app **app, t_list *st_a)
 	}
 
 	(*app)->chunk_top_val = stck_indVal(st_a, index);
-	ft_printf("top val is |%d|\n",(*app)->chunk_top_val);
+	// ft_printf("top val is |%d|\n",(*app)->chunk_top_val);
 
 }
 
@@ -123,7 +123,6 @@ void setTopVal(t_app **app, t_list *st_a)
 // 	rotInstrCheck(app);
 // }
 
-//CHECKPOINT HERE IMPORTANT
 void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 {
 	int ind;
@@ -134,26 +133,10 @@ void sortChunkInst(t_app **app, t_list *st_a, t_list *st_b)
 		stb_len = ft_list_size(st_b);
 		stHiLowVal = stckb_midValComp(st_b, (*app)->chunk_top_val);
 		ind = stck_valInd(st_b, stHiLowVal);
-		ft_printf("chunk top val is %d\n", (*app)->chunk_top_val);
-		ft_printf("hi low is %d\n", stHiLowVal);
-		ft_printf("hi low index is %d\n", ind);
-		// if (ind == 0 && st_b->elem > (*app)->chunk_top_val
-		// && st_b->next->elem < (*app)->chunk_top_val)
-		// {
-		// 	(*app)->sort_stb_flag[0] = 1;
-		// }
-		// else
-		// {
-			(*app)->sort_stb_flag[0] = ind; //rb
-			(*app)->sort_stb_flag[1] = ((*app)->len_stck_b - ind); //rrb
-		// }
+		(*app)->sort_stb_flag[0] = ind;
+		(*app)->sort_stb_flag[1] = ((*app)->len_stck_b - ind);
 		if((*app)->sort_stb_flag[1] == stb_len)
-			(*app)->sort_stb_flag[1] = 0;
-		
-		ft_printf("stb_flag[0] %d\n",(*app)->sort_stb_flag[0]);
-		ft_printf("stb_flag[1] %d\n",(*app)->sort_stb_flag[1]);
-			
-			
+			(*app)->sort_stb_flag[1] = 0;			
 	}
 	rotInstrCheck(app);
 }
@@ -193,8 +176,6 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 		st_a = st_a->next;
 	}
 	st_a = head;
-	ft_printf("first index %d\n", index_frst);
-	ft_printf("last index %d\n", index_lst);
 	if(index_frst == 1)
 	{
 		swapComp(app, st_a);
@@ -207,32 +188,42 @@ void setChnkValTopInst(t_app **app, t_list *st_a)
 
 void chunk_instr(t_app **app, t_list *st_a, t_list *st_b)
 {
-	if (stARotSort(*app, st_a))
+	if (stARotSort(*app, st_a) || (*app)->lastSet)
 	{
 		ft_printf("EVERYTHING IS READY LAST INSTRUCTIONS\n");
 		(*app)->lastSet = 1;
 		// last pushes are buggy, try to fix this
 		// set_sort_flag(app, st_a, st_b);
-		setSortedInst(app, st_a, st_b);
-		rotInstrCheck(app);
+		setStckBHiValTop(app, st_b);
+		if(!stARotSort((*app),st_a))
+		{
+			sta_flag(app, st_a);
+			saInstrCheck(app);
+			rotInstrCheck(app);
+		}
+		else
+		{
+			setSortedInst(app, st_a, st_b);
+			
+			// rotInstrCheck(app);
+		}
 	}
+
 	else if (!(*app)->lastSet)
 	{
 		setChnkValTopInst(app, st_a);
 		if(!stBRotSort(st_b))
 		{
 			// sort the stack b if it's not sorted
-			ft_printf("stack b is not properly sorted, sorting b\n");
+			// ft_printf("stack b is not properly sorted, sorting b\n");
 			stb_flag(app, st_b);
-			print_inst(*app);
 			saInstrCheck(app);
 			rotInstrCheck(app);
 		}
 		else
 		{
-			ft_printf("stack b IS properly sorted, setting new push\n");
-			print_inst(*app);
-			//CHECKPOINT HERE
+			// ft_printf("stack b IS properly sorted, setting new push\n");
+			// print_inst(*app);
 			sortChunkInst(app, st_a, st_b);
 			(*app)->sort_stb_flag[3] = 1;
 		}
@@ -258,8 +249,8 @@ void setChunkRange(t_app **app, t_list *st_a)
 		i++;
 	}
 	(*app)->chunkSet = 0;
-	ft_printf("lowest chunk val is |%d|\n",(*app)->chunk_low_val);
-	ft_printf("highest chunk val is |%d|\n",(*app)->chunk_hi_val);
+	// ft_printf("lowest chunk val is |%d|\n",(*app)->chunk_low_val);
+	// ft_printf("highest chunk val is |%d|\n",(*app)->chunk_hi_val);
 }
 
 
@@ -269,9 +260,13 @@ void setChunkRange(t_app **app, t_list *st_a)
 void setChunkLen(t_app **app, t_list  *st_a)
 {
 	(*app)->len_stck = ft_list_size(st_a);
-	if((*app)->len_stck > 10)
+	if((*app)->len_stck >= 100)
 	{
-		(*app)->chunk_len = (*app)->len_stck / 10;
+		(*app)->chunk_len = (*app)->len_stck / 5;
+	}
+	if((*app)->len_stck >= 500)
+	{
+		(*app)->chunk_len = (*app)->len_stck / 11;
 	}
 }
 
@@ -281,9 +276,9 @@ void checkChunk(t_app **app, t_list *st_b)
 	
 	(*app)->len_stck_b = ft_list_size(st_b);
 	i = (*app)->chunk_ind;
-	ft_printf("i is %d\n", i);
-	ft_printf("i * chunk len is %d\n", (i * (*app)->chunk_len));
-	ft_printf("len is %d\n", (*app)->len_stck_b);
+	// ft_printf("i is %d\n", i);
+	// ft_printf("i * chunk len is %d\n", (i * (*app)->chunk_len));
+	// ft_printf("len is %d\n", (*app)->len_stck_b);
 	if ((i * (*app)->chunk_len) == (*app)->len_stck_b)
 	{
 		(*app)->chunkSet = 1;

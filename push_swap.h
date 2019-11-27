@@ -159,6 +159,8 @@ void	print_stacks(t_list *st_a, t_list *st_b);
 void	print_stack(t_list **list);
 void	print_inst(t_app *app);
 
+void	sta_flag(t_app **app, t_list *st_a);
+void		setStckBHiValTop(t_app **app, t_list *st_b);
 
 
 #endif

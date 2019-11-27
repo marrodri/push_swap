@@ -55,7 +55,7 @@ $(NAME1): $(LIBFT) $(CH_OBJ) $(SRC_OBJ)
 	@gcc $(CH_OBJ) $(SRC_OBJ) $(LIBFT)  -o $(NAME1) -g
 
 $(NAME2): $(LIBFT) $(PS_OBJ) $(SRC_OBJ)
-	gcc $(PS_OBJ) $(SRC_OBJ) $(LIBFT) -o $(NAME2) -g
+	gcc $(PS_OBJ) $(SRC_OBJ) $(LIBFT) -o $(NAME2) -g -fsanitize=address
 
 clean:
 	@echo "cleaning .o files"

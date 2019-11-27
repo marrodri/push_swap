@@ -89,7 +89,7 @@ int main(int argc, char **argv)
 			ft_printf("stack set:\n");
 			print_stacks(st_a, st_b);
 		}
-		while (!check_stacks(st_a, st_b) && app->chunk_ind < 10)
+		while (!check_stacks(st_a, st_b))
 		{
 			if (app->deb_flag)
 				ft_printf("-----sort-------\n");
@@ -114,11 +114,11 @@ int main(int argc, char **argv)
 }
 
 // sun 4:40 
-// mon 7:19
+// mon 7:59 
 // ------- 
-// 11:59
+// 12:39 
 // tues 
-// ---------  
+// --------- 
 // 
 // wed 
 // -------- 
